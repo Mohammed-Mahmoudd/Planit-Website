@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body {
+    background: #20202A;
+    color: white;
+}
+nav{
+    width: 450px;
+    height: 100vh;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 50px;
+}
+.logo_con {
+    margin-top: 35px;
+    margin-left: 35px;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+.logo_con h1 {
+    padding-top: 10px;
+}
+.nav_main {
+    padding: 20px;
+}
+.nav_main h2 {
+    font-size: 15px;
+    opacity: 0.5;
+}
+.active {
+    background-color: #008CF0;
+    border-radius: 20px;
+    padding-left: 10px;
+    gap: 10px;
+    color: black;
+    font-weight: bold;
+}
+.active p {
+    opacity: 0.7;
+    
+}
+.link{
+    padding-left: 10px;
+    gap: 10px;
+
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    padding-left: 25px;
+
+    width: 100%;
+}
+
+.theme {
+    padding: 10px;
+    border-radius: 10px;
+
+}
+.inside {
+    padding: 5px;
+    border-radius: 10px;
+    gap: 15px;
+}
+.bill {
+    background-color: #ffffff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.acount {
+    background-color: #008CF0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 10px;
+    
+}
+.dropdown {
+    margin-top: 15px;
+    margin-left: 10px;
+
+}
+.search {
+    background-color: rgba(0, 0, 0, 0.445);
+    border: 0;
+    padding: 20px;
+    width: 500px;
+    outline: 0;
+    padding-left: 50px;
+    border-radius: 20px;
+    position: relative;
+    color: white;
+}
+
+
+.search_icon {
+    position:absolute;
+    top: 35px;
+    padding-left: 10px;
+    
+}
+header {
+    display: flex;
+    justify-content: space-between;
+}
