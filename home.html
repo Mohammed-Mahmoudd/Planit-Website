@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planit</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+</head>
+
+<body class="container-fluid d-flex  align-items-start ">
+
+
+    <!-- Navigation bar start -->
+    <nav  class="d-flex flex-column" style="background-color: #272935;">
+        <div class="logo_con d-flex align-items-center ">
+            <img src="assets/navigation/Logo.png" alt="">
+            <h1>Planit</h1>
+        </div>
+        <div class="nav_main">
+            <h2>Plan IT</h2>
+            <div>
+                <div class="d-flex align-items-center active">
+                    <img src="./assets/navigation/House_03.png" alt="">
+                    <p style="padding-top: 15px;">Home Page</p>
+                </div>
+                <div class="link d-flex align-items-center">
+                    <img src="./assets/navigation/Note_Edit.png" alt="">
+                    <p style="padding-top: 15px;">My Task</p>
+                </div>
+                <div class=" link d-flex align-items-center">
+                    <img src="./assets/navigation/Check_All.png" alt="">
+                    <p style="padding-top: 15px;">Habit Tracker</p>
+                </div>
+                <div class=" link d-flex align-items-center">
+                    <img src="./assets/navigation/Puzzle.png" alt="">
+                    <p style="padding-top: 15px;">Study Planner</p>
+                </div>
+                <div class=" link d-flex align-items-center">
+                    <img src="./assets/navigation/Bulb.png" alt="">
+                    <p style="padding-top: 15px;">Creativity & Solver</p>
+                </div>
+                <div class= " link d-flex align-items-center">
+                    <img src="./assets/navigation/Settings_Future.png" alt="">
+                    <p style="padding-top: 15px;">Setting</p>
+                </div>
+            </div>
+
+            
+        </div>
+
+
+    </nav><!-- Navigation bar End -->
+<div style="width: 100%;">
+
+    <!-- header start -->
+    <header >
+        <h3 class="h1">Hello</h3>
+        
+        <div class="search_con">
+            <img class="search_icon" src="./assets/Header/User/Search_Magnifying_Glass.png" alt="">
+            <input type="text " class="search" placeholder="Search For Somthing...">
+
+        </div>
+        <div class="Container d-flex">
+            <div class="theme" style="background-color: #272935;">
+                <div class="d-flex inside" style="background-color: rgba(0, 0, 0, 0.486); ">
+                    <div>
+
+                        <img src="./assets/Header/theme/Sun.png" alt="">
+                    </div>
+                    <div>
+
+                        <img src="./assets/Header/theme/Moon.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="bill">
+                <img src="./assets/Header/User/Bell.png" alt="">
+            </div>
+            <div class="acount">
+                <img src="./assets/Header/User/User_01.png" alt="">
+            </div>
+            <div class="dropdown ">
+                    <p class=" dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Salah
+                    </p>
+
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+            </div>
+        </div>
+    </header><!-- header end -->
+    
+
+    <!-- add here You content -->
+</div>
+
+    
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./firebase/script.js"></script>
+</body>
+</html>
