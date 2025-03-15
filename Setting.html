@@ -22,7 +22,7 @@
         <div class="nav_main">
             <h2>Plan IT</h2>
             <div>
-                <div class="d-flex align-items-center active">
+                <div class="d-flex align-items-center">
                     <img src="./assets/navigation/House_03.png" alt="">
                     <p style="padding-top: 15px;">Home Page</p>
                 </div>
@@ -42,7 +42,7 @@
                     <img src="./assets/navigation/Bulb.png" alt="">
                     <p style="padding-top: 15px;">Creativity & Solver</p>
                 </div>
-                <div class= " link d-flex align-items-center">
+                <div class= " link d-flex align-items-center active">
                     <img src="./assets/navigation/Settings_Future.png" alt="">
                     <p style="padding-top: 15px;">Setting</p>
                 </div>
@@ -96,8 +96,89 @@
             </div>
         </div>
     </header><!-- header end -->
+    <div class="button_GA text-center">
+        <button onclick="showContent('content1' , this)" class="button_Ge buttonGe-active"><b>General</b></button>
+        <button onclick="showContent('content2' , this)" class="button_Ge"><b>Account</b></button>
+    </div>
+    <div id="content1" class="content content-active">
+        <!-- 📌 Notification Section -->
+        <h4 class="topic">Notification</h4>
+        <p class="line">_______________________________________________________________________________________________________________________________________________________________________________________</p>
     
-
+        <!-- Mobile Notification -->
+        <div class="d-flex justify-content-between align-items-center py-3">
+            <div>
+                <h5 class="topic">Mobile notification</h5>
+                <p class="word">Press to enable or disable mobile notifications.</p>
+            </div>
+            <label class="switch">
+                <input type="checkbox" class="toggleSwitch" data-id="switch1">
+                <span class="slider"></span>
+            </label>
+        </div>
+    
+        <!-- Desktop Notification -->
+        <div class="d-flex justify-content-between align-items-center py-3">
+            <div>
+                <h5 class="topic">Desktop notification</h5>
+                <p class="word">Press to enable or disable desktop notifications.</p>
+            </div>
+            <label class="switch">
+                <input type="checkbox" class="toggleSwitch" data-id="switch2">
+                <span class="slider"></span>
+            </label>
+        </div>
+    
+        <!-- Gmail Notification -->
+        <div class="d-flex justify-content-between align-items-center py-3">
+            <div>
+                <h5 class="topic">Gmail notification</h5>
+                <p class="word">Press to enable or disable Gmail notifications.</p>
+            </div>
+            <label class="switch">
+                <input type="checkbox" class="toggleSwitch" data-id="switch3">
+                <span class="slider"></span>
+            </label>
+        </div>
+    
+        <!-- 📌 My Setting Section -->
+        <h4 class="topic mt-4">My Setting</h4>
+        <p class="line">_______________________________________________________________________________________________________________________________________________________________________________________</p>
+    
+        <!-- Appearance -->
+        <div class="d-flex justify-content-between align-items-center py-3">
+            <div>
+                <h5 class="topic">Appearance</h5>
+                <p class="word">Press to toggle between Dark Mode and Light Mode.</p>
+            </div>
+            <div class="custom-dropdown">
+                <button class="dropdown-btn">Dark mode</button>
+                <ul class="dropdown-list">
+                    <li onclick="selectOption(this)">Dark mode</li>
+                    <li onclick="selectOption(this)">Light mode</li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Language -->
+        <div class="d-flex justify-content-between align-items-center  py-3">
+            <div>
+                <h5 class="topic">Language</h5>
+                <p class="word">Press to switch between languages.</p>
+            </div>
+            <div class="custom-dropdown">
+                <button class="dropdown-btn">English</button>
+                <ul class="dropdown-list">
+                    <li onclick="selectOption(this)">English</li>
+                    <li onclick="selectOption(this)">Arabic</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="content2" class="content">
+        <h1>here content 2</h1>
+    </div>
     <!-- add here You content -->
 </div>
 
@@ -105,6 +186,6 @@
 
 
     <script src="./js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="./firebase/script.js"></script>
+    <script src="/js/setting.js"></script>
 </body>
 </html>

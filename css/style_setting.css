@@ -119,3 +119,157 @@ header {
     display: flex;
     justify-content: space-between;
 }
+.button_GA{
+    margin-top: 10px;
+    
+}
+.button_Ge{
+    background-color: #313038;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+.button_Ge:hover{
+    background-color: #1e1e22;
+    color: white;
+}
+.content {
+    display: none;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+.content-active {
+    display: block;
+}
+.buttonGe-active {
+    background-color: white;
+    color: #1e1e22;
+}
+.line{
+    opacity: 30%;
+}
+.topic{
+    margin-top: 40px;
+}
+.word{
+    opacity: 50%;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #313038;
+    transition: 0.4s;
+    border-radius: 25px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3.5px;
+    background-color: transparent;
+    transition: 0.4s;
+    border-radius: 50%;
+    border: white 2px solid;
+}
+
+input:checked + .slider {
+    background-color: #008CF0;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+select{
+    background-color: #313038;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 8px;
+    color: white;
+}
+option{
+    color: white;
+}
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background-color: #272935;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 130px;
+}
+.dropdown-btn::after {
+    background-image: url("/assets/icons/new_icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+}
+
+.dropdown-list {
+    display: none;
+    position: absolute;
+    background-color: #272935;
+    list-style: none;
+    margin: 0;
+    padding: 5px 0;
+    width: 130px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-list li {
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    transition: background 0.2s;
+}
+
+.dropdown-list li:hover {
+    background-color: #313038;
+}
+
+.custom-dropdown.active .dropdown-list {
+    display: block;
+}
