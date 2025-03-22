@@ -6,13 +6,14 @@
 body{
     font-family: 'Poppins', sans-serif;
     background: #20202A;
+    color: #ffffff;
 }
 
 /*side*/
 
 .aside{
-    /* position: fixed; */
-    position: relative;
+    position: fixed;
+    /* position: relative; */
     left: 0;
     top: 0;
     height: 97vh;
@@ -85,7 +86,7 @@ body{
     position: relative;
     left: 20px;
     top: 10%;
-    width: 21vh;
+    width: 23vh;
     display: inline-block;
     transition: 0.4s all;
     color: #ffffff;
@@ -109,7 +110,7 @@ body{
     position: relative;
     left: 20px;
     top: 10%;
-    width: 19vh;
+    width: 21vh;
     transition: 0.4s all;
     color: #ffffff;
     filter: drop-shadow(5px 5px 2px #000000);
@@ -204,25 +205,23 @@ body{
 
 /*creativity*/
 
-.creativity-link {
-    background: hsla(205, 91%, 41%, 0.775);
-    padding: 5px;
-    border-radius: 4px;
-}
+/* .creativity-link {
+    border-bottom: blueviolet 2px solid;
+    border-radius: 10px;
+} */
 
 .creativity-page {
     position: relative;
     left: 20px;
     top: 10%;
-    width: 24vh;
+    width: 22vh;
     color: #ffffff;
     filter: drop-shadow(5px 5px 2px #000000);
     
 }
 
 .creativity-page:hover {
-    transition: 0.7s all;
-    background: hsla(205, 85%, 28%, 0.775);
+    border-bottom: blueviolet 2px solid;
     border-radius: 4px;
 }
 
@@ -230,9 +229,9 @@ body{
     position: relative;
     display: block;
     width: 100%;
-    background: hsla(205, 91%, 41%, 0.775);
-    padding: 5px 0 5px 0;
-    border-radius: 4px;
+    padding-bottom: 5px;
+    border-bottom: blueviolet 2px solid;
+    border-radius: 10px;
 }
 
 /*settings*/
@@ -241,7 +240,7 @@ body{
     position: relative;
     left: 20px;
     top: 11%;
-    width: 22vh;
+    width: 21vh;
     transition: 0.4s all;
     color: #ffffff;
     filter: drop-shadow(4px 4px 3px #000000);
@@ -292,4 +291,123 @@ body{
     width: 22%;
     height: fit-content;
     padding: 7px;
+}
+
+/*main*/
+
+.main {
+    width: 170vh;
+    position: sticky;
+    margin-left: 190px;
+}
+ 
+.main h2{
+    padding-top: 20px;
+    padding-left:20px;
+}
+
+    /*main-search*/
+
+.main .search{
+    height: 40px;
+    border: 0px;
+    border-radius: 30px;
+    background: #2f2f39;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-left: 10%;
+    padding: 10px;
+    width: 100%;
+
+}
+
+    /*main-mode*/
+
+.main .mode{
+    border-radius: 30px;
+    margin-left: 20%;
+    background: #272935;
+    padding: 7px;
+    color: #ffffff;
+    margin-top: 20px;
+    cursor: pointer;
+    /* width: 100px; */
+}
+
+.mode .sun{
+    width: 30px;
+    height: fit-content;
+    margin-right: 30px;
+    background: #c4c3c3b5;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.mode .moon{
+    width: 25px;
+    height: fit-content;
+}
+
+
+    /*main-account*/
+
+.main .account{
+    width: 100%;
+    margin-left: 5%;
+    margin-top: 20px;
+    
+}
+
+.main .account .notification{
+    border-radius: 50%;
+    padding: 7px;
+    background-color: #ffffff;
+}
+
+.main .account .name{
+    margin-left: 10px;
+    height: 20px;
+    width: 100%;
+    color: #ffffff;
+}
+
+.name .user-image{
+    background: #008CF0;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+/*content*/
+
+/* problem-1 */
+
+.problem-1{
+    position: relative;
+    left: 20%;  
+    margin-top: 6%;
+    width: 929px;
+    height: fit-content;
+    background: #2f2f39;
+    border-radius: 10px;
+    padding: 20px;
+    color: #ffffff;
+}
+
+    /*solve-btn*/
+
+.problem-1 .solve{
+    background: #000;
+    color: #ffffff;
+    border: 1px solid #f04c00d4;
+    border-radius: 30px;
+    padding: 10px;
+}
+.problem-1 .earn{
+    background: #000;
+    color: #ffffff;
+    border: 1px solid #f04c00d4;
+    border-radius: 30px;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
