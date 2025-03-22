@@ -7,8 +7,230 @@
 body {
     background: #20202A;
     color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
-nav{
+
+/*side*/
+
+aside {
+    position: relative;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 97vh;
+    width: 205px;
+    background: #272935;
+    transition: 0.5s;
+    z-index: 99;
+    border-radius: 50px;
+    margin-top: 10px;
+    margin-left: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    padding: 10px;
+}
+
+/*logo-side*/
+
+.logo-side {
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    border-radius: 50px;
+}
+
+/*subtitle*/
+
+.subtitle {
+    color: hsl(0, 0%, 50%);
+}
+
+/*home-page*/
+
+.link {
+    display: inline-block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.5s;
+    font-size: 11px;
+    margin-left: 25px;
+}
+
+.home-page {
+    transition: 0.3s all;
+    color: #ffffff;
+    background: hsl(205, 100%, 37%);
+    color: #000000;
+    border-radius: 14px;
+    box-shadow: 5px 5px 2px #000000;
+}
+
+.home-pic {
+    display: block;
+    width: 10%;
+    height: 13%;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-left: 30px;
+}
+
+/*task-page*/
+
+.task-page {
+    transition: 0.3s all;
+    color: #ffffff;
+}
+
+.task-page:hover {
+    background: transparent;
+    color: #000000;
+    border-radius: 14px;
+    box-shadow: 5px 5px 2px #000000;
+
+}
+
+.task-pic {
+    display: block;
+    width: 10%;
+    height: 13%;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-left: 30px;
+}
+
+/*habit=page*/
+
+.habit-page {
+    transition: 0.3s all;
+    color: #ffffff;
+}
+
+.habit-page:hover {
+    background: transparent;
+    color: #000000;
+    border-radius: 14px;
+    box-shadow: 5px 5px 2px #000000;
+
+}
+
+.habit-pic {
+    display: block;
+    width: 10%;
+    height: 13%;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-left: 30px;
+}
+
+/*study-page*/
+
+.study-page {
+    transition: 0.3s all;
+    color: #ffffff;
+}
+
+.study-page:hover {
+    background: transparent;
+    color: #000000;
+    border-radius: 14px;
+    box-shadow: 5px 5px 2px #000000;
+
+}
+
+.study-pic {
+    display: block;
+    width: 10%;
+    height: 13%;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-left: 30px;
+}
+
+/*play-page*/
+
+.play-page {
+    transition: 0.3s all;
+    color: #ffffff;
+}
+
+.play-page:hover {
+    background: transparent;
+    color: #000000;
+    border-radius: 14px;
+    box-shadow: 5px 5px 2px #000000;
+    padding-right: 5px;
+
+}
+
+.play-pic {
+    display: block;
+    width: 10%;
+    height: 13%;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-left: 30px;
+}
+
+/*creativity*/
+
+.creativity-page {
+    transition: 0.3s all;
+    color: #ffffff;
+}
+
+.creativity-page:hover {
+    background: transparent;
+    color: #000000;
+    border-radius: 14px;
+    box-shadow: 5px 5px 2px #000000;
+    padding-right: 5px;
+
+}
+
+.creativity-pic {
+    display: block;
+    width: 10%;
+    height: 13%;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-left: 30px;
+}
+
+/*settings*/
+
+.settings-page {
+    transition: 0.3s all;
+    color: #ffffff;
+}
+
+.settings-page:hover {
+    background: transparent;
+    color: #000000;
+    border-radius: 14px;
+    box-shadow: 5px 5px 2px #000000;
+
+}
+
+.settings-pic {
+    display: block;
+    width: 10%;
+    height: 13%;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-left: 30px;
+}
+
+/*logout*/
+
+#logout {
+    margin-top: 55%;
+}
+
+/* */
+/* nav{
     width: 450px;
     height: 100vh;
     margin-top: 25px;
@@ -30,7 +252,7 @@ nav{
 .nav_main h2 {
     font-size: 15px;
     opacity: 0.5;
-}
+} */
 .active {
     background-color: #008CF0;
     border-radius: 20px;

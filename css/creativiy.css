@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #20202A;
+}
+
+/*side*/
+
+.aside{
+    /* position: fixed; */
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 97vh;
+    width: 90px;
+    background: #272935;
+    transition: 0.5s;
+    z-index: 99;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    padding: 10px;
+}
+.aside:hover{
+    width: 190px;
+    transition: 0.5s;
+    border-radius: 40px;
+}
+
+
+/*logo-side*/
+
+.row{
+    position: absolute;
+    width: 100%;
+}
+
+.logo-side{
+    position: absolute;
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    border-radius: 50px;
+}
+
+.aside h5{
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    display: inline;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/*subtitle*/
+
+.subtitle{
+    color: hsl(0, 0%, 50%);
+    position: relative;
+    top: 66px;
+}
+
+/*home-page*/
+
+.link {
+    position: relative;
+    display: inline-block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.5s;
+    font-size: 12px;
+    margin-left: 30px;
+}
+
+
+.home-page{
+    position: relative;
+    left: 20px;
+    top: 10%;
+    width: 21vh;
+    display: inline-block;
+    transition: 0.4s all;
+    color: #ffffff;
+    filter: drop-shadow(5px 5px 2px #000000);
+}
+
+.home-page:hover{
+    border-bottom: blueviolet 2px solid;
+    border-radius: 4px;
+}
+
+.home-pic{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+} 
+
+/*task-page*/
+
+.task-page{
+    position: relative;
+    left: 20px;
+    top: 10%;
+    width: 19vh;
+    transition: 0.4s all;
+    color: #ffffff;
+    filter: drop-shadow(5px 5px 2px #000000);
+}
+
+.task-page:hover{
+    border-bottom: blueviolet 2px solid;
+    border-radius: 4px;
+
+}
+
+.task-pic{
+    position: relative;
+    width: 100%;
+    display: block;
+
+}
+
+/*habit=page*/
+
+.habit-page {
+    position:relative;
+    left: 20px;
+    top: 10%;
+    width: 23vh;
+    transition: 0.4s all;
+    color: #ffffff;
+    filter: drop-shadow(5px 5px 2px #000000);
+}
+
+.habit-page:hover {
+    border-bottom: blueviolet 2px solid;
+    border-radius: 4px;
+
+}
+
+.habit-pic {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+/*study-page*/
+
+.study-page {
+    position: relative;
+    top: 10%;
+    left: 20px;
+    width: 24vh;
+    transition: 0.4s all;
+    color: #ffffff;
+    filter: drop-shadow(5px 5px 2px #000000);
+}
+
+.study-page:hover {
+    border-bottom: blueviolet 2px solid;
+    border-radius: 4px;
+
+}
+
+.study-pic {
+    position: relative;
+    display: block;
+    width: 100%;
+   
+}
+
+/*play-page*/
+
+.play-page {
+    position: relative;
+    left: 20px;
+    top: 10%;
+    width: 20vh;
+    transition: 0.4s all;
+    color: #ffffff;
+    filter: drop-shadow(5px 5px 2px #000000);
+}
+
+.play-page:hover {
+    border-bottom: blueviolet 2px solid;
+    border-radius: 4px;
+
+}
+
+.play-pic {
+    position: relative;
+    display: block;
+    width: 100%;
+    
+}
+
+/*creativity*/
+
+.creativity-link {
+    background: hsla(205, 91%, 41%, 0.775);
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.creativity-page {
+    position: relative;
+    left: 20px;
+    top: 10%;
+    width: 24vh;
+    color: #ffffff;
+    filter: drop-shadow(5px 5px 2px #000000);
+    
+}
+
+.creativity-page:hover {
+    transition: 0.7s all;
+    background: hsla(205, 85%, 28%, 0.775);
+    border-radius: 4px;
+}
+
+.creativity-pic {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: hsla(205, 91%, 41%, 0.775);
+    padding: 5px 0 5px 0;
+    border-radius: 4px;
+}
+
+/*settings*/
+
+.settings-page {
+    position: relative;
+    left: 20px;
+    top: 11%;
+    width: 22vh;
+    transition: 0.4s all;
+    color: #ffffff;
+    filter: drop-shadow(4px 4px 3px #000000);
+}
+
+.settings-page:hover {
+    border-bottom: blueviolet 2px solid;
+    border-radius: 4px;
+
+}
+
+.settings-pic {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-left: 4px;
+}
+
+/*logout*/
+
+#logout {
+    position: relative;
+    left: 15px;
+    top: 20%;
+    display: inline-block;
+    width: 25vh;
+    height: fit-content;
+    transition: 0.4s all;
+    padding: 0  10px 0 10px; 
+    background:  rgba(255, 255, 255, 0);
+    border: #ffffff00 2px solid;
+    color: #ffffff;
+    filter: drop-shadow(5px 5px 2px #000000);
+    padding: 5px;
+}
+
+#logout:hover {
+    background-color: #00000045;
+    border-radius: 4px;
+    transition: 0.4s all;
+}
+
+.logout-pic {
+    background-color: #00000045;
+    border-radius: 4px;
+    position: relative;
+    display: block;
+    width: 22%;
+    height: fit-content;
+    padding: 7px;
+}

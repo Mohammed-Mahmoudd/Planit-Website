@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Planit</title>
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+    </head>
+
+    <body class="container-fluid d-flex  align-items-start ">
+
+        <!-- side -->
+        <aside>
+                <div class="row d-flex mt-3">
+                    <div class="col-6 d-grid justify-content-center">
+                        <img src="./images/logo.jpg" alt="" class="img-fluid logo-side">
+                    </div>
+                    <div class="col-6 d-grid align-items-center">
+                        <h5>Plan IT</h5>
+                    </div>
+                </div>
+
+                <div class=" d-flex algn-items-center mt-4 mx-2">
+                    <p class="subtitle">Home</p>
+                </div>
+
+                <div class="home-page d-flex align-items-center ">
+                    <img src="./images/home.png" class="img-fluid home-pic">
+                    <a href="./index.html" class="home-link link">Home page</a>
+                </div>
+
+                <div class="task-page mt-2 d-flex align-items-center ">
+                    <img src="./images/Note_Edit.png" class="img-fluid task-pic">
+                    <a href="#" class="task-link link">My Task</a>
+                </div>
+
+                <div class="habit-page mt-2 d-flex align-items-center ">
+                    <img src="./images/Check_All.png" class="img-fluid habit-pic">
+                    <a href="#" class="habit-link link">Habit Trucker</a>
+                </div>
+
+                <div class="study-page mt-2 d-flex align-items-center ">
+                    <img src="./images/Book.png" class="img-fluid study-pic">
+                    <a href="#" class="study-link link">Study Planner</a>
+                </div>
+
+                <div class="play-page mt-2 d-flex align-items-center ">
+                    <img src="./images/Puzzle.png" class="img-fluid play-pic">
+                    <a href="#" class="play-link link">Play & Knowledge</a>
+                </div>
+
+                <div class="creativity-page mt-2 d-flex align-items-center ">
+                    <img src="./images/Bulb.png" class="img-fluid creativity-pic">
+                    <a href="./creativity.html" class="creativity-link link">Creativity & solver</a>
+                </div>
+
+                <div class="settings-page mt-2 d-flex align-items-center ">
+                    <img src="./images/Settings_Future.png" class="img-fluid settings-pic">
+                    <a href="#" class="settings-link link">Settings</a>
+                </div>
+
+                <button class="btn btn-dark rounded-3 ms-4 m" id="logout">
+                    <img src="./images/vector.png" class="img-fluid logout-pic">
+                    Log out
+                </button>
+          
+        </aside>
+
+        <!--  -->
+
+        <div style="width: 100%;">
+
+            <!-- header start -->
+            <header >
+                <h3 class="h1">Hello</h3>
+                
+                <div class="search_con">
+                    <img class="search_icon" src="./assets/Header/User/Search_Magnifying_Glass.png" alt="">
+                    <input type="text " class="search" placeholder="Search For Somthing...">
+
+                </div>
+                <div class="Container d-flex">
+                    <div class="theme" style="background-color: #272935;">
+                        <div class="d-flex inside" style="background-color: rgba(0, 0, 0, 0.486); ">
+                            <div>
+
+                                <img src="./assets/Header/theme/Sun.png" alt="">
+                            </div>
+                            <div>
+
+                                <img src="./assets/Header/theme/Moon.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bill">
+                        <img src="./assets/Header/User/Bell.png" alt="">
+                    </div>
+                    <div class="acount">
+                        <img src="./assets/Header/User/User_01.png" alt="">
+                    </div>
+                    <div class="dropdown ">
+                            <p class=" dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Salah
+                            </p>
+
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Iam here</a></li>
+                            </ul>
+                    </div>
+                </div>
+            </header><!-- header end -->
+            
+            <!-- Main Content -->
+            <main class="container d-flex" style="margin-top: 15px;">
+                <!-- completed start -->
+                <div class="d-flex align-items-center completed_con" style="margin-left: 25px;">
+                    <div class="first_con">
+                        <img src="./assets/Header/User/Vector 1.png" alt="">
+                        
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center ">
+                        <p class="comp">Completed <br> <span>20</span></p>
+                        
+                    </div>
+                </div><!-- completed start -->
+
+
+                <!-- in progress -->
+                <div class="d-flex align-items-center inprogress_con" style="margin-left: 25px;">
+                    <div class="second_con">
+                        <img src="./assets/Header/User/Vector.png" alt="">
+
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center ">
+                        <p class="compp">In Progress <br> <span>5</span></p>
+                        
+                    </div>
+                </div><!-- in progress/ -->
+
+
+
+
+                <!-- points -->
+                <div class="d-flex align-items-center points" style="margin-left: 25px;">
+                    <div class="third_con">
+                        <img src="./assets/Header/User/$.png" alt="">
+
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center ">
+                        <p class="comppp">Points <br> <span>$20</span></p>
+                        
+                    </div>
+                </div><!-- points -->
+            </main>
+            <!-- add here You content -->
+            <section>
+                <!-- Card One start -->
+                <div class="card1">
+                    <div class="header d-flex align-items-center">
+                        <img src="./assets/main/shape1.png" alt="">
+                        <p>Play</p>
+                    </div>
+                    <div>
+                        <img src="./assets/main/cardimg1.png" alt="">
+                        <p>| Games</p>
+                    </div>
+
+                    <div class="d-flex">
+                        <img src="./assets/main/controller.png" alt="">
+                        <div>
+                            <p>X/O</p>
+                            <p>Languathist</p>
+                            <p>Memory Game</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+<<<<<<< Updated upstream
+    </header><!-- header end -->
+    
+    <!-- Main Content -->
+    <main class="container d-flex" style="margin-top: 15px;">
+        <!-- completed start -->
+        <div class="d-flex align-items-center completed_con" style="margin-left: 25px;">
+            <div class="first_con">
+                <img src="./assets/Header/User/Vector 1.png" alt="">
+                
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center ">
+                <p class="comp">Completed <br> <span>20</span></p>
+                
+            </div>
+        </div><!-- completed start -->
+
+
+        <!-- in progress -->
+        <div class="d-flex align-items-center inprogress_con" style="margin-left: 25px;">
+            <div class="second_con">
+                <img src="./assets/Header/User/Vector.png" alt="">
+
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center ">
+                <p class="compp">In Progress <br> <span>5</span></p>
+                
+            </div>
+        </div><!-- in progress/ -->
+
+
+
+
+        <!-- points -->
+        <div class="d-flex align-items-center points" style="margin-left: 25px;">
+            <div class="third_con">
+                <img src="./assets/Header/User/$.png" alt="">
+
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center ">
+                <p class="comppp">Points <br> <span>$20</span></p>
+                
+            </div>
+        </div><!-- points -->
+    </main>
+    <!-- add here You content -->
+     <section class="d-flex">
+        <!-- Card One start -->
+        <div class="card1" >
+            <div class="header d-flex align-items-center">
+                <img class="header_icon" src="./assets/main/shape1.png" alt="">
+                <p class="header_play">Play</p>
+            </div>
+            <div class="card_middle">
+                <img class="main_img" src="./assets/main/mainimgcard1.png" class="img-fluid" alt="">
+                <p class="text-end" style="font-size: 25px; padding-right: 15px;">| Games</p>
+            </div>
+
+            <div class="d-flex justify-content-around " >
+                <img src="./assets/main/controller.png" class="img-fluid" style="width: 120px;" alt="">
+                <div>
+
+                    <a href="" style="text-decoration: none; color: white;"><p class="beautiful_p"> X/O</p></a>
+                    <a href="" style="text-decoration: none; color: white;"><p class="beautiful_p" >Languathist</p></a>
+                    <a href="" style="text-decoration: none; color: white;"><p class="beautiful_p">Memory Game</p></a>
+                </div>
+            </div>
+        </div>
+        <!-- Card two start -->
+        <div class="card2" >
+            <div class="header d-flex align-items-center justify-content-center">
+                <p class="header_play " style="text-align: center; font-size: 40px; font-weight: bold;">Let's Study</p>
+            </div>
+            <div class="card_middle">
+                <div class="w-100 d-flex justify-content-center">
+
+                    <img class="main_img2" src="./assets/main/cardimg2.png" class="img-fluid" alt="">
+                </div>
+            </div>
+
+            <div class="d-flex  justify-content-center" style="margin-top: 20px; ">
+                <div class="d-flex  gap-5 ">
+                    <div style="line-height: 0.2; padding-top: 5px;">
+                        <p>Lessons Completed</p>
+                        <div class="colorr"></div>
+                    </div>
+                    <div class="percnt_card2">
+                        <p>30%</p>
+                    </div>
+                    <div class="complete_lesson">
+                        <p style="padding-top:4px;">Complete lesson</p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex  justify-content-center" style="margin-top: 20px; ">
+                <div class="d-flex  gap-5 ">
+                    <div style="line-height: 0.2; padding-top: 5px;">
+                        <p>Lessons Completed</p>
+                        <div class="colorr"></div>
+                    </div>
+                    <div class="percnt_card2">
+                        <p>30%</p>
+                    </div>
+                    <div class="complete_lesson">
+                        <p style="padding-top:4px;">Complete lesson</p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- card two end -->
+     </section>
+</div>
+=======
+>>>>>>> Stashed changes
+
+    
+
+
+        <script src="./js/bootstrap.bundle.min.js"></script>
+        <script type="module" src="./firebase/script.js"></script>
+    </body>
+</html>
