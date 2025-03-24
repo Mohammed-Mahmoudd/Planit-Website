@@ -1,61 +1,112 @@
-function showContent(id, btn) {
-    // إخفاء كل المحتويات
-    document.querySelectorAll('.content').forEach(div => {
-        div.classList.remove('content-active');
-    });
-
-    // إظهار المحتوى المطلوب
-    document.getElementById(id).classList.add('content-active');
-
-    // إعادة تعيين لون الأزرار
-    document.querySelectorAll('.button_Ge').forEach(button => {
-        button.classList.remove('buttonGe-active');
-    });
-
-    // جعل الزر الحالي نشطًا
-    btn.classList.add('buttonGe-active');
-}
-document.querySelectorAll(".toggleSwitch").forEach(switchInput => {
-    const switchID = switchInput.getAttribute("data-id");
-
-    // تحميل الحالة من localStorage
-    if (localStorage.getItem(switchID) === "on") {
-        switchInput.checked = true;
-    }
-
-    // حفظ الحالة عند التغيير
-    switchInput.addEventListener("change", function() {
-        if (this.checked) {
-            localStorage.setItem(switchID, "on");
-        } else {
-            localStorage.setItem(switchID, "off");
-        }
-    });
+// تهيئة التطبيق
+document.addEventListener('DOMContentLoaded', function() {
+    loadSettings();
+    setupEventListeners();
 });
-document.querySelectorAll(".custom-dropdown").forEach(dropdown => {
-    const btn = dropdown.querySelector(".dropdown-btn");
-    const list = dropdown.querySelector(".dropdown-list");
-    
-    // عند الضغط على الزر، قم بتبديل القائمة النشطة
-    btn.addEventListener("click", function(event) {
-        event.stopPropagation(); // منع إغلاقها فور الضغط
-        dropdown.classList.toggle("active");
-    });
 
-    // تحديد الخيار المختار من القائمة
-    list.querySelectorAll("li").forEach(option => {
-        option.addEventListener("click", function() {
-            btn.textContent = this.textContent;
-            dropdown.classList.remove("active");
+// إعداد مستمعي الأحداث
+function setupEventListeners() {
+    // أحداث التبويبات
+    document.querySelectorAll('.tab-button').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const contentId = this.getAttribute('onclick').split("'")[1];
+            showContent(contentId, this);
         });
     });
-});
 
-// إغلاق القوائم عند النقر خارجها
-document.addEventListener("click", function(event) {
-    document.querySelectorAll(".custom-dropdown").forEach(dropdown => {
-        if (!dropdown.contains(event.target)) {
-            dropdown.classList.remove("active");
-        }
+    // أحداث القوائم المنسدلة
+    document.querySelectorAll('.dropdown-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.parentElement.classList.toggle('active');
+        });
     });
-});
+
+    // أحداث الحفظ
+    document.getElementById('saveSettings')?.addEventListener('click', saveSettings);
+    document.getElementById('saveGeneralSettings')?.addEventListener('click', saveSettings);
+}
+
+// تبديل المحتوى
+function showContent(contentId, button) {
+    document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+    
+    document.getElementById(contentId).classList.add('active');
+    button.classList.add('active');
+}
+
+// تحديد خيار في القائمة المنسدلة
+function selectOption(element) {
+    const dropdown = element.closest('.custom-dropdown');
+    const btn = dropdown.querySelector('.dropdown-btn');
+    btn.textContent = element.textContent;
+    dropdown.classList.remove('active');
+}
+
+// حفظ الإعدادات
+function saveSettings() {
+    try {
+        const settings = {
+            account: {
+                name: document.querySelector('#content2 input[placeholder="Mohamed"]').value,
+                surname: document.querySelector('#content2 input[placeholder="Hamza"]').value,
+                email: document.querySelector('#content2 input[type="email"]').value
+            },
+            general: {
+                mobileNotification: document.querySelector('#content1 .switch:nth-child(1) input').checked,
+                desktopNotification: document.querySelector('#content1 .switch:nth-child(2) input').checked,
+                gmailNotification: document.querySelector('#content1 .switch:nth-child(3) input').checked,
+                appearance: document.querySelector('#content1 .dropdown-btn').textContent.trim(),
+                language: document.querySelector('#content1 .custom-dropdown:last-child .dropdown-btn').textContent.trim()
+            }
+        };
+
+        localStorage.setItem('appSettings', JSON.stringify(settings));
+        showToast('تم حفظ الإعدادات بنجاح!');
+    } catch (error) {
+        console.error('Error saving settings:', error);
+        showToast('حدث خطأ أثناء الحفظ', true);
+    }
+}
+
+// تحميل الإعدادات
+function loadSettings() {
+    const saved = JSON.parse(localStorage.getItem('appSettings'));
+    if (saved) {
+        // تحميل إعدادات الحساب
+        if (saved.account) {
+            document.querySelector('#content2 input[placeholder="Mohamed"]').value = saved.account.name || '';
+            document.querySelector('#content2 input[placeholder="Hamza"]').value = saved.account.surname || '';
+            document.querySelector('#content2 input[type="email"]').value = saved.account.email || '';
+        }
+
+        // تحميل الإعدادات العامة
+        if (saved.general) {
+            document.querySelector('#content1 .switch:nth-child(1) input').checked = saved.general.mobileNotification || false;
+            document.querySelector('#content1 .switch:nth-child(2) input').checked = saved.general.desktopNotification || false;
+            document.querySelector('#content1 .switch:nth-child(3) input').checked = saved.general.gmailNotification || false;
+            
+            if (saved.general.appearance) {
+                document.querySelector('#content1 .dropdown-btn').textContent = saved.general.appearance;
+            }
+            
+            if (saved.general.language) {
+                document.querySelector('#content1 .custom-dropdown:last-child .dropdown-btn').textContent = saved.general.language;
+            }
+        }
+    }
+}
+
+// عرض التنبيهات
+function showToast(message, isError = false) {
+    const toast = document.createElement('div');
+    toast.className = `toast ${isError ? 'error' : 'success'}`;
+    toast.textContent = message;
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+        toast.classList.add('fade-out');
+        setTimeout(() => toast.remove(), 500);
+    }, 3000);
+}

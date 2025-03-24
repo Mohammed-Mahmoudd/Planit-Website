@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,182 +8,201 @@
     <link rel="stylesheet" href="./css/style_setting.css">
 </head>
 
-<body class="container-fluid d-flex  align-items-start ">
-
-
+<body class="container-fluid d-flex align-items-start">
     <!-- Navigation bar start -->
-    <nav  class="d-flex flex-column" style="background-color: #272935;">
-        <div class="logo_con d-flex align-items-center ">
-            <img src="assets/navigation/Logo.png" alt="">
+    <nav class="d-flex flex-column" style="background-color: #272935;">
+        <div class="logo_con d-flex align-items-center">
+            <img src="assets/navigation/Logo.png" alt="Logo">
             <h1>Planit</h1>
         </div>
         <div class="nav_main">
             <h2>Plan IT</h2>
             <div>
-                <div class="d-flex align-items-center">
-                    <img src="./assets/navigation/House_03.png" alt="">
-                    <p style="padding-top: 15px;">Home Page</p>
+                <div class="d-flex align-items-center link">
+                    <img src="./assets/navigation/House_03.png" alt="Home">
+                    <p>Home Page</p>
                 </div>
-                <div class="link d-flex align-items-center">
-                    <img src="./assets/navigation/Note_Edit.png" alt="">
-                    <p style="padding-top: 15px;">My Task</p>
+                <div class="d-flex align-items-center link">
+                    <img src="./assets/navigation/Note_Edit.png" alt="Tasks">
+                    <p>My Task</p>
                 </div>
-                <div class=" link d-flex align-items-center">
-                    <img src="./assets/navigation/Check_All.png" alt="">
-                    <p style="padding-top: 15px;">Habit Tracker</p>
+                <div class="d-flex align-items-center link">
+                    <img src="./assets/navigation/Check_All.png" alt="Habits">
+                    <p>Habit Tracker</p>
                 </div>
-                <div class=" link d-flex align-items-center">
-                    <img src="./assets/navigation/Puzzle.png" alt="">
-                    <p style="padding-top: 15px;">Study Planner</p>
+                <div class="d-flex align-items-center link">
+                    <img src="./assets/navigation/Puzzle.png" alt="Study">
+                    <p>Study Planner</p>
                 </div>
-                <div class=" link d-flex align-items-center">
-                    <img src="./assets/navigation/Bulb.png" alt="">
-                    <p style="padding-top: 15px;">Creativity & Solver</p>
+                <div class="d-flex align-items-center link">
+                    <img src="./assets/navigation/Bulb.png" alt="Ideas">
+                    <p>Creativity & Solver</p>
                 </div>
-                <div class= " link d-flex align-items-center active">
-                    <img src="./assets/navigation/Settings_Future.png" alt="">
-                    <p style="padding-top: 15px;">Setting</p>
+                <div class="d-flex align-items-center active">
+                    <img src="./assets/navigation/Settings_Future.png" alt="Settings">
+                    <p>Setting</p>
                 </div>
             </div>
-
-            
         </div>
-
-
     </nav><!-- Navigation bar End -->
-<div style="width: 100%;">
 
-    <!-- header start -->
-    <header >
-        <h3 class="h1">Hello</h3>
-        
-        <div class="search_con">
-            <img class="search_icon" src="./assets/Header/User/Search_Magnifying_Glass.png" alt="">
-            <input type="text " class="search" placeholder="Search For Somthing...">
+    <div class="main-content">
+        <!-- Header start -->
+        <header>
+            <h3 class="greeting">Hello</h3>
+            
+            <div class="search_con">
+                <img class="search_icon" src="./assets/Header/User/Search_Magnifying_Glass.png" alt="Search">
+                <input type="text" class="search" placeholder="Search For Something...">
+            </div>
 
-        </div>
-        <div class="Container d-flex">
-            <div class="theme" style="background-color: #272935;">
-                <div class="d-flex inside" style="background-color: rgba(0, 0, 0, 0.486); ">
-                    <div>
-
-                        <img src="./assets/Header/theme/Sun.png" alt="">
+            <div class="header-actions d-flex align-items-center">
+                <div class="theme-toggle" style="background-color: #272935;">
+                    <div class="d-flex theme-buttons">
+                        <img src="./assets/Header/theme/Sun.png" alt="Light">
+                        <img src="./assets/Header/theme/Moon.png" alt="Dark">
                     </div>
-                    <div>
+                </div>
+                <div class="notification-icon">
+                    <img src="./assets/Header/User/Bell.png" alt="Notifications">
+                </div>
+                <div class="user-avatar">
+                    <img src="./assets/Header/User/User_01.png" alt="User">
+                </div>
+                <div class="dropdown">
+                    <p class="dropdown-toggle" data-bs-toggle="dropdown">Salah</p>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header><!-- Header end -->
 
-                        <img src="./assets/Header/theme/Moon.png" alt="">
+        <!-- Tab buttons -->
+        <div class="tab-buttons text-center">
+            <button onclick="showContent('content1', this)" class="tab-button active">General</button>
+            <button onclick="showContent('content2', this)" class="tab-button">Account</button>
+        </div>
+
+        <!-- General Settings Content -->
+        <div id="content1" class="content active">
+            <h4 class="section-title">Notification</h4>
+            <hr class="divider">
+            
+            <div class="setting-item">
+                <div>
+                    <h5>Mobile notification</h5>
+                    <p class="description">Press to enable or disable mobile notifications.</p>
+                </div>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-item">
+                <div>
+                    <h5>Desktop notification</h5>
+                    <p class="description">Press to enable or disable desktop notifications.</p>
+                </div>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-item">
+                <div>
+                    <h5>Gmail notification</h5>
+                    <p class="description">Press to enable or disable Gmail notifications.</p>
+                </div>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <h4 class="section-title mt-5">My Setting</h4>
+            <hr class="divider">
+
+            <div class="setting-item">
+                <div>
+                    <h5>Appearance</h5>
+                    <p class="description">Press to toggle between Dark Mode and Light Mode.</p>
+                </div>
+                <div class="custom-dropdown">
+                    <button class="dropdown-btn">Dark mode</button>
+                    <ul class="dropdown-list">
+                        <li onclick="selectOption(this)">Dark mode</li>
+                        <li onclick="selectOption(this)">Light mode</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="setting-item">
+                <div>
+                    <h5>Language</h5>
+                    <p class="description">Press to switch between languages.</p>
+                </div>
+                <div class="custom-dropdown">
+                    <button class="dropdown-btn">English</button>
+                    <ul class="dropdown-list">
+                        <li onclick="selectOption(this)">English</li>
+                        <li onclick="selectOption(this)">Arabic</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-end mt-4">
+                <button id="saveGeneralSettings" class="save-btn">
+                    <img src="./assets/icons/Check_Big.svg" alt="Save">
+                    Save Settings
+                </button>
+            </div>
+        </div>
+
+        <!-- Account Settings Content -->
+        <div id="content2" class="content">
+            <div class="account-settings">
+                <div class="profile-form">
+                    <h4>Profile</h4>
+                    <p class="description">Set your account details</p>
+                    
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" placeholder="Mohamed" class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Surname</label>
+                        <input type="text" placeholder="Hamza" class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="Mohamedhamza@gmail.com" class="form-input">
+                    </div>
+                    <button id="saveSettings" class="save-btn">
+                        <img src="./assets/icons/Check_Big.svg" alt="Save">
+                        Save Changes
+                    </button>
+                </div>
+                
+                <div class="profile-picture">
+                    <img src="./assets/Header/User/photo2.jpeg" class="profile-image" alt="Profile">
+                    <div class="picture-actions">
+                        <button class="edit-btn">Edit photo</button>
+                        <button class="delete-btn">
+                            <img src="./assets/icons/Trash_Empty.svg" alt="Delete">
+                        </button>
                     </div>
                 </div>
             </div>
-            <div class="bill">
-                <img src="./assets/Header/User/Bell.png" alt="">
-            </div>
-            <div class="acount">
-                <img src="./assets/Header/User/User_01.png" alt="">
-            </div>
-            <div class="dropdown ">
-                    <p class=" dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        Salah
-                    </p>
-
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Iam here</a></li>
-                    </ul>
-            </div>
-        </div>
-    </header><!-- header end -->
-    <div class="button_GA text-center">
-        <button onclick="showContent('content1' , this)" class="button_Ge buttonGe-active"><b>General</b></button>
-        <button onclick="showContent('content2' , this)" class="button_Ge"><b>Account</b></button>
-    </div>
-    <div id="content1" class="content content-active">
-        <!-- 📌 Notification Section -->
-        <h4 class="topic">Notification</h4>
-        <p class="line">_______________________________________________________________________________________________________________________________________________________________________________________</p>
-    
-        <!-- Mobile Notification -->
-        <div class="d-flex justify-content-between align-items-center py-3">
-            <div>
-                <h5 class="topic">Mobile notification</h5>
-                <p class="word">Press to enable or disable mobile notifications.</p>
-            </div>
-            <label class="switch">
-                <input type="checkbox" class="toggleSwitch" data-id="switch1">
-                <span class="slider"></span>
-            </label>
-        </div>
-    
-        <!-- Desktop Notification -->
-        <div class="d-flex justify-content-between align-items-center py-3">
-            <div>
-                <h5 class="topic">Desktop notification</h5>
-                <p class="word">Press to enable or disable desktop notifications.</p>
-            </div>
-            <label class="switch">
-                <input type="checkbox" class="toggleSwitch" data-id="switch2">
-                <span class="slider"></span>
-            </label>
-        </div>
-    
-        <!-- Gmail Notification -->
-        <div class="d-flex justify-content-between align-items-center py-3">
-            <div>
-                <h5 class="topic">Gmail notification</h5>
-                <p class="word">Press to enable or disable Gmail notifications.</p>
-            </div>
-            <label class="switch">
-                <input type="checkbox" class="toggleSwitch" data-id="switch3">
-                <span class="slider"></span>
-            </label>
-        </div>
-    
-        <!-- 📌 My Setting Section -->
-        <h4 class="topic mt-4">My Setting</h4>
-        <p class="line">_______________________________________________________________________________________________________________________________________________________________________________________</p>
-    
-        <!-- Appearance -->
-        <div class="d-flex justify-content-between align-items-center py-3">
-            <div>
-                <h5 class="topic">Appearance</h5>
-                <p class="word">Press to toggle between Dark Mode and Light Mode.</p>
-            </div>
-            <div class="custom-dropdown">
-                <button class="dropdown-btn">Dark mode</button>
-                <ul class="dropdown-list">
-                    <li onclick="selectOption(this)">Dark mode</li>
-                    <li onclick="selectOption(this)">Light mode</li>
-                </ul>
-            </div>
-        </div>
-    
-        <!-- Language -->
-        <div class="d-flex justify-content-between align-items-center  py-3">
-            <div>
-                <h5 class="topic">Language</h5>
-                <p class="word">Press to switch between languages.</p>
-            </div>
-            <div class="custom-dropdown">
-                <button class="dropdown-btn">English</button>
-                <ul class="dropdown-list">
-                    <li onclick="selectOption(this)">English</li>
-                    <li onclick="selectOption(this)">Arabic</li>
-                </ul>
-            </div>
         </div>
     </div>
-    
-    <div id="content2" class="content">
-        <h1>here content 2</h1>
-    </div>
-    <!-- add here You content -->
-</div>
-
-    
-
 
     <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="/js/setting.js"></script>
+    <script src="./js/setting.js"></script>
 </body>
 </html>
