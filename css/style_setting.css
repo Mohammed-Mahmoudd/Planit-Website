@@ -65,7 +65,7 @@ nav {
 
 .active {
     background-color: none;
-    color: none;
+    color: white;
     font-weight: 600;
 }
 
