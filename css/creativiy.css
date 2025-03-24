@@ -298,7 +298,6 @@ body{
 
 .main {
     width: 170vh;
-    position: sticky;
     margin-left: 190px;
     border-bottom: #00000062 2px solid;
     margin-top: 10px;
@@ -393,9 +392,131 @@ body{
     left: 23%;
     margin-top: 6%;
     width: fit-content;
-    height: 120vh;
+    height: fit-content;
+    padding-bottom: 20px;
+    margin-bottom: 10%;
    
 
+}
+
+/*animation p-1*/
+
+.anime{
+    width: fit-content;
+    height: 10%;
+    background-image: linear-gradient(to right, #00000079,#008cf07e,transparent),url(../images/Bulb.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+    box-shadow: #00000061 -3px 3px 7px;
+    filter: blur(6px);
+}
+
+.anime-1{
+    position: absolute;
+    top: -30px;
+    left: 30px;
+    animation: anime1 20s infinite forwards;
+
+}
+@keyframes anime1{
+    0%{
+        transform: rotatez(0deg);
+        translate: 0px -30px;
+    }
+    100%{
+        transform: rotatez(360deg);
+        translate: 0px 400px;
+    }
+}
+
+/*anime-2 p-2*/
+
+.anime-2 {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    animation: anime2 20s infinite forwards;
+
+}
+
+@keyframes anime2 {
+    0% {
+        transform: rotateZ(0deg);
+        translate: 0px -30px;
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+        translate: 0px 400px;
+    }
+}
+
+/*anime-3 p-2*/
+
+.anime-3 {
+    position: absolute;
+    top: -30px;
+    left: 20%;
+    animation: anime3 15s infinite forwards;
+
+}
+
+@keyframes anime3 {
+    0% {
+        transform: rotateZ(0deg);
+        translate: 0px -30px;
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+        translate: 0px 400px;
+    }
+}
+
+/*anime-4 p-2*/
+
+.anime-4 {
+    position: absolute;
+    top: -30px;
+    left: 70%;
+    animation: anime4 10s infinite forwards;
+
+}
+
+@keyframes anime4 {
+    0% {
+        transform: rotateZ( 0deg);
+        translate: 0px -30px;
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+        translate: 0px 400px;
+    }
+}
+
+/*anime-5 p-2*/
+
+.anime-5 {
+    position: absolute;
+    top: -30px;
+    left: 88%;
+    animation: anime5 12s infinite forwards;
+
+}
+
+@keyframes anime5 {
+    0% {
+        transform: rotateZ(0deg);
+        translate: 0px -30px;
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+        translate: 0px 400px;
+    }
 }
 
 /* problem-1 */
@@ -413,7 +534,7 @@ body{
     box-shadow: #00000061 -3px 3px 7px;
 }
 #problem-1:hover{
-    height: 380px;
+    height: 390px;
 }
 
     /*solve-btn*/
@@ -432,7 +553,7 @@ body{
     border-radius: 30px;
     padding: 10px;
     padding-right: 20px;
-    padding-left: 20px;
+    padding-left: 30px;
 }
 
 #problem-1 .start{
@@ -453,6 +574,20 @@ body{
     }
 }
 
+    /*points*/
+
+.points{
+    width: fit-content;
+    height: fit-content;
+    background: #313344;
+    padding: 12px;
+    border-radius: 15px;
+    /* box-shadow: #00000061 -3px 3px 7px; */
+    filter: drop-shadow(3px 3px 10px #000000);
+    position: relative;
+    left: 26.5%;
+}
+
 /* problem-2 */
 
 #problem-2 {
@@ -470,7 +605,7 @@ body{
 }
 
 #problem-2:hover {
-    height: 380px;
+    height: 390px;
 }
 
 /*solve-btn*/
@@ -490,7 +625,7 @@ body{
     border-radius: 30px;
     padding: 10px;
     padding-right: 20px;
-    padding-left: 20px;
+    padding-left: 30px;
 }
 
 #problem-2 .start {
@@ -513,6 +648,21 @@ body{
         transform: translate(-5px);
     }
 }
+
+/*points*/
+
+.points {
+    width: fit-content;
+    height: fit-content;
+    background: #313344;
+    padding: 12px;
+    border-radius: 15px;
+    /* box-shadow: #00000061 -3px 3px 7px; */
+    filter: drop-shadow(3px 3px 10px #000000);
+    position: relative;
+    left: 26.5%;
+}
+
 /* problem-3 */
 
 #problem-3 {
@@ -530,7 +680,7 @@ body{
 }
 
 #problem-3:hover {
-    height: 380px;
+    height: 390px;
 }
 
 /*solve-btn*/
@@ -550,7 +700,7 @@ body{
     border-radius: 30px;
     padding: 10px;
     padding-right: 20px;
-    padding-left: 20px;
+    padding-left: 30px;
 }
 
 #problem-3 .start {
@@ -574,6 +724,20 @@ body{
     }
 }
 
+/*points*/
+
+.points {
+    width: fit-content;
+    height: fit-content;
+    background: #313344;
+    padding: 12px;
+    border-radius: 15px;
+    /* box-shadow: #00000061 -3px 3px 7px; */
+    filter: drop-shadow(3px 3px 10px #000000);
+    position: relative;
+    left: 26.5%;
+}
+
 /* problem-4 */
 
 #problem-4 {
@@ -591,7 +755,7 @@ body{
 }
 
 #problem-4:hover {
-    height: 380px;
+    height: 390px;
 }
 
 /*solve-btn*/
@@ -611,7 +775,7 @@ body{
     border-radius: 30px;
     padding: 10px;
     padding-right: 20px;
-    padding-left: 20px;
+    padding-left: 30px;
 }
 
 #problem-4 .start {
@@ -633,4 +797,18 @@ body{
     100% {
         transform: translate(-5px);
     }
+}
+
+/*points*/
+
+.points {
+    width: fit-content;
+    height: fit-content;
+    background: #313344;
+    padding: 12px;
+    border-radius: 15px;
+    /* box-shadow: #00000061 -3px 3px 7px; */
+    filter: drop-shadow(3px 3px 10px #000000);
+    position: relative;
+    left: 26.5%;
 }
