@@ -18,7 +18,7 @@ body{
     left: 0;
     top: 0;
     height: 97vh;
-    width: 92px;
+    width: 85px;
     background: #272935;
     transition: 0.5s;
     z-index: 99;
@@ -47,8 +47,8 @@ body{
 .logo-side{
     position: absolute;
     display: inline-block;
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: fit-content;
     border-radius: 50px;
 }
 
@@ -67,6 +67,7 @@ body{
     color: hsl(0, 0%, 50%);
     position: relative;
     top: 66px;
+    font-size: 12px;
 }
 
 /*home-page*/
@@ -79,7 +80,7 @@ body{
     color: #ffffff;
     transition: 0.5s;
     font-size: 15px;
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
 
@@ -404,7 +405,7 @@ body{
 .anime{
     width: fit-content;
     height: 10%;
-    background-image: linear-gradient(to right, #00000079,#008cf07e,transparent),url(../images/Bulb.png);
+    background-image: linear-gradient(to right, #00000079,#008cf05a,transparent),url(../images/Bulb.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -415,7 +416,7 @@ body{
 
 .anime-1{
     position: absolute;
-    top: -30px;
+    top: -20px;
     left: 30px;
     animation: anime1 20s infinite forwards;
 
@@ -423,7 +424,7 @@ body{
 @keyframes anime1{
     0%{
         transform: rotatez(0deg);
-        translate: 0px -30px;
+        translate: 0px -20px;
     }
     100%{
         transform: rotatez(360deg);
@@ -435,7 +436,7 @@ body{
 
 .anime-2 {
     position: absolute;
-    top: -30px;
+    top: -20px;
     left: 50%;
     animation: anime2 20s infinite forwards;
 
@@ -444,7 +445,7 @@ body{
 @keyframes anime2 {
     0% {
         transform: rotateZ(0deg);
-        translate: 0px -30px;
+        translate: 0px -20px;
     }
 
     100% {
@@ -457,7 +458,7 @@ body{
 
 .anime-3 {
     position: absolute;
-    top: -30px;
+    top: -20px;
     left: 20%;
     animation: anime3 15s infinite forwards;
 
@@ -466,7 +467,7 @@ body{
 @keyframes anime3 {
     0% {
         transform: rotateZ(0deg);
-        translate: 0px -30px;
+        translate: 0px -20px;
     }
 
     100% {
@@ -479,7 +480,7 @@ body{
 
 .anime-4 {
     position: absolute;
-    top: -30px;
+    top: -20px;
     left: 70%;
     animation: anime4 10s infinite forwards;
 
@@ -488,7 +489,7 @@ body{
 @keyframes anime4 {
     0% {
         transform: rotateZ( 0deg);
-        translate: 0px -30px;
+        translate: 0px -20px;
     }
 
     100% {
@@ -588,6 +589,12 @@ body{
     left: 26.5%;
 }
 
+/*animation p-2*/
+
+#p-2{
+    background: rgba(137, 43, 226, 0.455);
+}
+
 /* problem-2 */
 
 #problem-2 {
@@ -663,6 +670,12 @@ body{
     left: 26.5%;
 }
 
+/*animation p-2*/
+
+#p-3 {
+    background: rgba(194, 224, 22, 0.455);
+}
+
 /* problem-3 */
 
 #problem-3 {
@@ -736,6 +749,12 @@ body{
     filter: drop-shadow(3px 3px 10px #000000);
     position: relative;
     left: 26.5%;
+}
+
+/*animation p-2*/
+
+#p-4 {
+    background: rgba(95, 56, 224, 0.455);
 }
 
 /* problem-4 */
