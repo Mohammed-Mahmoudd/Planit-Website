@@ -33,7 +33,9 @@ body{
 .aside:hover{
     width: 190px;
     transition: 0.5s;
-    border-radius: 25px;
+    border-radius: 25px 0px 0px 25px;
+    z-index: 3;
+    box-shadow: 0 0 0px;
 }
 
 
@@ -359,8 +361,9 @@ body{
 
 .main .account{
     width: 100%;
-    margin-left: 5%;
+    margin-left: 4%;
     margin-top: 20px;
+    cursor: pointer;
     
 }
 
@@ -371,7 +374,6 @@ body{
 }
 
 .main .account .name{
-    margin-left: 10px;
     height: 20px;
     width: 100%;
     color: #ffffff;
