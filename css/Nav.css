@@ -352,7 +352,7 @@ body {
 }
 
 /* لما الشاشة تكون صغيرة، يظهر الزر وتختفي القائمة افتراضيًا */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1230px) {
     .toggle-nav-btn {
         display: block;
     }
@@ -449,24 +449,23 @@ body {
     padding: 5px;
 }
 
-/* التصميم الأساسي للشاشات الكبيرة */
 .search-mode-container {
     display: flex;
-    flex-direction: row; /* الوضع الطبيعي يكون جنب بعض */
+    flex-direction: row;
     align-items: center;
     gap: 10px;
 }
 
-/* جعل العناصر تقرب من بعضها مع تصغير الشاشة */
+
 @media screen and (max-width: 1200px) {
     .main {
         max-width: 95%;
     }
     .main h2 {
-        font-size: 1.4rem; /* تصغير العنوان شوية */
+        font-size: 1.4rem; 
     }
     .search-mode-container {
-        gap: 5px; /* تقليل المسافات بين البحث والوضع */
+        gap: 5px; 
     }
 }
 
@@ -513,7 +512,6 @@ body {
         border-radius: 10px;
     }
 
-    /* جعل البحث وأيقونات السمة جنب بعض */
     .search-mode-container {
         display: flex;
         justify-content: center;
@@ -523,13 +521,11 @@ body {
         margin: 10px auto;
     }
 
-    /* تصغير حجم البحث لتناسب الشاشة */
     .main .search {
-        width: 70%; /* بدلاً من max-width */
-        min-width: 180px; /* ضمان عدم تصغيره أكثر من اللازم */
+        width: 70%; 
+        min-width: 180px; 
     }
 
-    /* تحسين أيقونات الوضع */
     .main .mode {
         padding: 5px;
         border-radius: 30px;
@@ -538,8 +534,6 @@ body {
     .mode img {
         width: 22px;
     }
-
-    /* توسيط الحساب */
     .main .account {
         margin-top: 10px;
         justify-content: center;
@@ -558,12 +552,10 @@ body {
     grid-template-rows: repeat(4, auto);
     grid-gap: 50px;
     position: relative;
-    left: 18%;
+    margin-left: 10%; /* بدلاً من left */
     margin-top: 3%;
-    width: fit-content;
+    max-width: 80%; /* يسمح له بأخذ مساحة أكبر */
     height: fit-content;
     padding-bottom: 20px;
     margin-bottom: 10%;
-
-
 }
