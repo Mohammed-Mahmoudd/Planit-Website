@@ -362,7 +362,6 @@ input:checked + .slider:before {
 
 /* جعل التصميم ريسبونسيف */
 @media screen and (max-width: 1200px) {
-    
     h4 {
         margin-bottom: 3px;
         font-size: 16px; /* تصغير العنوان */
