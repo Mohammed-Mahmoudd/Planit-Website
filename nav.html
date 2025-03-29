@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/Nav.css">
+    </head>
+    <body>
+
+        <!-- side -->
+
+        <!-- زر فتح وإغلاق القائمة -->
+            <button id="toggle-nav" class="toggle-nav-btn">☰</button>
+
+            <aside id="sidebar">
+                <div class="aside">
+                    <div class="row d-flex mt-3">
+                        <div class="col-6 d-grid justify-content-center">
+                            <img src="./images/logo.jpg" alt="" class="img-fluid logo-side">
+                        </div>
+                        <div class="col-6 d-grid align-items-center">
+                            <h5>Plan IT</h5>
+                        </div>
+                    </div>
+                    <div class=" d-flex algn-items-center mt-4 mx-2 subtitle">
+                        <p>Creativity</p>
+                    </div>
+                    <div class="home-page d-flex align-items-center justify-content-between">
+                        <a href="./index.html">
+                            <img src="./images/home.png" class="img-fluid home-pic">
+                        </a>
+                        <a href="./index.html" class="home-link link">Home page</a>
+                    </div>
+                    <div class="task-page mt-2 d-flex align-items-center justify-content-between">
+                        <a href="#">
+                            <img src="./images/Note_Edit.png" class="img-fluid task-pic">
+                        </a>
+                        <a href="#" class="task-link link">My Task</a>
+                    </div>
+                    <div class="habit-page mt-2 d-flex align-items-center justify-content-between">
+                        <a href="#">
+                            <img src="./images/Check_All.png" class="img-fluid habit-pic">
+                        </a>
+                        <a href="#" class="habit-link link">Habit Trucker</a>
+                    </div>
+                    <div class="study-page mt-2 d-flex align-items-center justify-content-between">
+                        <a href="#">
+                            <img src="./images/Book.png" class="img-fluid study-pic">
+                        </a>
+                        <a href="#" class="study-link link">Study Planner</a>
+                    </div>
+                    <div class="play-page mt-2 d-flex align-items-center justify-content-between">
+                        <a href="#">
+                            <img src="./images/Puzzle.png" class="img-fluid play-pic">
+                        </a>
+                        <a href="#" class="play-link link">Play</a>
+                    </div>
+                    <div class="creativity-page mt-2 d-flex align-items-center justify-content-between">
+                        <a href="./creativity.html">
+                            <img src="./images/Bulb.png" class="img-fluid creativity-pic">
+                        </a>
+                        <a href="./creativity.html" class="creativity-link link">Creativity</a>
+                    </div>
+                    <div class="settings-page mt-2 d-flex align-items-center justify-content-between">
+                        <a href="./Setting.html">
+                            <img src="./images/Settings_Future.png" class="img-fluid settings-pic">
+                        </a>
+                        <a href="./Setting.html" class="settings-link link">Settings</a>
+                    </div>
+                    <button class=" d-flex rounded-3 justify-content-between align-content-center" id="logout">
+                        <img src="./images/vector.png" class="img-fluid logout-pic">
+                            Log out
+                    </button>
+                </div>
+            </aside>
+
+
+    <!-- main -->
+    <main>
+        <div class="main d-flex justify-content-between align-items-center">
+            <h2>Creativity</h2>
+    
+            <!-- البحث + وضع السمة داخل div واحد -->
+            <div class="search-mode-container">
+                <input type="search" name="search" class="search" placeholder="Search something..."> 
+                <div class="mode">
+                    <img src="./images/Sun-b.png" alt="light" class="sun">
+                    <img src="./images/moon.png" alt="dark" class="moon">
+                </div>
+            </div>
+    
+            <div class="account d-flex align-items-center">
+                <img src="./images/notification.png" alt="account" class="notification">
+                <div class="dropdown">
+                    <div class="dropdown-toggle name d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="./images/User_01.png" alt="user-image" class="user-image">
+                        <p class="m-3">John Doe</p>
+                    </div>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="./Setting.html">Setting</a></li>
+                        <li><a class="dropdown-item" href="./Setting.html">Profile</a></li>
+                        <li><a class="dropdown-item" href="./Setting.html">Log out</a></li>
+                        <li><a class="dropdown-item" href="./Setting.html">Points</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+        <!-- content -->
+         <script src="./js/nav.js"></script>
+        <script src="./js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
