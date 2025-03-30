@@ -1,0 +1,561 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #20202A;
+    color: #ffffff;
+}
+
+/*side*/
+
+.aside {
+    position: fixed;
+    /* position: relative; */
+    left: 0;
+    top: 0;
+    height: 97vh;
+    width: 85px;
+    background: #272935 ;
+    transition: 0.5s;
+    z-index: 99;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 7px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    padding: 10px;
+}
+
+.aside:hover {
+    background: linear-gradient(to right, #272935, #20202a);
+    width: 190px;
+    transition: 0.5s;
+    border-radius: 25px 0px 0px 25px;
+    z-index: 3;
+    box-shadow: 0 0 0px;
+    border-left: 1px solid rgba(255, 255, 255, 0.243);
+}
+
+
+/*logo-side*/
+
+.row {
+    position: absolute;
+    width: 100%;
+}
+
+.logo-side {
+    position: absolute;
+    display: inline-block;
+    width: 60px;
+    height: fit-content;
+    border-radius: 50px;
+}
+
+.aside h5 {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    display: inline;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/*subtitle*/
+
+.subtitle {
+    color: hsl(0, 0%, 50%);
+    position: relative;
+    top: 66px;
+    font-size: 12px;
+}
+
+/*home-page*/
+
+.link {
+    position: relative;
+    display: inline-block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.5s;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+
+.home-page {
+    position: relative;
+    left: 20px;
+    top: 10%;
+    width: 23vh;
+    display: inline-block;
+    transition: 0.4s all;
+    color: #ffffff;
+    filter: drop-shadow(5px 5px 2px #000000);
+}
+
+.home-page:hover {
+    border-bottom: #008CF0 2px solid;
+    border-radius: 4px;
+}
+
+.home-pic {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+}
+
+/*task-page*/
+
+.task-page {
+    position: relative;
+    left: 20px;
+    top: 10%;
+    width: 21vh;
+    transition: 0.4s all;
+    color: #ffffff;
+    filter: drop-shadow(5px 5px 2px #000000);
+}
+
+.task-page:hover {
+    border-bottom: #008CF0 2px solid;
+    border-radius: 4px;
+
+}
+
+.task-pic {
+    position: relative;
+    width: 100%;
+    display: block;
+
+}
+
+/*habit=page*/
+
+.habit-page {
+    position: relative;
+    left: 20px;
+    top: 10%;
+    width: 23vh;
+    transition: 0.4s all;
+    color: #ffffff;
+    filter: drop-shadow(5px 5px 2px #000000);
+}
+
+.habit-page:hover {
+    border-bottom: #008CF0 2px solid;
+    border-radius: 4px;
+
+}
+
+.habit-pic {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+/*study-page*/
+
+.study-page {
+    position: relative;
+    top: 10%;
+    left: 20px;
+    width: 24vh;
+    transition: 0.4s all;
+    color: #ffffff;
+    filter: drop-shadow(5px 5px 2px #000000);
+}
+
+.study-page:hover {
+    border-bottom: #3c4247 2px solid;
+    border-radius: 4px;
+
+}
+
+.study-pic {
+    position: relative;
+    display: block;
+    width: 100%;
+
+}
+
+/*play-page*/
+
+.play-page {
+    position: relative;
+    left: 20px;
+    top: 10%;
+    width: 20vh;
+    transition: 0.4s all;
+    color: #ffffff;
+    filter: drop-shadow(5px 5px 2px #000000);
+}
+
+.play-page:hover {
+    border-bottom: #008CF0 2px solid;
+    border-radius: 4px;
+
+}
+
+.play-pic {
+    position: relative;
+    display: block;
+    width: 100%;
+
+}
+
+/*creativity*/
+
+/* .creativity-link {
+    border-bottom: #008CF0 2px solid;
+    border-radius: 10px;
+} */
+
+.creativity-page {
+    position: relative;
+    left: 20px;
+    top: 10%;
+    width: 22vh;
+    color: #ffffff;
+    filter: drop-shadow(5px 5px 2px #000000);
+
+}
+
+.creativity-page:hover {
+    border-bottom: #008CF0 2px solid;
+    border-radius: 4px;
+}
+
+.activeside {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-bottom: 5px;
+    border-bottom: #008CF0 2px solid;
+    border-radius: 10px;
+}
+
+/*settings*/
+
+.settings-page {
+    position: relative;
+    left: 20px;
+    top: 11%;
+    width: 21vh;
+    transition: 0.4s all;
+    color: #ffffff;
+    filter: drop-shadow(4px 4px 3px #000000);
+}
+
+.settings-page:hover {
+    border-bottom: #008CF0 2px solid;
+    border-radius: 4px;
+
+}
+
+.settings-pic {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-left: 4px;
+}
+
+/*logout*/
+
+#logout {
+    position: relative;
+    left: 10px;
+    top: 20%;
+    display: inline-block;
+    width: 25vh;
+    height: fit-content;
+    transition: 0.4s all;
+    padding: 0 10px 0 10px;
+    background: rgba(255, 255, 255, 0);
+    border: #ffffff00 2px solid;
+    color: #ffffff;
+    filter: drop-shadow(5px 5px 2px #000000);
+    padding: 5px;
+}
+
+#logout:hover {
+    background-color: #00000045;
+    border-radius: 4px;
+    transition: 0.4s all;
+}
+
+.logout-pic {
+    background-color: #00000045;
+    border-radius: 4px;
+    position: relative;
+    display: block;
+    width: 22%;
+    height: fit-content;
+    padding: 7px;
+}
+/* زر فتح القائمة */
+.toggle-nav-btn {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: #008CF0;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 100;
+    transition: 0.3s;
+    display: none; /* إخفاء الزر افتراضيًا */
+}
+
+.toggle-nav-btn:hover {
+    background: #006bb3;
+}
+
+/* القائمة الجانبية */
+.aside {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 97vh;
+    width: 85px;
+    background: #272935;
+    transition: 0.5s;
+    z-index: 99;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 7px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    padding: 10px;
+}
+
+/* عند تحريك الماوس عليها */
+.aside:hover {
+    background: linear-gradient(to right, #272935, #20202a);
+    width: 190px;
+    transition: 0.5s;
+    border-radius: 25px 0px 0px 25px;
+    z-index: 3;
+    box-shadow: 0 0 0px;
+    border-left: 1px solid rgba(255, 255, 255, 0.243);
+}
+
+/* لما الشاشة تكون صغيرة، يظهر الزر وتختفي القائمة افتراضيًا */
+@media screen and (max-width: 1230px) {
+    .toggle-nav-btn {
+        display: block;
+    }
+    
+    .aside {
+        left: -190px;
+        transition: left 0.5s ease-in-out;
+    }
+
+    /* لما القائمة تفتح */
+    .aside.active {
+        left: 0;
+    }
+}
+
+/* Main Container */
+.main {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.38);
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Heading */
+.main h2 {
+    padding-left: 10px;
+    white-space: nowrap;
+}
+
+/* Search Input */
+.main .search {
+    height: 40px;
+    border: none;
+    border-radius: 30px;
+    background: #2f2f39;
+    color: #ffffff;
+    padding: 10px;
+    flex: 1;
+    max-width: 250px;
+    margin: 10px;
+}
+
+/* Mode Switch */
+.main .mode {
+    border-radius: 30px;
+    background: #272935;
+    padding: 7px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.mode .sun {
+    width: 30px;
+    margin-right: 15px;
+    background: rgba(0, 0, 0, 0.71);
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.mode .moon {
+    width: 25px;
+}
+
+/* Account Section */
+.main .account {
+    display: flex;
+    align-items: center;
+}
+
+.main .account .notification {
+    border-radius: 50%;
+    padding: 7px;
+    background-color: #ffffff;
+    margin-right: 15px;
+}
+
+.main .account .name {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.name .user-image {
+    background: #008CF0;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.search-mode-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .main {
+        max-width: 95%;
+    }
+    .main h2 {
+        font-size: 1.4rem; 
+    }
+    .search-mode-container {
+        gap: 5px; 
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .main {
+        max-width: 1200px;
+    }
+
+    .search-mode-container {
+        width: 100%;
+        max-width: 400px;
+        justify-content: center;
+        gap: 3px;
+    }
+
+    .main .search {
+        width: 70%;
+        min-width: 180px;
+    }
+
+    .mode img {
+        width: 22px;
+    }
+
+    .main .account {
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .main h2 {
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 992px) {
+    .main {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        max-width: 90%;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+
+    .search-mode-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 400px;
+        margin: 10px auto;
+    }
+
+    .main .search {
+        width: 70%; 
+        min-width: 180px; 
+    }
+
+    .main .mode {
+        padding: 5px;
+        border-radius: 30px;
+    }
+
+    .mode img {
+        width: 22px;
+    }
+    .main .account {
+        margin-top: 10px;
+        justify-content: center;
+    }
+    .main h2 {
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+
+}
+
+/*content*/
+
+#content {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 50px;
+    position: relative;
+    margin-left: 10%; /* بدلاً من left */
+    margin-top: 3%;
+    max-width: 80%; /* يسمح له بأخذ مساحة أكبر */
+    height: fit-content;
+    padding-bottom: 20px;
+    margin-bottom: 10%;
+}
