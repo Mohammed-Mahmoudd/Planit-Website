@@ -396,7 +396,8 @@ body {
     grid-template-rows: repeat(4, auto);
     grid-gap: 50px;
     position: relative;
-    left: 18%;
+    /* left: 18%; */
+    padding-left: 18%;
     margin-top: 3%;
     width: fit-content;
     height: fit-content;
@@ -417,11 +418,11 @@ body {
 }
 
 .solution-place textarea{
-    background: #2c2e37;
+    background: #272935;
     display: flex;
     padding: 5px;
     color:white;
-    border: 1px solid rgba(24, 99, 238, 0.254);
+    border: 2px solid rgba(24, 99, 238, 0.254);
     border-radius: 10px;
 }
 
@@ -451,6 +452,31 @@ textarea::placeholder{
     font-size: 11px;
     cursor: pointer;
     margin-left: 14px;
-
 }
 
+/*contact-information*/
+
+.contact input{
+    display: flex;
+    width: 350px;
+    padding: 15px;
+    border: 1px solid hsl(272, 88%, 46%, 60%);
+    background: hsla(0, 0%, 0%, 70%);
+    border-radius: 14px;
+    
+}
+
+.contact input::placeholder{
+    color: hsl(0, 0%, 50%);
+    text-align: center;
+}
+
+.contact button{
+    color: hsl(0, 0%, 50%);
+    padding: 15px;
+    margin-top: 50px;
+    justify-self: center;
+    background: hsla(0, 0%, 0%, 70%);
+    border: 1px solid hsl(272, 88%, 46%, 60%);
+    border-radius: 14px;
+}
