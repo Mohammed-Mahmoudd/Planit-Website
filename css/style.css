@@ -32,11 +32,12 @@ body {
 }
 
 .aside:hover {
+    background: linear-gradient(to right, #272935, #20202a);
     width: 190px;
     transition: 0.5s;
     border-radius: 25px 0px 0px 25px;
-    z-index: 3;
-    box-shadow: 0 0 0px ;
+    box-shadow: 0 0 0px;
+    border-left: 1px solid rgba(255, 255, 255, 0.243);
 }
 
 
@@ -388,7 +389,7 @@ body {
     grid-template-rows: auto;
     grid-gap: 50px;
     position: relative;
-    left: 12%;
+    left: 15%;
     margin-top: 2.5%;
     width: fit-content;
     height: fit-content;
