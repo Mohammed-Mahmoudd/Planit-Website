@@ -413,7 +413,7 @@ body {
     background: #272935;
     border-radius: 15px;
     padding: 15px;
-    width: 100%;
+    width: fit-content;
     height: fit-content;
 }
 
@@ -456,6 +456,10 @@ textarea::placeholder{
 
 /*contact-information*/
 
+.contact{
+    width: 93%;
+}
+
 .contact input{
     display: flex;
     width: 350px;
@@ -479,4 +483,20 @@ textarea::placeholder{
     background: hsla(0, 0%, 0%, 70%);
     border: 1px solid hsl(272, 88%, 46%, 60%);
     border-radius: 14px;
+}
+
+.hint{
+    border: 1px solid hsla(272, 88%, 46%, 0.368);
+    border-radius: 14px;
+    padding: 8px;
+    color: #8283DF;
+    margin-top: 40px;
+    width:90%;
+    font-size: 26px;
+    font-family: Inter;
+    text-align: center;
+}
+
+ .hint p{
+    width: 100%;
 }
