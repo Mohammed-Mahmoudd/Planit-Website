@@ -12,380 +12,11 @@ body{
 
 /*side*/
 
-.aside{
-    position: fixed;
-    /* position: relative; */
-    left: 0;
-    top: 0;
-    height: 97vh;
-    width: 85px;
-    background: #272935;
-    transition: 0.5s;
-    z-index: 99;
-    border-radius: 20px;
-    margin-top: 10px;
-    margin-left: 7px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    color: #ffffff;
-    padding: 10px;
-}
-.aside:hover{
-    background: linear-gradient(to right, #272935, #20202a);
-    width: 190px;
-    transition: 0.5s;
-    border-radius: 25px 0px 0px 25px;
-    z-index: 3;
-    box-shadow: 0 0 0px;
-    border-left: 1px solid rgba(255, 255, 255, 0.243);
-}
-
-
-/*logo-side*/
-
-.row{
-    position: absolute;
-    width: 100%;
-}
-
-.logo-side{
-    position: absolute;
-    display: inline-block;
-    width: 60px;
-    height: fit-content;
-    border-radius: 50px;
-}
-
-.aside h5{
-    position: absolute;
-    top: 20px;
-    left: 100px;
-    display: inline;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-/*subtitle*/
-
-.subtitle{
-    color: hsl(0, 0%, 50%);
-    position: relative;
-    top: 66px;
-    font-size: 12px;
-}
-
-/*home-page*/
-
-.link {
-    position: relative;
-    display: inline-block;
-    padding: 10px 0;
-    text-decoration: none;
-    color: #ffffff;
-    transition: 0.5s;
-    font-size: 15px;
-    margin-left: 20px;
-}
-
-
-.home-page{
-    position: relative;
-    left: 20px;
-    top: 10%;
-    width: 23vh;
-    display: inline-block;
-    transition: 0.4s all;
-    color: #ffffff;
-    filter: drop-shadow(5px 5px 2px #000000);
-}
-
-.home-page:hover{
-    border-bottom: #008CF0 2px solid;
-    border-radius: 4px;
-}
-
-.home-pic{
-    position: relative;
-    width: 100%;
-    height: fit-content;
-} 
-
-/*task-page*/
-
-.task-page{
-    position: relative;
-    left: 20px;
-    top: 10%;
-    width: 21vh;
-    transition: 0.4s all;
-    color: #ffffff;
-    filter: drop-shadow(5px 5px 2px #000000);
-}
-
-.task-page:hover{
-    border-bottom: #008CF0 2px solid;
-    border-radius: 4px;
-
-}
-
-.task-pic{
-    position: relative;
-    width: 100%;
-    display: block;
-
-}
-
-/*habit=page*/
-
-.habit-page {
-    position:relative;
-    left: 20px;
-    top: 10%;
-    width: 23vh;
-    transition: 0.4s all;
-    color: #ffffff;
-    filter: drop-shadow(5px 5px 2px #000000);
-}
-
-.habit-page:hover {
-    border-bottom: #008CF0 2px solid;
-    border-radius: 4px;
-
-}
-
-.habit-pic {
-    position: relative;
-    display: block;
-    width: 100%;
-}
-
-/*study-page*/
-
-.study-page {
-    position: relative;
-    top: 10%;
-    left: 20px;
-    width: 24vh;
-    transition: 0.4s all;
-    color: #ffffff;
-    filter: drop-shadow(5px 5px 2px #000000);
-}
-
-.study-page:hover {
-    border-bottom: #008CF0 2px solid;
-    border-radius: 4px;
-
-}
-
-.study-pic {
-    position: relative;
-    display: block;
-    width: 100%;
-   
-}
-
-/*play-page*/
-
-.play-page {
-    position: relative;
-    left: 20px;
-    top: 10%;
-    width: 20vh;
-    transition: 0.4s all;
-    color: #ffffff;
-    filter: drop-shadow(5px 5px 2px #000000);
-}
-
-.play-page:hover {
-    border-bottom: #008CF0 2px solid;
-    border-radius: 4px;
-
-}
-
-.play-pic {
-    position: relative;
-    display: block;
-    width: 100%;
-    
-}
-
-/*creativity*/
-
-/* .creativity-link {
-    border-bottom: #008CF0 2px solid;
-    border-radius: 10px;
-} */
-
-.creativity-page {
-    position: relative;
-    left: 20px;
-    top: 10%;
-    width: 22vh;
-    color: #ffffff;
-    filter: drop-shadow(5px 5px 2px #000000);
-    
-}
-
-.creativity-page:hover {
-    border-bottom: #008CF0 2px solid;
-    border-radius: 4px;
-}
-
-.creativity-pic {
-    position: relative;
-    display: block;
-    width: 100%;
-    padding-bottom: 5px;
-    border-bottom: #008CF0 2px solid;
-    border-radius: 10px;
-}
-
-/*settings*/
-
-.settings-page {
-    position: relative;
-    left: 20px;
-    top: 11%;
-    width: 21vh;
-    transition: 0.4s all;
-    color: #ffffff;
-    filter: drop-shadow(4px 4px 3px #000000);
-}
-
-.settings-page:hover {
-    border-bottom: #008CF0 2px solid;
-    border-radius: 4px;
-
-}
-
-.settings-pic {
-    position: relative;
-    display: block;
-    width: 100%;
-    padding-left: 4px;
-}
-
-/*logout*/
-
-#logout {
-    position: relative;
-    left: 10px;
-    top: 20%;
-    display: inline-block;
-    width: 25vh;
-    height: fit-content;
-    transition: 0.4s all;
-    padding: 0  10px 0 10px; 
-    background:  rgba(255, 255, 255, 0);
-    border: #ffffff00 2px solid;
-    color: #ffffff;
-    filter: drop-shadow(5px 5px 2px #000000);
-    padding: 5px;
-}
-
-#logout:hover {
-    background-color: #00000045;
-    border-radius: 4px;
-    transition: 0.4s all;
-}
-
-.logout-pic {
-    background-color: #00000045;
-    border-radius: 4px;
-    position: relative;
-    display: block;
-    width: 22%;
-    height: fit-content;
-    padding: 7px;
-}
+/*روح لصفحة nav*/
 
 /*main*/
 
-.main {
-    width: 170vh;
-    margin-left: 190px;
-    border-bottom: #00000062 2px solid;
-    margin-top: 10px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    border-radius: 10px;
-}
- 
-.main h2{
-    padding-top: 20px;
-    padding-left:10px;
-}
-
-    /*main-search*/
-
-.main .search{
-    height: 40px;
-    border: 0px;
-    border-radius: 30px;
-    background: #2f2f39;
-    color: #ffffff;
-    margin-top: 20px;
-    margin-left: 10%;
-    padding: 10px;
-    width: 100%;
-
-}
-
-    /*main-mode*/
-
-.main .mode{
-    border-radius: 30px;
-    margin-left: 20%;
-    background: #272935;
-    padding: 7px;
-    color: #ffffff;
-    margin-top: 20px;
-    cursor: pointer;
-    /* width: 100px; */
-}
-
-.mode .sun{
-    width: 30px;
-    height: fit-content;
-    margin-right: 30px;
-    background: #000000b5;
-    padding: 5px;
-    border-radius: 50%;
-}
-
-.mode .moon{
-    width: 25px;
-    height: fit-content;
-}
-
-
-    /*main-account*/
-
-.main .account{
-    width: 100%;
-    margin-left: 4%;
-    margin-top: 20px;
-    cursor: pointer;
-    
-}
-
-.main .account .notification{
-    border-radius: 50%;
-    padding: 7px;
-    background-color: #ffffff;
-}
-
-.main .account .name{
-    height: 20px;
-    width: 100%;
-    color: #ffffff;
-}
-
-.name .user-image{
-    background: #008CF0;
-    border-radius: 50%;
-    padding: 5px;
-}
+/*روح لصفحة nav*/
 
 /*content*/
 
@@ -395,13 +26,10 @@ body{
     grid-gap: 50px;
     position: relative;
     left: 23%;
-    margin-top: 6%;
     width: fit-content;
     height: fit-content;
     padding-bottom: 20px;
     margin-bottom: 10%;
-   
-
 }
 
 /*animation p-1*/
@@ -834,4 +462,677 @@ body{
     filter: drop-shadow(3px 3px 10px #000000);
     position: relative;
     left: 26.5%;
+}
+
+
+/*responsive 1054px*/
+
+@media (max-width: 1054px) and (min-width: 973px) {
+    #content{
+        position: relative;
+        left: 17%;
+    }
+}
+
+
+@media (max-width: 973px) and (min-width: 946px) {
+    #content {
+        position: relative;
+        left: 15%;
+    }
+}
+
+
+@media (max-width: 946px) and (min-width: 810px) {
+    #content {
+        position: relative;
+        left: 19.5%;
+    }
+
+    #problem-1 {
+        width: 650px;
+        height: 265px;
+    } 
+
+    #problem-1:hover{
+    height: 445px;
+    }
+
+   #problem-2 {
+        width: 650px;
+        height: 265px;
+    } 
+
+    #problem-2.anime-1{
+    height: 445px;
+    }
+
+   #problem-3 {
+        width: 650px;
+        height: 265px;
+    } 
+
+    #problem-3:hover{
+    height: 445px;
+    }
+
+   #problem-4 {
+        width: 650px;
+        height: 265px;
+    } 
+
+    #problem-4:hover{
+    height: 445px;
+    }
+
+   .points {
+        width: fit-content;
+        height: fit-content;
+        background: #313344;
+        padding: 12px;
+        border-radius: 15px;
+        /* box-shadow: #00000061 -3px 3px 7px; */
+        filter: drop-shadow(3px 3px 10px #000000);
+        position: relative;
+        left: 20.5%;
+    }
+}
+
+
+@media (max-width: 810px) and (min-width: 768px) {
+    #content {
+        position: relative;
+        left: 16.5%;
+    }
+
+    #problem-1 {
+        width: 650px;
+        height: 265px;
+    } 
+
+    #problem-1:hover{
+    height: 445px;
+    }
+
+   #problem-2 {
+        width: 650px;
+        height: 265px;
+    } 
+
+    #problem-1:hover{
+    height: 445px;
+    }
+
+   #problem-3 {
+        width: 650px;
+        height: 265px;
+    } 
+
+    #problem-1:hover{
+    height: 445px;
+    }
+
+   #problem-4 {
+        width: 650px;
+        height: 265px;
+    } 
+
+    #problem-1:hover{
+    height: 445px;
+    }
+
+   .points {
+        width: fit-content;
+        height: fit-content;
+        background: #313344;
+        padding: 12px;
+        border-radius: 15px;
+        /* box-shadow: #00000061 -3px 3px 7px; */
+        filter: drop-shadow(3px 3px 10px #000000);
+        position: relative;
+        left: 20.5%;
+    }
+}
+
+
+
+@media (max-width: 768px) and (min-width: 752px) {
+    #content {
+        position: relative; 
+        left: 6%;
+        display: grid;   
+        
+    }
+
+    #problem-1{
+        width: 700px;
+        height: 265px;
+    }
+
+    #problem-1:hover{
+    height: 433px;
+    }
+
+    #problem-2 {
+        width: 700px;
+        height: 265px;
+    }
+
+    #problem-2:hover {
+        height: 433px;
+    }
+
+    #problem-3 {
+        width: 700px;
+        height: 265px;
+    }
+
+    #problem-3:hover {
+        height: 433px;
+    }
+
+    #problem-4 {
+        width: 700px;
+        height: 265px;
+    }
+
+    #problem-4:hover {
+        height: 433px;
+    }
+
+    .points {
+        width: fit-content;
+        height: fit-content;
+        background: #313344;
+        padding: 12px;
+        border-radius: 15px;
+        /* box-shadow: #00000061 -3px 3px 7px; */
+        filter: drop-shadow(3px 3px 10px #000000);
+        position: relative;
+        left: 22.5%;
+    }
+}
+
+
+@media (max-width: 752px) and (min-width: 660px) {
+    #content {
+        position: relative;
+        left: 8%;
+        display: grid;
+
+    }
+
+    #problem-1 {
+        width: 600px;
+        height: 265px;
+    }
+
+    #problem-1:hover {
+        height: 453px;
+    }
+
+    #problem-2 {
+        width: 600px;
+        height: 265px;
+    }
+
+    #problem-2:hover {
+        height: 453px;
+    }
+
+    #problem-3 {
+        width: 600px;
+        height: 265px;
+    }
+
+    #problem-3:hover {
+        height: 453px;
+    }
+
+    #problem-4 {
+        width: 600px;
+        height: 265px;
+    }
+
+    #problem-4:hover {
+        height: 453px;
+    }
+
+    .points {
+        width: fit-content;
+        height: fit-content;
+        background: #313344;
+        padding: 12px;
+        border-radius: 15px;
+        /* box-shadow: #00000061 -3px 3px 7px; */
+        filter: drop-shadow(3px 3px 10px #000000);
+        position: relative;
+        left: 17.5%;
+    }
+}
+
+
+@media (max-width: 660px) and (min-width: 610px) {
+    #content {
+        position: relative;
+        left: 7%;
+        display: grid;
+
+    }
+
+    #problem-1 {
+        width: 565px;
+        height: 265px;
+    }
+
+    #problem-1:hover {
+        height: 453px;
+    }
+
+    #problem-2 {
+        width: 565px;
+        height: 265px;
+    }
+
+    #problem-2:hover {
+        height: 453px;
+    }
+
+    #problem-3 {
+        width: 565px;
+        height: 265px;
+    }
+
+    #problem-3:hover {
+        height: 453px;
+    }
+
+    #problem-4 {
+        width: 565px;
+        height: 265px;
+    }
+
+    #problem-4:hover {
+        height: 453px;
+    }
+
+    .points {
+        width: fit-content;
+        height: fit-content;
+        background: #313344;
+        padding: 12px;
+        border-radius: 15px;
+        /* box-shadow: #00000061 -3px 3px 7px; */
+        filter: drop-shadow(3px 3px 10px #000000);
+        position: relative;
+        left: 15.5%;
+    }
+}
+
+
+@media (max-width: 610px) and (min-width: 524px) {
+    #content {
+        position: relative;
+        left: 9%;
+        display: grid;
+
+    }
+
+    #problem-1 {
+        width: 470px;
+        height: 278px;
+    }
+
+    #problem-1:hover {
+        height: 492px;
+    }
+
+    #problem-2 {
+        width: 470px;
+        height: 278px;
+    }
+
+    #problem-2:hover {
+        height: 492px;
+    }
+
+    #problem-3 {
+        width: 470px;
+        height: 278px;
+    }
+
+    #problem-3:hover {
+        height: 492px;
+    }
+
+    #problem-4 {
+        width: 470px;
+        height: 278px;
+    }
+
+    #problem-4:hover {
+        height: 492px;
+    }
+
+    .earn {
+        width: 150px;
+        font-size: 12px;
+    }
+
+    .solve {
+        width: fit-content;
+        font-size: 13px;
+    }
+
+    .points {
+        width: 30حء;
+        height: fit-content;
+        background: #313344;
+        padding: 9px;
+        border-radius: 11px;
+        /* box-shadow: #00000061 -3px 3px 7px; */
+        filter: drop-shadow(3px 3px 10px #000000);
+        position: relative;
+        left: 12.5%;
+    }
+}
+
+
+@media (max-width: 524px) and (min-width: 468px) {
+    #content {
+        position: relative;
+        left: 6.5%;
+
+    }
+
+    #problem-1 {
+        width: 430px;
+        height: 285px;
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+
+    #problem-1:hover {
+        height: 520px;
+    }
+
+    #problem-2 {
+        width: 430px;
+        height: 285px;
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+
+    #problem-2:hover {
+        height: 520px;
+    }
+
+    #problem-3 {
+        width: 430px;
+        height: 285px;
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+
+    #problem-3:hover {
+        height: 520px;
+    }
+
+    #problem-4 {
+        width: 430px;
+        height: 285px;
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+
+    #problem-4:hover {
+        height: 520px;
+    }
+
+    .earn {
+        width: 150px;
+        font-size: 12px;
+    }
+
+    .solve {
+        width: fit-content;
+        font-size: 12px;
+    }
+
+    .points {
+        width: fit-content;
+        height: fit-content;
+        background: #313344;
+        padding: 12px;
+        border-radius: 15px;
+        /* box-shadow: #00000061 -3px 3px 7px; */
+        filter: drop-shadow(3px 3px 10px #000000);
+        position: relative;
+        left: 12.5%;
+    }
+}
+
+
+@media (max-width: 468px) and (min-width: 439px) {
+    #content {
+        position: relative;
+        left: 6.5%;
+
+    }
+
+    #problem-1 {
+        width: 400px;
+        height: 285px;
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+
+    #problem-1:hover{
+    height: 535px;
+    }
+
+    #problem-2 {
+        width: 400px;
+        height: 285px;
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+
+    #problem-2:hover{
+    height: 535px;
+    }
+
+    #problem-3 {
+        width: 400px;
+        height: 285px;
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+
+    #problem-3:hover{
+    height: 535px;
+    }
+
+    #problem-4 {
+        width: 400px;
+        height: 285px;
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+
+    #problem-4:hover{
+    height: 535px;
+    }
+
+    .earn{
+        width: 150px;
+        font-size: 12px;
+    }
+
+    .solve{
+        width: fit-content;
+        font-size: 13px;
+    }
+
+    .points {
+        width: fit-content;
+        height: fit-content;
+        background: #313344;
+        padding: 12px;
+        border-radius: 15px;
+        /* box-shadow: #00000061 -3px 3px 7px; */
+        filter: drop-shadow(3px 3px 10px #000000);
+        position: relative;
+        left: 8.5%;
+    }
+}
+
+
+@media (max-width: 439px) and (min-width: 320px) {
+    #content {
+        position: relative;
+        left: 7.5%;
+
+    }
+
+    #problem-1 {
+        width: 350px;
+        height: 285px;
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+
+    #problem-1:hover {
+        height: 560px;
+    }
+
+    #problem-2 {
+        width: 350px;
+        height: 285px;
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+
+    #problem-2:hover {
+        height: 560px;
+    }
+
+    #problem-3 {
+        width: 350px;
+        height: 285px;
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+
+    #problem-3:hover {
+        height: 560px;
+    }
+
+    #problem-4 {
+        width: 350px;
+        height: 285px;
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+
+    #problem-4:hover {
+        height: 560px;
+    }
+
+    .earn {
+        width: 150px;
+        font-size: 10px;
+    }
+
+    .solve {
+        width: fit-content;
+        font-size: 10px;
+    }
+
+    .points {
+        width: fit-content;
+        height: fit-content;
+        background: #313344;
+        padding: 12px;
+        border-radius: 15px;
+        /* box-shadow: #00000061 -3px 3px 7px; */
+        filter: drop-shadow(3px 3px 10px #000000);
+        position: relative;
+        left: 8.5%;
+    }
+}  
+
+@media (max-width: 320px) {
+     #content {
+        position: relative;
+        left: 6.5%;
+
+    }
+
+    #problem-1 {
+        width: 310px;
+        height: 285px;
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+
+    #problem-1:hover {
+        height: 589px;
+    }
+
+    #problem-2 {
+        width: 310px;
+        height: 285px;
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+
+    #problem-2:hover {
+        height: 589px;
+    }
+
+    #problem-3 {
+        width: 310px;
+        height: 285px;
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+
+    #problem-3:hover {
+        height: 589px;
+    }
+
+    #problem-4 {
+        width: 310px;
+        height: 285px;
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+
+    #problem-4:hover {
+        height: 589px;
+    }
+
+    .earn {
+        width: 150px;
+        font-size: 9px;
+    }
+
+    .solve {
+        width: fit-content;
+        font-size: 9px;
+    }
+
+    .points {
+        width: 30px;
+        height: fit-content;
+        background: #313344;
+        padding: 9px;
+        border-radius: 9px;
+        /* box-shadow: #00000061 -3px 3px 7px; */
+        filter: drop-shadow(3px 3px 10px #000000);
+        position: relative;
+        left: 8.5%;
+    }
+
 }

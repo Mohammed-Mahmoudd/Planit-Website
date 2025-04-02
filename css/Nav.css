@@ -48,6 +48,7 @@ body {
     border-radius: 50%;
     object-fit: cover;
     transition: all 0.3s ease;
+    margin-left: 6px;
 }
 
 .logo-section h5 {
@@ -97,8 +98,9 @@ body {
 }
 
 .nav-icon {
-    width: 24px;
-    height: 24px;
+    margin-left: 10px;
+    width: 20px;
+    height: fit-content;
     transition: all 0.3s ease;
 }
 
@@ -143,7 +145,7 @@ body {
 
 /* Sidebar Hover Effect */
 .sidebar:hover {
-    width: 220px;
+    width: 205px;
     border-radius: 25px 0 0 25px;
     border-left: 1px solid rgba(255, 255, 255, 0.243);
 }
@@ -159,7 +161,7 @@ body {
     margin-left: 100px;
     padding: 20px;
     transition: margin-left 0.5s ease;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 
 .main-header {
@@ -168,7 +170,9 @@ body {
     align-items: center;
     padding: 20px 0;
     margin-bottom: 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: #0000008d 2px solid;
+    border-radius: 10px;
+    padding-right: 10px;
 }
 
 .title-section {
@@ -254,6 +258,9 @@ body {
 
 .moon {
     display: none;
+    background: #272935;
+    padding: 1px;
+    border-radius: 10px;
 }
 
 .notification-icon {
@@ -270,8 +277,11 @@ body {
 }
 
 .user-avatar {
-    width: 36px;
-    height: 36px;
+    background: #008CF0;
+    border-radius: 50%;
+    padding: 5px;
+    width: 34px;
+    height: fit-content;
     border-radius: 50%;
     object-fit: cover;
 }
