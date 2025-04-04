@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plan IT - Creativity</title>
+    <title>Plan IT - Task</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/Nav.css">
@@ -19,7 +19,7 @@
             </div>
             
             <div class="subtitle">
-                <p>Creativity</p>
+                <p>Task</p>
             </div>
             
             <nav class="nav-links">
@@ -72,7 +72,7 @@
             <!-- زر التوجيه بجانب العنوان -->
             <div class="title-section">
                 <button id="toggle-nav" class="toggle-nav-btn">☰</button>
-                <h2 class="page-title">Creativity</h2>
+                <h2 class="page-title">Task</h2>
             </div>
             
             <div class="header-controls">
@@ -151,6 +151,18 @@
             </div>
         </div>
     </main>
+        <!-- Custom Prompt Modal -->
+        <div id="custom-prompt" class="custom-prompt" style="display: none;">
+            <div class="prompt-content">
+                <h5 id="prompt-title"></h5>
+                <input type="text" id="prompt-input">
+                <div id="prompt-error" class="error-message"></div>
+                <div class="prompt-buttons">
+                    <button id="prompt-cancel" class="task-btn btn-secondary">Cancel</button>
+                    <button id="prompt-confirm" class="task-btn btn-primary">Confirm</button>
+                </div>
+            </div>
+        </div>
 
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="js/nav.js"></script>
