@@ -14,341 +14,327 @@
         <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
     </head>
 
-    <body class="d-flex align-content-center">
+    <body>
 
         <!-- side -->
-        
-        <aside id="sidebar" class="sidebar">
-            <div class="aside-content">
-                <div class="logo-section">
-                    <img src="images/logo.jpg" alt="Plan IT Logo" class="logo-img">
-                    <h5>Plan IT</h5>
-                </div>
-                
-                <div class="">
-                    <p style="color: hsl(0, 0%, 50%);
-                    font-size: 12px;
-                    margin-bottom: 20px;
-                    padding-left: 10px;">Setting</p>
-                </div>
-                
-                <nav class="nav-links">
-                    <a href="./index.html" class="nav-link">
-                        <img src="./images/home.png" class="nav-icon">
-                        <span class="nav-text">Home page</span>
-                    </a>
-                    
-                    <a href="#" class="nav-link">
-                        <img src="./images/Note_Edit.png" class="nav-icon">
-                        <span class="nav-text">My Task</span>
-                    </a>
-                    
-                    <a href="#" class="nav-link">
-                        <img src="./images/Check_All.png" class="nav-icon">
-                        <span class="nav-text">Habit Trucker</span>
-                    </a>
-                    
-                    <a href="#" class="nav-link">
-                        <img src="./images/Book.png" class="nav-icon">
-                        <span class="nav-text">Study Planner</span>
-                    </a>
-                    
-                    <a href="#" class="nav-link">
-                        <img src="./images/Puzzle.png" class="nav-icon">
-                        <span class="nav-text">Play</span>
-                    </a>
-                    
-                    <a href="./Idea submission/creativity.html" class="nav-link ">
-                        <img src="./images/Bulb.png" class="nav-icon">
-                        <span class="nav-text">Creativity</span>
-                    </a>
-                    
-                    <a href="./Setting.html" class="nav-link active">
-                        <img src="./images/Settings_Future.png" class="nav-icon">
-                        <span class="nav-text">Settings</span>
-                    </a>
-                </nav>
-                
-                <button class="logout-btn">
-                    <img src="./images/vector.png" class="logout-icon">
-                    <span class="logout-text">Log out</span>
-                </button>
-            </div>
-        </aside>
 
+            <aside id="sidebar" class="sidebar">
+                <div class="aside-content">
+                    <div class="logo-section">
+                        <img src="images/logo.jpg" alt="Plan IT Logo" class="logo-img">
+                        <h5>Plan IT</h5>
+                    </div>
 
-        <!-- 
-        
-                <nav class="" style="position: relative;">
-            <div class="header d-flex align-items-center" >
-                <img src="./assets/navigation/Logo.png" alt="">
-                <h3 class="mt-3 ms-2"></h3>
-            </div>
-            <div class="mt-4">
-                <p class="mb-4 " style="font-size: 10px; color: rgba(255, 255, 255, 0.301); font-weight: bold ; letter-spacing: 1.5px;">PlanIt</p>
-                <a href="./index.html" class="d-flex align-items-center active link_">
-                    <img src="./assets/navigation/House_03.png" alt="">
-                    <p></p>
-                </a>
-                <a href="./task.html" class="d-flex align-items-center link_">
-                    <img src="./assets/navigation/Note_Edit.png" alt="">
-                    <p></p>
-                </a>
-                <a href="" class="d-flex align-items-center link_">
-                    <img src="./assets/navigation/Check_All.png" alt="">
-                    <p></p>
-                </a>
-                <a href="./Chill&Play.html" class="d-flex align-items-center link_">
-                    <img src="./assets/navigation/Puzzle.png" alt="">
-                    <p></p>
-                </a>
-                <a href="./Idea submission/creativity.html" class="d-flex align-items-center link_">
-                    <img src="./assets/navigation/Bulb.png" alt="">
-                    <p></p>
-                </a>
-                <a href="./Setting.html" class="d-flex align-items-center link_">
-                    <img src="./assets/navigation/Settings_Future.png" alt="">
-                    <p></p>
-                </a>
-                
-            </div>
-            <a href="./Setting.html" style="position: absolute; bottom: 20px;" class="d-flex align-items-center logOut">
-                <img src="./images/Log_Out.png" alt="">
-                <p></p>
-            </a>
-        </nav>
-        
-        -->
+                    <div class="subtitle">
+                        <p>Home</p>
+                    </div>
+
+                    <nav class="nav-links">
+                        <a href="./index.html" class="nav-link active">
+                            <img src="./images/home.png" class="nav-icon">
+                            <span class="nav-text">Home page</span>
+                        </a>
+
+                        <a href="#" class="nav-link">
+                            <img src="./images/Note_Edit.png" class="nav-icon">
+                            <span class="nav-text">My Task</span>
+                        </a>
+
+                        <a href="./habit-trucker.html" class="nav-link">
+                            <img src="./images/Check_All.png" class="nav-icon">
+                            <span class="nav-text">Habit Trucker</span>
+                        </a>
+
+                        <a href="./study-planner.html" class="nav-link">
+                            <img src="./images/Book.png" class="nav-icon">
+                            <span class="nav-text">Study Planner</span>
+                        </a>
+
+                        <a href="./play.html" class="nav-link">
+                            <img src="./images/Puzzle.png" class="nav-icon">
+                            <span class="nav-text">Play</span>
+                        </a>
+
+                        <a href="./Idea submission/creativity.html" class="nav-link">
+                            <img src="./images/Bulb.png" class="nav-icon">
+                            <span class="nav-text">Creativity</span>
+                        </a>
+
+                        <a href="./Setting.html" class="nav-link">
+                            <img src="./images/Settings_Future.png" class="nav-icon">
+                            <span class="nav-text">Settings</span>
+                        </a>
+                    </nav>
+
+                    <button class="logout-btn">
+                        <img src="./images/vector.png" class="logout-icon">
+                        <span class="logout-text">Log out</span>
+                    </button>
+                </div>
+
+            </aside>
+
         <!-- header start -->
          
         <!-- main -->
-        <div class="d-flex flex-column w-100" style="margin-left: 125px;">
 
-        
-        <main>
-            <div class="main d-flex justify-content-between align-items-center">
-                <h2>Home</h2>
-                <input type="search" name="search" class="search" placeholder="Search something..."> 
-                <div class="mode d-flex justify-content-between">
-                    <img src="./images/Sun-b.png" alt="light" class="sun">
-                    <img src="./images/moon.png" alt="dark" class="moon">
-                </div>
-                <div class="account d-flex justify-content-around align-items-center">
-                    <img src="./images/notification.png" alt="account" class="notification">
-                    <div class="dropdown ">
-                            <div class="dropdown-toggle name d-flex  align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="./images/User_01.png" alt="user-image" class="user-image">
-                                <p class="m-3">John Doe</p>
+            <main class="main-content">
+
+                <header class="main-header">
+                    <!-- زر التوجيه بجانب العنوان -->
+                    <div class="title-section">
+                        <button id="toggle-nav" class="toggle-nav-btn">☰</button>
+                        <h2 class="page-title">Plan IT home</h2>
+                    </div>
+
+                    <div class="header-controls">
+                        <div class="search-container">
+                            <input type="search" name="search" class="search-input" placeholder="Search...">
+                            <img src="./assets\Header\User\Search_Magnifying_Glass.png" class="search-icon" alt="Search">
+                        </div>
+
+                        <div class="user-actions">
+                            <div class="mode-toggle">
+                                <img src="./images/Sun-b.png" alt="light mode" class="mode-icon sun">
+                                <img src="./images/moon.png" alt="dark mode" class="mode-icon moon">
                             </div>
 
-                            <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="./Setting.html">Setting</a></li>
-                                <li><a class="dropdown-item" href="./Setting.html">Profile</a></li>
-                                <li><a class="dropdown-item" href="./Setting.html">Log out</a></li>
-                                <li><a class="dropdown-item" href="./Setting.html">points</a></li>
-                            </ul>
+
+                            <div class="dropdown">
+                                <div class="user-profile dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="./images/User_01.png" alt="user profile" class="user-avatar">
+                                    <span class="user-name">John Doe</span>
+                                </div>
+                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="./Setting.html">Setting</a></li>
+                                    <li><a class="dropdown-item" href="./Setting.html">Profile</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="./Setting.html">Points</a></li>
+                                    <li><a class="dropdown-item" href="./Setting.html">Log out</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </main>
+                </header>
+            </main>
         
         <!-- Content -->
-         <div class="d-flex align-items-start">
+         
+        <div class="d-flex align-items-start">
 
-        <div class="row d-flex align-content-center container-fluid" id="content">
+            <div class="row d-flex align-content-center container-fluid" id="content">
 
-            <div class="col-lg-7 d-grid justify-content-start">
+                <div class="col-lg-7 d-grid justify-content-start">
 
-                <!-- progress & point -->
+                        <!-- progress & point -->
 
-                <div class="d-flex align-content-center">
+                    <div class="d-flex align-content-center">
 
-                    <div class="d-flex align-items-center" id="completed">
-                        <img src="./assets/Header/User/Vector 1.png" alt="completed" class="completed-pic">
-                        <div class="d-grid completed-task">
-                            <i><span>Completed</span></i>
-                            <span>20</span>
-                        </div>
-                    </div>   
-
-                    <div class="d-flex align-items-center" id="progress">
-                        <img src="./assets/Header/User/Vector.png" alt="progress" class="progress-pic">
-                        <div class="d-grid progress-task">
-                            <i><span>In progress</span></i>
-                            <span>5</span>
-                        </div>
-                    </div> 
-
-                    <div class="d-flex align-items-center" id="point">
-                        <img src="./assets/Header/User/$.png" alt="progress" class="point-pic">
-                        <div class="d-grid point-task">
-                            <i><span>points</span></i>
-                            <span>$ 20</span>
-                        </div>
-                    </div> 
-
-                </div>
-
-                <!-- pages -->
-
-                <div class="d-grid">
-                    
-                    <div class="row">
-
-                        <div class="col-7">
-                            
-                            <div class="d-flex">
-
-                                <!-- play -->
-                                <div id="play">
-    
-                                    <div class="d-flex align-items-center play">
-                                        <img src="./images/Rectangle 41.png" alt="play" class="Play-pic">
-                                        <h4 class="mx-2">Play</h4>
-                                    </div>
-                                    
-                                    <img src="./images/pol (2).png" alt="" class="shape1">
-                                    <img src="./images/pol (1).png" alt="" class="shape2">
-                                    <img src="./images/pol (3).png" alt="" class="shape3">
-    
-                                    <img src="./assets/main/cardimg1.png" alt="logo" class="d-block m-auto img-fluid">
-                                    <h5 dir="ltr">|Games</h5>
-        
-                                    <div class="d-flex text-center">
-                                        <img src="./assets/main/controller.png" alt="Games">
-                                        <div class="control">
-                                            <button class="bu-1">
-                                                X / O
-                                            </button>
-                                            <button class="bu-2">
-                                                Linguist
-                                            </button>
-                                        </div>
-                                    </div>
-    
-                                </div>
-    
-                                <!-- study -->
-                                <div id="study">
-    
-                                    <div class="d-flex align-items-center justify-content-center play">
-                                        <h4 class="mx-2 text-center">Let`s study</h4>
-                                    </div>
-                                    
-                                    <div class="shapes">
-                                        <img src="./images/Polygon 23.png" alt="" class="shape1">
-                                        <img src="./images/Polygon 24.png" alt="" class="shape2">
-                                        <img src="./images/Polygon 25.png" alt="" class="shape3">
-                                    </div>
-    
-                                    <img src="./images/1f49cb48ea8d550b1491cb13f30dc9b6 3.png" alt="logo" class="d-block logo">
-    
-                                    <div class="d-grid lessons">
-                                        <div class="d-flex justify-content-between align-items-center lesson">
-                                            <p class="my-auto">lessons Completed</p>
-                                            <button class="bu-1">Complete lessons</button>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center course">
-                                            <p class="my-auto">tasks Completed</p>
-                                            <button class="bu-2">Complete tasks</button>
-                                        </div>
-                                    </div>
-    
-                                </div>
-
+                        <div class="d-flex align-items-center" id="completed">
+                            <img src="./assets/Header/User/Vector 1.png" alt="completed" class="completed-pic">
+                            <div class="d-grid completed-task">
+                                <i><span>Completed</span></i>
+                                <span>20</span>
                             </div>
+                        </div>   
 
-                             
-                            <!-- creativity -->
+                        <div class="d-flex align-items-center" id="progress">
+                            <img src="./assets/Header/User/Vector.png" alt="progress" class="progress-pic">
+                            <div class="d-grid progress-task">
+                                <i><span>In progress</span></i>
+                                <span>5</span>
+                            </div>
+                        </div> 
 
-                            <div class="col-7">
-                            
-                                
-                                <div class="d-grid" id="creativity">
-                                    <img src="./images/Ellipse 1090.png" alt="shape" class="shape1">
-                                    <img src="./images/Ellipse 1094.png" alt="shape" class="shape2">
+                        <div class="d-flex align-items-center" id="point">
+                            <img src="./assets/Header/User/$.png" alt="progress" class="point-pic">
+                            <div class="d-grid point-task">
+                                <i><span>points</span></i>
+                                <span>$ 20</span>
+                            </div>
+                        </div> 
 
-                                    <img src="./images/Polygon 26.png" alt="shape" class="shape1-2">
-                                    <img src="./images/Polygon 27.png" alt="shape" class="shape2-2">
-                                
-                                    <div class="d-flex align-items-center justify-content-center creativity-head">
-                                        <h4 class="mx-2 text-center">Creativity</h4>
+                    </div>
+
+
+                    <!-- pages -->
+
+                    <div class="d-grid">
+
+                        <div class="row">
+
+                            <div class="col-7 d-grid justify-content-start">
+
+                                <div class="d-flex">
+
+                                    <!-- play -->
+                                    <div id="play">
+                                    
+                                        <div class="d-flex align-items-center play">
+                                            <img src="./images/Rectangle 41.png" alt="play" class="Play-pic">
+                                            <h4 class="mx-2">Play</h4>
+                                        </div>
+
+                                        <img src="./images/pol (2).png" alt="" class="shape1">
+                                        <img src="./images/pol (1).png" alt="" class="shape2">
+                                        <img src="./images/pol (3).png" alt="" class="shape3">
+                                    
+                                        <img src="./assets/main/cardimg1.png" alt="logo" class="d-block m-auto img-fluid">
+                                        <h5 dir="ltr">|Games</h5>
+                                    
+                                        <div class="d-flex text-center">
+                                            <img src="./assets/main/controller.png" alt="Games">
+                                            <div class="control">
+                                                <button class="bu-1">
+                                                    X / O
+                                                </button>
+                                                <button class="bu-2">
+                                                    Linguist
+                                                </button>
+                                            </div>
+                                        </div>
+                                    
                                     </div>
                                 
-                                    <img src="./images/70497804cdcb767f24f636892c3a9619 2.png" alt="creativity" class="creativity-pic">
-
-                                    <p>Let the world know who you are and what your ideas are to solve current problems</p>
+                                    <!-- study -->
+                                    <div id="study">
                                     
-                                    <button onclick="creativity()">start now</button>
+                                        <div class="d-flex align-items-center justify-content-center play">
+                                            <h4 class="mx-2 text-center">Let`s study</h4>
+                                        </div>
+
+                                        <div class="shapes">
+                                            <img src="./images/Polygon 23.png" alt="" class="shape1">
+                                            <img src="./images/Polygon 24.png" alt="" class="shape2">
+                                            <img src="./images/Polygon 25.png" alt="" class="shape3">
+                                        </div>
+                                    
+                                        <img src="./images/1f49cb48ea8d550b1491cb13f30dc9b6 3.png" alt="logo" class="d-block logo">
+                                    
+                                        <div class="d-grid lessons">
+                                            <div class="d-flex justify-content-between align-items-center lesson">
+                                                <p class="my-auto">lessons Completed</p>
+                                                <button class="bu-1">Complete lessons</button>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center course">
+                                                <p class="my-auto">tasks Completed</p>
+                                                <button class="bu-2">Complete tasks</button>
+                                            </div>
+                                        </div>
+                                    
+                                    </div>
+
+                                </div>
+
+
+                                <!-- creativity -->
+
+                                <div class="col-4">
+                                
+
+                                    <div class="d-grid" id="creativity">
+                                        <img src="./images/Ellipse 1090.png" alt="shape" class="shape1">
+                                        <img src="./images/Ellipse 1094.png" alt="shape" class="shape2">
+
+                                        <img src="./images/Polygon 26.png" alt="shape" class="shape1-2">
+                                        <img src="./images/Polygon 27.png" alt="shape" class="shape2-2">
+                                    
+                                        <div class="d-flex align-items-center justify-content-center creativity-head">
+                                            <h4 class="mx-2 text-center">Creativity</h4>
+                                        </div>
+                                    
+                                        <img src="./images/70497804cdcb767f24f636892c3a9619 2.png" alt="creativity" class="creativity-pic">
+
+                                        <p>Let the world know who you are and what your ideas are to solve current problems</p>
+
+                                        <button onclick="creativity()">start now</button>
+                                    
+                                    </div>
                                 
                                 </div>
-                            
-                            </div>
-                            
-                        </div>  <!-- end-col-7 -->
-                        
-                    </div> <!-- end-row -->
 
-                </div>
+                            </div>  <!-- end-col-7 -->
+
+                        </div> <!-- end-row -->
+
+                    </div> <!--  -->
                 
-            </div>
+                </div> <!-- end-col-7 -->
 
-        </div>
-        <div class="right">
-            <div class="first d-flex " style="position: relative;">
-    
-                <div>
-                    <p>Timer</p>
-                    <p>15:00:00</p>
+            </div> <!-- end-row -->
+
+            <div class=" right">
+
+                <div class="first d-grid " style="position: relative;">
+
+                    <div>
+
+                        <p>Timer</p>
+
+                        <button style="background: transparent; border: none; position:absolute; top: 5px; right: 5px; outline: none; border-radius: 50%; width: 35px; height: 35px;">
+                            <img src="./images/More_Vertical.png" alt="">
+                        </button>
+
+                    </div>
+
+                    <div class="mt-1">
+
+                        <h4 class="mt-2">15:00:00</h4>
+
+                        <div class="d-flex  gap-3" style="position: absolute; right: 25px; bottom: 15px; ">
+                            <button style="background: #F0AC00; border: none; outline: none; border-radius: 50%; width: 35px; height: 35px;">
+                                <img src="./images/Pause.png" alt="">
+                            </button>
+                            <button style="background: #008CF0; border: none; outline: none; border-radius: 50%; width: 35px; height: 35px;">
+                                <img src="./images/Vector.png" alt="">
+                            </button>
+                        </div>
+
+                    </div>
+                
                 </div>
-                <div class="d-flex  gap-2" style="position: absolute; right: 35px; bottom: 15px; ">
-                    <button style="background: #F0AC00; border: none; outline: none; border-radius: 50%; width: 35px; height: 35px;">
-                        <img src="./images/Pause.png" alt="">
-                    </button>
-                    <button style="background: #008CF0; border: none; outline: none; border-radius: 50%; width: 35px; height: 35px;">
-                        <img src="./images/Vector.png" alt="">
-                    </button>
-                </div>
-                <button style="background: transparent; border: none; position:absolute; top: 5px; right: 5px; outline: none; border-radius: 50%; width: 35px; height: 35px;">
-                    <img src="./images/More_Vertical.png" alt="">
-                </button>
-    
-    
-            </div>
-            <div class="wrapper" style="margin-top: 30px;">
-                <header>
-                  <p class="current-date" style="margin: 0; padding-top: 10px;"></p>
-                  <div class="icons">
-                    <span id="prev" class="material-symbols-rounded" style="font-size: 15px; width: 25px; height: 25px;"><</span>
-                    <span id="next" class="material-symbols-rounded" style="font-size: 15px; width: 25px; height: 25px;">></span>
+
+                <div class="wrapper" style="margin-top: 30px;">
+
+                    <header>
+                      <p class="current-date" style="margin: 0; padding-top: 10px;"></p>
+                      <div class="icons">
+                        <span id="prev" class="material-symbols-rounded" style="font-size: 15px; width: 25px; height: 25px;"><</span>
+                        <span id="next" class="material-symbols-rounded" style="font-size: 15px; width: 25px; height: 25px;">></span>
+                      </div>
+                    </header>
+
+                    <div class="calendar" >
+                      <ul class="weeks" style="margin: 12px; margin-bottom: 0; padding: 0px;">
+                        <li>Sun</li>
+                        <li>Mon</li>
+                        <li>Tue</li>
+                        <li>Wed</li>
+                        <li>Thu</li>
+                        <li>Fri</li>
+                        <li>Sat</li>
+                      </ul>
+                      <ul class="days" class="weeks" style="margin: 0px; padding: 15px;"></ul>
+                    </div>
                   </div>
-                </header>
-                <div class="calendar" >
-                  <ul class="weeks" style="margin: 12px; margin-bottom: 0; padding: 0px;">
-                    <li>Sun</li>
-                    <li>Mon</li>
-                    <li>Tue</li>
-                    <li>Wed</li>
-                    <li>Thu</li>
-                    <li>Fri</li>
-                    <li>Sat</li>
-                  </ul>
-                  <ul class="days" class="weeks" style="margin: 0px; padding: 15px;"></ul>
+
                 </div>
-              </div>
-    
-        </div>
-    </div>
-</div>
+
+            </div> <!-- end-right -->
+
+        </div> <!-- end-d-flex -->
 
         <!-- welcome -->
 
-
+        <div class="welcome d-grid justify-content-center">
+            <p class="m-auto">Welcome to plan IT this place will make you learn, prepare and get new-skills</p>
+        </div>
 
 
 
         <script src="./js/bootstrap.bundle.min.js"></script>
         <script type="module" src="./firebase/script.js"></script>
+        <script src="./js/nav.js"></script>
         <script src="./js/home.js"></script>
     </body>
 </html>

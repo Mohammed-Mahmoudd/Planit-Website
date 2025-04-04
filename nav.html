@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/Nav.css">
-    <link rel="stylesheet" href="css/task.css">
 </head>
 <body>
     <!-- القائمة الجانبية -->
@@ -28,12 +27,12 @@
                     <span class="nav-text">Home page</span>
                 </a>
                 
-                <a href="#" class="nav-link active">
+                <a href="#" class="nav-link">
                     <img src="./images/Note_Edit.png" class="nav-icon">
                     <span class="nav-text">My Task</span>
                 </a>
                 
-                <a href="#" class="nav-link">
+                <a href="./habit-trucker.html" class="nav-link">
                     <img src="./images/Check_All.png" class="nav-icon">
                     <span class="nav-text">Habit Trucker</span>
                 </a>
@@ -43,12 +42,12 @@
                     <span class="nav-text">Study Planner</span>
                 </a>
                 
-                <a href="#" class="nav-link">
+                <a href="./play.html" class="nav-link">
                     <img src="./images/Puzzle.png" class="nav-icon">
                     <span class="nav-text">Play</span>
                 </a>
                 
-                <a href="./creativity.html" class="nav-link">
+                <a href="./creativity.html" class="nav-link active">
                     <img src="./images/Bulb.png" class="nav-icon">
                     <span class="nav-text">Creativity</span>
                 </a>
@@ -105,48 +104,12 @@
             </div>
         </header>
         
+        <!-- منطقة المحتوى -->
         <div class="content-area" id="content">
             <div class="content-container">
-                <h1 class="page-main-title">Manage Tasks</h1>
-            
-                <!-- Task Creation Form -->
-                <div class="task-form-container">
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="form-label">Main Title</label>
-                                <input type="text" class="form-control input-field" id="main-title" placeholder="Enter task title">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="form-label">Sub Title</label>
-                                <input type="text" class="form-control input-field" id="sub-title" placeholder="Enter subtitle">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="form-label">Task Image</label>
-                                <div class="file-input-container">
-                                    <input type="file" class="form-control input-field" id="task-image" accept="image/*">
-                                    <span class="file-input-label">Choose Image</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 d-flex align-items-end">
-                            <div class="create-btn-container">
-                                <button class="create-btn" onclick="createTask()">
-                                    <span class="btn-icon">+</span>
-                                    <span class="btn-text">Add New Challenge</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- Dynamic Task List -->
-                <div id="task-list" class="row g-4">
-                    <!-- Tasks will be inserted here by JavaScript -->
+                <div class="content-card shadow-effect">
+                    <h3>Welcome to Creativity Section</h3>
+                    <p>This is your main content area with shadow effect.</p>
                 </div>
             </div>
         </div>
@@ -154,6 +117,5 @@
 
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="js/nav.js"></script>
-    <script src="js/task.js"></script>
 </body>
 </html>
