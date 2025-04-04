@@ -5,9 +5,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Planit</title>
+        
         <link rel="stylesheet" href="./css/bootstrap.min.css">
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/Nav.css">
+        <link rel="stylesheet" href="./css/index.css">
         <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
     </head>
@@ -15,7 +17,7 @@
     <body>
 
         <!-- side -->
-        
+
             <aside id="sidebar" class="sidebar">
                 <div class="aside-content">
                     <div class="logo-section">
@@ -71,12 +73,70 @@
                 </div>
 
             </aside>
+        <!-- <aside id="sidebar" class="sidebar">
+            <div class="aside-content">
+                <div class="logo-section">
+                    <img src="images/logo.jpg" alt="Plan IT Logo" class="logo-img">
+                    <h5>Plan IT</h5>
+                </div>
+                
+                <div class="">
+                    <p style="color: hsl(0, 0%, 50%);
+                    font-size: 12px;
+                    margin-bottom: 20px;
+                    padding-left: 10px;">Setting</p>
+                </div>
+                
+                <nav class="nav-links">
+                    <a href="./index.html" class="nav-link">
+                        <img src="./images/home.png" class="nav-icon">
+                        <span class="nav-text">Home page</span>
+                    </a>
+                    
+                    <a href="#" class="nav-link">
+                        <img src="./images/Note_Edit.png" class="nav-icon">
+                        <span class="nav-text">My Task</span>
+                    </a>
+                    
+                    <a href="#" class="nav-link">
+                        <img src="./images/Check_All.png" class="nav-icon">
+                        <span class="nav-text">Habit Trucker</span>
+                    </a>
+                    
+                    <a href="#" class="nav-link">
+                        <img src="./images/Book.png" class="nav-icon">
+                        <span class="nav-text">Study Planner</span>
+                    </a>
+                    
+                    <a href="#" class="nav-link">
+                        <img src="./images/Puzzle.png" class="nav-icon">
+                        <span class="nav-text">Play</span>
+                    </a>
+                    
+                    <a href="./Idea submission/creativity.html" class="nav-link ">
+                        <img src="./images/Bulb.png" class="nav-icon">
+                        <span class="nav-text">Creativity</span>
+                    </a>
+                    
+                    <a href="./Setting.html" class="nav-link active">
+                        <img src="./images/Settings_Future.png" class="nav-icon">
+                        <span class="nav-text">Settings</span>
+                    </a>
+                </nav>
+                
+                <button class="logout-btn">
+                    <img src="./images/vector.png" class="logout-icon">
+                    <span class="logout-text">Log out</span>
+                </button>
+            </div>
+        </aside> -->
 
         <!-- header start -->
          
         <!-- main -->
 
             <main class="main-content">
+
                 <header class="main-header">
                     <!-- زر التوجيه بجانب العنوان -->
                     <div class="title-section">
@@ -117,152 +177,215 @@
         
         <!-- Content -->
          
-        <div class="row d-flex align-content-center container-fluid" id="content">
+        <div class="d-flex align-items-start">
 
-            <div class="col-lg-7 d-grid justify-content-start">
+            <div class="row d-flex align-content-center container-fluid" id="content">
 
-                <!-- progress & point -->
+                <div class="col-lg-7 d-grid justify-content-start">
 
-                <div class="d-flex align-content-center">
+                        <!-- progress & point -->
 
-                    <div class="d-flex align-items-center" id="completed">
-                        <img src="./assets/Header/User/Vector 1.png" alt="completed" class="completed-pic">
-                        <div class="d-grid completed-task">
-                            <i><span>Completed</span></i>
-                            <span>20</span>
-                        </div>
-                    </div>   
+                    <div class="d-flex align-content-center">
 
-                    <div class="d-flex align-items-center" id="progress">
-                        <img src="./assets/Header/User/Vector.png" alt="progress" class="progress-pic">
-                        <div class="d-grid progress-task">
-                            <i><span>In progress</span></i>
-                            <span>5</span>
-                        </div>
-                    </div> 
-
-                    <div class="d-flex align-items-center" id="point">
-                        <img src="./assets/Header/User/$.png" alt="progress" class="point-pic">
-                        <div class="d-grid point-task">
-                            <i><span>points</span></i>
-                            <span>$ 20</span>
-                        </div>
-                    </div> 
-
-                </div>
-
-                <!-- pages -->
-
-                <div class="d-grid">
-                    
-                    <div class="row">
-
-                        <div class="col-7">
-                            
-                            <div class="d-flex">
-
-                                <!-- play -->
-                                <div id="play">
-    
-                                    <div class="d-flex align-items-center play">
-                                        <img src="./images/Rectangle 41.png" alt="play" class="Play-pic">
-                                        <h4 class="mx-2">Play</h4>
-                                    </div>
-                                    
-                                    <img src="./images/pol (2).png" alt="" class="shape1">
-                                    <img src="./images/pol (1).png" alt="" class="shape2">
-                                    <img src="./images/pol (3).png" alt="" class="shape3">
-    
-                                    <img src="./assets/main/cardimg1.png" alt="logo" class="d-block m-auto img-fluid">
-                                    <h5 dir="ltr">|Games</h5>
-        
-                                    <div class="d-flex text-center">
-                                        <img src="./assets/main/controller.png" alt="Games">
-                                        <div class="control">
-                                            <button class="bu-1">
-                                                X / O
-                                            </button>
-                                            <button class="bu-2">
-                                                Linguist
-                                            </button>
-                                        </div>
-                                    </div>
-    
-                                </div>
-    
-                                <!-- study -->
-                                <div id="study">
-    
-                                    <div class="d-flex align-items-center justify-content-center play">
-                                        <h4 class="mx-2 text-center">Let`s study</h4>
-                                    </div>
-                                    
-                                    <div class="shapes">
-                                        <img src="./images/Polygon 23.png" alt="" class="shape1">
-                                        <img src="./images/Polygon 24.png" alt="" class="shape2">
-                                        <img src="./images/Polygon 25.png" alt="" class="shape3">
-                                    </div>
-    
-                                    <img src="./images/1f49cb48ea8d550b1491cb13f30dc9b6 3.png" alt="logo" class="d-block logo">
-    
-                                    <div class="d-grid lessons">
-                                        <div class="d-flex justify-content-between align-items-center lesson">
-                                            <p class="my-auto">lessons Completed</p>
-                                            <button class="bu-1">Complete lessons</button>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center course">
-                                            <p class="my-auto">tasks Completed</p>
-                                            <button class="bu-2">Complete tasks</button>
-                                        </div>
-                                    </div>
-    
-                                </div>
-
+                        <div class="d-flex align-items-center" id="completed">
+                            <img src="./assets/Header/User/Vector 1.png" alt="completed" class="completed-pic">
+                            <div class="d-grid completed-task">
+                                <i><span>Completed</span></i>
+                                <span>20</span>
                             </div>
+                        </div>   
 
-                             
-                            <!-- creativity -->
+                        <div class="d-flex align-items-center" id="progress">
+                            <img src="./assets/Header/User/Vector.png" alt="progress" class="progress-pic">
+                            <div class="d-grid progress-task">
+                                <i><span>In progress</span></i>
+                                <span>5</span>
+                            </div>
+                        </div> 
 
-                            <div class="col-7">
-                            
-                                
-                                <div class="d-grid" id="creativity">
-                                    <img src="./images/Ellipse 1090.png" alt="shape" class="shape1">
-                                    <img src="./images/Ellipse 1094.png" alt="shape" class="shape2">
+                        <div class="d-flex align-items-center" id="point">
+                            <img src="./assets/Header/User/$.png" alt="progress" class="point-pic">
+                            <div class="d-grid point-task">
+                                <i><span>points</span></i>
+                                <span>$ 20</span>
+                            </div>
+                        </div> 
 
-                                    <img src="./images/Polygon 26.png" alt="shape" class="shape1-2">
-                                    <img src="./images/Polygon 27.png" alt="shape" class="shape2-2">
-                                
-                                    <div class="d-flex align-items-center justify-content-center creativity-head">
-                                        <h4 class="mx-2 text-center">Creativity</h4>
+                    </div>
+
+
+                    <!-- pages -->
+
+                    <div class="d-grid">
+
+                        <div class="row">
+
+                            <div class="col-7 d-grid justify-content-start">
+
+                                <div class="d-flex">
+
+                                    <!-- play -->
+                                    <div id="play">
+                                    
+                                        <div class="d-flex align-items-center play">
+                                            <img src="./images/Rectangle 41.png" alt="play" class="Play-pic">
+                                            <h4 class="mx-2">Play</h4>
+                                        </div>
+
+                                        <img src="./images/pol (2).png" alt="" class="shape1">
+                                        <img src="./images/pol (1).png" alt="" class="shape2">
+                                        <img src="./images/pol (3).png" alt="" class="shape3">
+                                    
+                                        <img src="./assets/main/cardimg1.png" alt="logo" class="d-block m-auto img-fluid">
+                                        <h5 dir="ltr">|Games</h5>
+                                    
+                                        <div class="d-flex text-center">
+                                            <img src="./assets/main/controller.png" alt="Games">
+                                            <div class="control">
+                                                <button class="bu-1">
+                                                    X / O
+                                                </button>
+                                                <button class="bu-2">
+                                                    Linguist
+                                                </button>
+                                            </div>
+                                        </div>
+                                    
                                     </div>
                                 
-                                    <img src="./images/70497804cdcb767f24f636892c3a9619 2.png" alt="creativity" class="creativity-pic">
-
-                                    <p>Let the world know who you are and what your ideas are to solve current problems</p>
+                                    <!-- study -->
+                                    <div id="study">
                                     
-                                    <button onclick="creativity()">start now</button>
+                                        <div class="d-flex align-items-center justify-content-center play">
+                                            <h4 class="mx-2 text-center">Let`s study</h4>
+                                        </div>
+
+                                        <div class="shapes">
+                                            <img src="./images/Polygon 23.png" alt="" class="shape1">
+                                            <img src="./images/Polygon 24.png" alt="" class="shape2">
+                                            <img src="./images/Polygon 25.png" alt="" class="shape3">
+                                        </div>
+                                    
+                                        <img src="./images/1f49cb48ea8d550b1491cb13f30dc9b6 3.png" alt="logo" class="d-block logo">
+                                    
+                                        <div class="d-grid lessons">
+                                            <div class="d-flex justify-content-between align-items-center lesson">
+                                                <p class="my-auto">lessons Completed</p>
+                                                <button class="bu-1">Complete lessons</button>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center course">
+                                                <p class="my-auto">tasks Completed</p>
+                                                <button class="bu-2">Complete tasks</button>
+                                            </div>
+                                        </div>
+                                    
+                                    </div>
+
+                                </div>
+
+
+                                <!-- creativity -->
+
+                                <div class="col-4">
+                                
+
+                                    <div class="d-grid" id="creativity">
+                                        <img src="./images/Ellipse 1090.png" alt="shape" class="shape1">
+                                        <img src="./images/Ellipse 1094.png" alt="shape" class="shape2">
+
+                                        <img src="./images/Polygon 26.png" alt="shape" class="shape1-2">
+                                        <img src="./images/Polygon 27.png" alt="shape" class="shape2-2">
+                                    
+                                        <div class="d-flex align-items-center justify-content-center creativity-head">
+                                            <h4 class="mx-2 text-center">Creativity</h4>
+                                        </div>
+                                    
+                                        <img src="./images/70497804cdcb767f24f636892c3a9619 2.png" alt="creativity" class="creativity-pic">
+
+                                        <p>Let the world know who you are and what your ideas are to solve current problems</p>
+
+                                        <button onclick="creativity()">start now</button>
+                                    
+                                    </div>
                                 
                                 </div>
-                            
-                            </div>
-                            
-                        </div>  <!-- end-col-7 -->
-                        
-                    </div> <!-- end-row -->
 
-                </div>
+                            </div>  <!-- end-col-7 -->
+
+                        </div> <!-- end-row -->
+
+                    </div> <!--  -->
                 
-            </div>
+                </div> <!-- end-col-7 -->
 
-        </div>
+            </div> <!-- end-row -->
+
+            <div class=" right">
+
+                <div class="first d-grid " style="position: relative;">
+
+                    <div>
+
+                        <p>Timer</p>
+
+                        <button style="background: transparent; border: none; position:absolute; top: 5px; right: 5px; outline: none; border-radius: 50%; width: 35px; height: 35px;">
+                            <img src="./images/More_Vertical.png" alt="">
+                        </button>
+
+                    </div>
+
+                    <div class="mt-1">
+
+                        <h4 class="mt-2">15:00:00</h4>
+
+                        <div class="d-flex  gap-3" style="position: absolute; right: 25px; bottom: 15px; ">
+                            <button style="background: #F0AC00; border: none; outline: none; border-radius: 50%; width: 35px; height: 35px;">
+                                <img src="./images/Pause.png" alt="">
+                            </button>
+                            <button style="background: #008CF0; border: none; outline: none; border-radius: 50%; width: 35px; height: 35px;">
+                                <img src="./images/Vector.png" alt="">
+                            </button>
+                        </div>
+
+                    </div>
+                
+                </div>
+
+                <div class="wrapper" style="margin-top: 30px;">
+
+                    <header>
+                      <p class="current-date" style="margin: 0; padding-top: 10px;"></p>
+                      <div class="icons">
+                        <span id="prev" class="material-symbols-rounded" style="font-size: 15px; width: 25px; height: 25px;"><</span>
+                        <span id="next" class="material-symbols-rounded" style="font-size: 15px; width: 25px; height: 25px;">></span>
+                      </div>
+                    </header>
+
+                    <div class="calendar" >
+                      <ul class="weeks" style="margin: 12px; margin-bottom: 0; padding: 0px;">
+                        <li>Sun</li>
+                        <li>Mon</li>
+                        <li>Tue</li>
+                        <li>Wed</li>
+                        <li>Thu</li>
+                        <li>Fri</li>
+                        <li>Sat</li>
+                      </ul>
+                      <ul class="days" class="weeks" style="margin: 0px; padding: 15px;"></ul>
+                    </div>
+                  </div>
+
+                </div>
+
+            </div> <!-- end-right -->
+
+        </div> <!-- end-d-flex -->
 
         <!-- welcome -->
 
         <div class="welcome d-grid justify-content-center">
             <p class="m-auto">Welcome to plan IT this place will make you learn, prepare and get new-skills</p>
         </div>
-
 
 
 
