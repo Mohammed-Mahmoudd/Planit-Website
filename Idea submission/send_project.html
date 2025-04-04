@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/Nav.css">
+        <link rel="stylesheet" href="../css/send-project.css">
+    </head>
+    <body>
+
+        <!-- side -->
+
+            <aside id="sidebar" class="sidebar">
+
+                <div class="aside-content">
+                    <div class="logo-section">
+                        <img src="../images/logo.jpg" alt="Plan IT Logo" class="logo-img">
+                        <h5>Plan IT</h5>
+                    </div>
+
+                    <div class="subtitle">
+                        <p>Creativity</p>
+                    </div>
+
+                    <nav class="nav-links">
+                        <a href="../index.html" class="nav-link">
+                            <img src="../images/home.png" class="nav-icon">
+                            <span class="nav-text">Home page</span>
+                        </a>
+
+                        <a href="../task.html" class="nav-link">
+                            <img src="../images/Note_Edit.png" class="nav-icon">
+                            <span class="nav-text">My Task</span>
+                        </a>
+
+                        <a href="../habit-trucker.html" class="nav-link">
+                            <img src="../images/Check_All.png" class="nav-icon">
+                            <span class="nav-text">Habit Trucker</span>
+                        </a>
+
+                        <a href="../study-planner.html" class="nav-link">
+                            <img src="../images/Book.png" class="nav-icon">
+                            <span class="nav-text">Study Planner</span>
+                        </a>
+
+                        <a href="../play.html" class="nav-link">
+                            <img src="../images/Puzzle.png" class="nav-icon">
+                            <span class="nav-text">Play</span>
+                        </a>
+
+                        <a href="./creativity.html" class="nav-link active">
+                            <img src="../images/Bulb.png" class="nav-icon">
+                            <span class="nav-text">Creativity</span>
+                        </a>
+
+                        <a href="../Setting.html" class="nav-link">
+                            <img src="../images/Settings_Future.png" class="nav-icon">
+                            <span class="nav-text">Settings</span>
+                        </a>
+                    </nav>
+
+                    <button class="logout-btn">
+                        <img src="../images/vector.png" class="logout-icon">
+                        <span class="logout-text">Log out</span>
+                    </button>
+                </div>
+
+            </aside>
+
+
+        <!-- main -->
+
+            <main class="main-content">
+                <header class="main-header">
+                    <!-- زر التوجيه بجانب العنوان -->
+                    <div class="title-section">
+                        <button id="toggle-nav" class="toggle-nav-btn">☰</button>
+                        <h2 class="page-title">Creativity</h2>
+                    </div>
+
+                    <div class="header-controls">
+                        <div class="search-container">
+                            <input type="search" name="search" class="search-input" placeholder="Search...">
+                            <img src="../assets\Header\User\Search_Magnifying_Glass.png" class="search-icon" alt="Search">
+                        </div>
+
+                        <div class="user-actions">
+                            <div class="mode-toggle">
+                                <img src="../images/Sun-b.png" alt="light mode" class="mode-icon sun">
+                                <img src="../images/moon.png" alt="dark mode" class="mode-icon moon">
+                            </div>
+
+
+                            <div class="dropdown">
+                                <div class="user-profile dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="../images/User_01.png" alt="user profile" class="user-avatar">
+                                    <span class="user-name">John Doe</span>
+                                </div>
+                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="../Setting.html">Setting</a></li>
+                                    <li><a class="dropdown-item" href="../Setting.html">Profile</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="../Setting.html">Points</a></li>
+                                    <li><a class="dropdown-item" href="../Setting.html">Log out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </main>
+
+        <!-- content -->
+
+        <div class="d-grid align-items-center" id="content">
+        
+            <div class="shape">
+
+                <div class="solution-place">
+                    <textarea name="Write your solution here" id=" your solution here" cols="120" rows="15" placeholder="Explain your solution here"></textarea>
+                    <div id="explain">
+
+                        <div class="d-md-flex justify-content-between">
+
+                            <div class="mb-4">
+                                <label for="picture" class="mb-2">Image (prototype)</label>
+                                <input type="file" id="picture">
+                            </div>
+        
+                            <div>
+                                <label for="pdf" class="mb-2">( PDF ) to explain solution</label>
+                                <input type="file" id="pdf">
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="mt-5">
+                            <label for="file-1" class="mb-2">External-file (power-point (PPTX) / word)</label>
+                            <input type="file" id="file-1">
+                        </div>
+                    </div>
+
+                    <!-- hr -->
+
+                        <hr class="mt-5">
+
+                    <!-- contact -->
+
+                    <div class="contact d-grid align-items-lg-center">
+        
+                        <div class="d-md-flex d-grid justify-content-between text-center">
+        
+                            <div class="mt-3">
+                                <label for="pohone" class="mb-2">Enter your phone</label>
+                                <input type="text" id="phone" placeholder="xx-xxxxxxxxxx" class="form-control">
+                            </div>
+            
+                            <div class="mt-3">
+                                <label for="Email" class="mb-2">Enter your Email</label>
+                                <input type="email" id="Email" placeholder="Example@gmail.com" class="form-control">
+                            </div>
+        
+                        </div>
+        
+                        <div class="d-md-flex d-grid justify-content-between mt-5 text-center">
+        
+                            <div class="mt-3">
+                                <label for="first-name" class="mb-2">Enter your first name</label>
+                                <input type="text" id="first-name" placeholder="first name" class="form-control">
+                            </div>
+            
+                            <div class="mt-3">
+                                <label for="last-name" class="mb-2">Enter your last name</label>
+                                <input type="text" id="last-name" placeholder="Last name" class="form-control">
+                            </div>
+        
+                        </div>
+        
+                        <button class="w-50" type="submit">Submit</button>
+        
+                    </div>
+
+
+                </div>
+
+                
+            </div>
+            
+            <div class="hint" dir="rtl">
+                <p>كن فى يقين  عزيزى العميل انة اذا كان حلك لهذة المشكلة مستدام كما انة سوف يقوم بحل المشكلة بطريقة فعالة ويمكن تحقيقة فى الواقع سوف يتم عرضة على جهات مختصة بحل هذة المشكلة, وسوف يتم اشهارة على وساءل التواصل الاجتماعى كما انة اذا وجد ربح سوف نهديك اياة مباشرة وسوف يكون لنا نسبة بسيطة جدا اذا سمحت عزيزى العميل  نحن نثق بك داءما</p>
+            </div>
+
+
+        </div>
+
+
+
+
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script src="../js/nav.js"></script>
+    </body>
+</html>

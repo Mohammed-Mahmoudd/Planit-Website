@@ -1,3 +1,3 @@
 function solve(){
-    window.location.href= "./send-project.html";
+    window.location.href= "../Idea submission/send_project.html";
 }

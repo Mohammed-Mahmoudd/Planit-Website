@@ -1,4 +1,4 @@
-nav {
+/* nav {
 
     width: 90px;
     background-color: #272935;
@@ -70,8 +70,24 @@ nav {
     border-radius: 15px;
     padding-left: 15px;
     padding-top: 15px;
+} */
+
+
+
+
+/* Right */
+
+.right{
+  position: relative;
+  left: 15%;
 }
 
+.right .first{
+  padding: 10px;
+  background-color: #272935;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
 
 
 
