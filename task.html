@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/task.css">
 </head>
 <body>
-    <!-- القائمة الجانبية -->
+    <!-- Sidebar -->
     <aside id="sidebar" class="sidebar">
         <div class="aside-content">
             <div class="logo-section">
@@ -66,10 +66,9 @@
         </div>
     </aside>
 
-    <!-- المحتوى الرئيسي -->
+    <!-- Main Content -->
     <main class="main-content">
         <header class="main-header">
-            <!-- زر التوجيه بجانب العنوان -->
             <div class="title-section">
                 <button id="toggle-nav" class="toggle-nav-btn">☰</button>
                 <h2 class="page-title">Task</h2>
@@ -78,7 +77,7 @@
             <div class="header-controls">
                 <div class="search-container">
                     <input type="search" name="search" class="search-input" placeholder="Search...">
-                    <img src="./assets\Header\User\Search_Magnifying_Glass.png" class="search-icon" alt="Search">
+                    <img src="./assets/Header/User/Search_Magnifying_Glass.png" class="search-icon" alt="Search">
                 </div>
                 
                 <div class="user-actions">
@@ -86,7 +85,6 @@
                         <img src="./images/Sun-b.png" alt="light mode" class="mode-icon sun">
                         <img src="./images/moon.png" alt="dark mode" class="mode-icon moon">
                     </div>
-                    
                     
                     <div class="dropdown">
                         <div class="user-profile dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -146,23 +144,24 @@
             
                 <!-- Dynamic Task List -->
                 <div id="task-list" class="row g-4">
-                    <!-- Tasks will be inserted here by JavaScript -->
+                    <!-- Tasks will be added here dynamically -->
                 </div>
             </div>
         </div>
     </main>
-        <!-- Custom Prompt Modal -->
-        <div id="custom-prompt" class="custom-prompt" style="display: none;">
-            <div class="prompt-content">
-                <h5 id="prompt-title"></h5>
-                <input type="text" id="prompt-input">
-                <div id="prompt-error" class="error-message"></div>
-                <div class="prompt-buttons">
-                    <button id="prompt-cancel" class="task-btn btn-secondary">Cancel</button>
-                    <button id="prompt-confirm" class="task-btn btn-primary">Confirm</button>
-                </div>
+    
+    <!-- Custom Prompt Modal -->
+    <div id="custom-prompt" class="custom-prompt" style="display: none;">
+        <div class="prompt-content">
+            <h5 id="prompt-title"></h5>
+            <input type="text" id="prompt-input">
+            <div id="prompt-error" class="error-message"></div>
+            <div class="prompt-buttons">
+                <button id="prompt-cancel" class="task-btn btn-secondary">Cancel</button>
+                <button id="prompt-confirm" class="task-btn btn-primary">Confirm</button>
             </div>
         </div>
+    </div>
 
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="js/nav.js"></script>
