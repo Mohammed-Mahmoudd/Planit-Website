@@ -156,4 +156,16 @@ document.querySelector('.pause-btn').addEventListener('click', pauseTimer);
 
 // Initialize timer display
 updateTimerDisplay();
-document.querySelector('.pause-btn').style.display = 'none'; // إخفاء زر الإيقاف في البداية
+document.querySelector('.pause-btn').style.display = 'none'; // إخفاء زر ا// أضف هذه الدالة في ملف home.js
+function setupLinguistButton() {
+    const linguistBtn = document.querySelector('.control-btn.bu-2');
+    linguistBtn.addEventListener('click', function() {
+        window.location.href = "./play-linguist.html";
+    });
+}
+
+// استدع هذه الدالة عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', function() {
+    setupLinguistButton();
+    // باقي الكود...
+})
