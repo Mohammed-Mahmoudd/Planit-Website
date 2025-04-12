@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan IT / Linguist</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/linguist.css">
+    <link rel="stylesheet" href="./css/Nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+        <!-- Introduction Screen -->
+
+            <div class="intro-screen" id="introScreen">
+                <div class="intro-content">
+                    <div class="intro-logo">
+                        <img src="images/logo.svg" alt="Planit">
+                        <h1>لعبة الكلمات العربية</h1>
+                    </div>
+                    <div class="intro-description">
+                        <p>مرحباً بك في لعبة الكلمات العربية المميزة!</p>
+                        <p>تحدى الذكاء الاصطناعي في معرفتك بالكلمات العربية ومعانيها ومضاداتها.</p>
+                        <p>اختر كلمتك، وضعها على اللوحة، وأجب على التحديات لتفوز بالنقاط!</p>
+                        <p>هل أنت مستعد لاختبار مهاراتك اللغوية؟</p>
+                    </div>
+                    <div class="intro-features">
+                        <div class="feature">
+                            <i class="fas fa-chess-board"></i>
+                            <span>لوحة لعب 3×3</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-brain"></i>
+                            <span>تحديات لغوية متنوعة</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-robot"></i>
+                            <span>خصم ذكاء اصطناعي</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-coins"></i>
+                            <span>نظام نقاط تنافسي</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Sidebar -->
+
+            <aside id="sidebar" class="sidebar">
+
+                <div class="aside-content">
+                    <div class="logo-section">
+                        <img src="images/logo.jpg" alt="Plan IT Logo" class="logo-img">
+                        <h5>Plan IT</h5>
+                    </div>
+                    <div class="subtitle">
+                        <p>PLay</p>
+                    </div>
+                    <nav class="nav-links">
+                        <a href="./index.html" class="nav-link">
+                            <img src="./images/home.png" class="nav-icon">
+                            <span class="nav-text">Home page</span>
+                        </a>
+                        <a href="./task.html" class="nav-link">
+                            <img src="./images/Note_Edit.png" class="nav-icon">
+                            <span class="nav-text">My Task</span>
+                        </a>
+                        <a href="./habit-trucker.html" class="nav-link">
+                            <img src="./images/Check_All.png" class="nav-icon">
+                            <span class="nav-text">Habit Trucker</span>
+                        </a>
+                        <a href="./study-planner.html" class="nav-link">
+                            <img src="./images/Book.png" class="nav-icon">
+                            <span class="nav-text">Study Planner</span>
+                        </a>
+                        <a href="./play.html" class="nav-link active">
+                            <img src="./images/Puzzle.png" class="nav-icon">
+                            <span class="nav-text">Play</span>
+                        </a>
+                        <a href="./Idea submission/creativity.html" class="nav-link">
+                            <img src="./images/Bulb.png" class="nav-icon">
+                            <span class="nav-text">Creativity</span>
+                        </a>
+                        <a href="./Setting.html" class="nav-link">
+                            <img src="./images/Settings_Future.png" class="nav-icon">
+                            <span class="nav-text">Settings</span>
+                        </a>
+                    </nav>
+                    <button class="logout-btn">
+                        <img src="./images/vector.png" class="logout-icon">
+                        <span class="logout-text">Log out</span>
+                    </button>
+                </div>
+
+                <!-- Custom Challenge Button -->
+                <div class="custom-challenge-btn" id="custom-challenge-btn">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>إضافة تحدي</span>
+                </div>
+            </aside>
+
+        <!-- Main Content -->
+        
+            <main class="main-content">
+                <header class="main-header">
+                    <!-- زر التوجيه بجانب العنوان -->
+                    <div class="title-section">
+                        <button id="toggle-nav" class="toggle-nav-btn">☰</button>
+                        <h2 class="page-title">Play</h2>
+                    </div>
+
+                    <div class="header-controls">
+                        <div class="search-container">
+                            <input type="search" name="search" class="search-input" placeholder="Search...">
+                            <img src="./assets\Header\User\Search_Magnifying_Glass.png" class="search-icon" alt="Search">
+                        </div>
+
+                        <div class="user-actions">
+                            <div class="mode-toggle">
+                                <img src="./images/Sun-b.png" alt="light mode" class="mode-icon sun">
+                                <img src="./images/moon.png" alt="dark mode" class="mode-icon moon">
+                            </div>
+
+
+                            <div class="dropdown">
+                                <div class="user-profile dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="./images/User_01.png" alt="user profile" class="user-avatar">
+                                    <span class="user-name">John Doe</span>
+                                </div>
+                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="./Setting.html">Setting</a></li>
+                                    <li><a class="dropdown-item" href="./Setting.html">Profile</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="./Setting.html">Points</a></li>
+                                    <li><a class="dropdown-item" href="./Setting.html">Log out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </main>
+            
+        <div class="container" id="gameContainer">
+
+            <!-- game -->
+
+            <div class="game-container">
+                <!-- Word Selection Panel / Challenge Panel -->
+                <div class="word-selection">
+                    <div class="challenge-header" id="challenge-header">
+                        <h3 class="challenge-title" id="challenge-title">اختر كلمة للبدء</h3>
+                        <div class="challenge-text" id="challenge-text"></div>
+                        <div class="game-status" id="game-status">
+                            <span id="status-message"></span>
+                        </div>
+                        <div class="timer">
+                            <span class="seconds" id="challenge-timer">20</span> ثانية
+                        </div>
+                    </div>
+                    <div class="word-grid" id="word-grid">
+                        <!-- Words will be dynamically added here -->
+                    </div>
+                </div>
+                <!-- Game Board and Player Info -->
+                <div class="game-board-container">
+                    <!-- Player 1 (AI) Info -->
+                    <div class="player-start">
+                        <div class="start-with">
+                            <span>Start with</span>
+                            <span class="arrow">→</span>
+                            <span class="word" id="ai-word">نباتات</span>
+                        </div>
+                        <div class="player-info ai-player">
+                            <div class="player-avatar">
+                                <i class="fas fa-user"></i>
+                                <span>Player</span>
+                            </div>
+                            <div class="player-color ai-color"></div>
+                            <div class="player-need">
+                                <span>I NEED</span>
+                                <span class="need-type" id="ai-need-type">فعل ماضي</span>
+                            </div>
+                            <div class="player-points">
+                                <i class="fas fa-dollar-sign"></i>
+                                <span>Points</span>
+                                <span class="points-value" id="ai-points">$20</span>
+                            </div>
+                            <div class="player-timer">
+                                <span>Timer</span>
+                                <span class="timer-value" id="ai-timer">03:00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Game Board -->
+                    <div class="game-board" id="game-board">
+                        <div class="board-cell" data-cell="0"></div>
+                        <div class="board-cell" data-cell="1"></div>
+                        <div class="board-cell" data-cell="2"></div>
+                        <div class="board-cell" data-cell="3"></div>
+                        <div class="board-cell" data-cell="4"></div>
+                        <div class="board-cell" data-cell="5"></div>
+                        <div class="board-cell" data-cell="6"></div>
+                        <div class="board-cell" data-cell="7"></div>
+                        <div class="board-cell" data-cell="8"></div>
+                    </div>
+                    <!-- Player 2 (Human) Info -->
+                    <div class="player-start">
+                        <div class="player-info human-player">
+                            <div class="player-avatar">
+                                <i class="fas fa-user"></i>
+                                <span>You</span>
+                            </div>
+                            <div class="player-color human-color"></div>
+                            <div class="player-need">
+                                <span>I NEED</span>
+                                <span class="need-type" id="human-need-type">مفرد</span>
+                            </div>
+                            <div class="player-points">
+                                <i class="fas fa-dollar-sign"></i>
+                                <span>Points</span>
+                                <span class="points-value" id="human-points">$20</span>
+                            </div>
+                            <div class="player-timer">
+                                <span>Timer</span>
+                                <span class="timer-value" id="human-timer">03:00</span>
+                            </div>
+                        </div>
+                        <div class="start-with">
+                            <span>Start with</span>
+                            <span class="arrow">→</span>
+                            <span class="word" id="human-word">حيوانات</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Game Modals -->
+    <div class="modal" id="takeOverModal">
+        <div class="modal-content">
+            <h2>فرصة إضافية</h2>
+            <p class="takeover-text">لم يستطع اللاعب الآخر الإجابة. هل تريد أخذ دوره؟</p>
+            <div class="takeover-options">
+                <button class="takeover-yes">نعم</button>
+                <button class="takeover-no">لا</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="challengeTypeModal">
+        <div class="modal-content">
+            <h2>اختر نوع التحدي</h2>
+            <p>اختر نوع التحدي الذي تريد أن تسأله للاعب الآخر</p>
+            <div class="challenge-type-options" id="challenge-type-options">
+                <!-- Challenge types will be added here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="gameOverModal">
+        <div class="modal-content">
+            <h2 class="winner-text"></h2>
+            <p class="final-score"></p>
+            <button class="play-again">العب مرة أخرى</button>
+        </div>
+    </div>
+
+    <!-- Draw Confirmation Modal -->
+    <div class="modal" id="drawConfirmModal">
+        <div class="modal-content">
+            <h2>تعادل!</h2>
+            <p>لقد انتهت اللعبة بالتعادل. هل تريد إعادة اللعب؟</p>
+            <div class="draw-options">
+                <button class="draw-play-again">نعم، أريد إعادة اللعب</button>
+                <button class="draw-end-game">لا، انهِ اللعبة</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Challenge Creation Modal -->
+    <div class="modal" id="customChallengeModal">
+        <div class="modal-content custom-challenge-content">
+            <h2>إنشاء تحدي جديد</h2>
+            <div class="custom-challenge-form">
+                <div class="form-group">
+                    <label for="challenge-word">الكلمة:</label>
+                    <input type="text" id="challenge-word" placeholder="أدخل الكلمة">
+                </div>
+                <div class="form-group">
+                    <label for="challenge-type">نوع التحدي:</label>
+                    <select id="challenge-type">
+                        <option value="مضاد">مضاد</option>
+                        <option value="مفرد">مفرد</option>
+                        <option value="جمع">جمع</option>
+                        <option value="معنى">معنى</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>خيارات الإجابة:</label>
+                    <div class="options-container">
+                        <div class="option-input">
+                            <input type="text" class="option-text" placeholder="الخيار 1">
+                            <label class="radio-container">
+                                <input type="radio" name="correct-option" value="0" checked>
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="option-input">
+                            <input type="text" class="option-text" placeholder="الخيار 2">
+                            <label class="radio-container">
+                                <input type="radio" name="correct-option" value="1">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="option-input">
+                            <input type="text" class="option-text" placeholder="الخيار 3">
+                            <label class="radio-container">
+                                <input type="radio" name="correct-option" value="2">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="option-input">
+                            <input type="text" class="option-text" placeholder="الخيار 4">
+                            <label class="radio-container">
+                                <input type="radio" name="correct-option" value="3">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="challenge-points">النقاط:</label>
+                    <input type="number" id="challenge-points" min="1" max="20" value="5" placeholder="أدخل عدد النقاط (1-20)">
+                </div>
+                <div class="form-actions">
+                    <button id="create-challenge">إنشاء التحدي</button>
+                    <button id="cancel-challenge">إلغاء</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Challenge Acceptance Modal -->
+    <div class="modal" id="customChallengeAcceptModal">
+        <div class="modal-content">
+            <h2>تحدي جديد!</h2>
+            <p>لديك تحدي جديد من اللاعب الآخر. هل تقبل التحدي؟</p>
+            <div class="challenge-accept-options">
+                <button class="accept-challenge">قبول التحدي</button>
+                <button class="decline-challenge">رفض التحدي</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="js/linguist.js"></script>
+    <script src="js/nav.js"></script>
+</body>
+</html>

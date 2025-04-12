@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(rgba(9, 34, 102, 0.697) 10%, rgba(4, 4, 86, 0.672) 50%, rgba(30, 76, 204, 0.696), transparent), radial-gradient(rgba(0, 0, 0, 0.542) 10%, red 50%, transparent);
+}
+
+.sign:hover {
+    animation: sign 20s linear infinite;
+}
+
+@keyframes sign {
+    0% {
+        box-shadow:
+            -5px 5px 10px black,
+            5px 5px 10px blueviolet,
+            5px -5px 10px rgba(255, 255, 0, 0.425),
+            -5px -5px 10px blue,
+            -5px 5px 10px rgb(201, 130, 130),
+            5px 5px 10px rgb(86, 159, 192),
+            5px -5px 10px rgba(93, 194, 118, 0.411),
+            -5px -5px 10px rgb(218, 213, 157);
+    }
+
+    100% {
+        box-shadow:
+            20px 20px 40px blueviolet,
+            20px -20px 40px rgba(255, 255, 0, 0.425),
+            -20px 20px 40px black,
+            -20px 20px 40px rgb(201, 130, 130),
+            20px -20px 40px rgba(93, 194, 118, 0.411),
+            -20px -20px 40px blue,
+            -20px -20px 40px rgb(218, 213, 157),
+            20px 20px 40px rgb(86, 159, 192);
+    }
+}
+
+
+/*section-1 contact*/
+
+#contact {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.861), rgba(0, 0, 0, 0.92)50%, rgb(0, 0, 0)), url(../Images/logo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: fit-content;
+    border-radius: 25px 0px 25px 0px;
+    overflow: hidden;
+}
+
+
+
+/*HR3*/
+
+.hr3 {
+    border: 1px solid rgb(255, 5, 109);
+}
+
+/*Footer*/
+
+#app-btn {
+    background-image: linear-gradient(to left, pink, rgba(255, 166, 0, 0.615));
+    animation: app-btn 20s linear forwards infinite;
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes app-btn {
+    0% {
+        background-image: linear-gradient(to left, pink, rgba(255, 166, 0, 0.577));
+    }
+
+    100% {
+        background-image: linear-gradient(to right, pink, rgba(255, 166, 0, 0.555));
+    }
+}
+
+footer {
+    padding-top: 80px;
+    background-image: linear-gradient(black 0%, black 10%, rgba(19, 19, 19, 0.831)), url(../Images/Picture3.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+footer li a {
+    display: block;
+    color: aliceblue;
+}
+
+footer li a:hover {
+    color: rgba(255, 255, 0, 0.822);
+    font-size: medium;
+    text-decoration: overline;
+    border-bottom: 2px solid rgb(206, 51, 162);
+    padding: 2px;
+}
+
+/*btn-top*/
+
+#btntop {
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    z-index: 1000;
+    animation: btntop linear forwards;
+    animation-timeline: view();
+    animation-range: cover 0% 100%;
+}
+
+@keyframes btntop {
+    0% {
+        scale: 0;
+        opacity: 0;
+    }
+
+    100% {
+        scale: 1;
+        opacity: 1;
+    }
+}

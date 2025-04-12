@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: fit-content;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.582), black), url(../Images/pexels-pixabay-247599.jpg);
+    /* background-image: linear-gradient(to right,rgba(128, 0, 255, 0.437),rgba(0, 145, 255, 0.555),rgba(128, 0, 255, 0.52),transparent),url(../Images/pexels-pixabay-247599.jpg); */
+}
+
+.container {
+    width: 100vh;
+    height: 100vh;
+}
+
+.login {
+    /* margin-left: 310px; */
+    width: 700px;
+    height: 450px;
+    padding: 20px;
+    background-color: rgba(107, 17, 171, 0.7);
+    border-radius: 900px 300px 900px 400px;
+    animation: login 15s linear infinite;
+}
+
+@keyframes login {
+    0% {
+        background-color: rgba(107, 17, 171, 0.2);
+        border-radius: 900px 300px 900px 400px;
+    }
+
+    20% {
+        background-color: rgba(17, 55, 171, 0.2);
+        border-radius: 350px 900px 450px 900px;
+    }
+
+    30% {
+        background-color: rgba(171, 17, 130, 0.2);
+        border-radius: 300px 900px 400px 900px;
+    }
+
+    40% {
+        background-color: rgba(249, 14, 182, 0.2);
+        border-radius: 350px 900px 450px 900px;
+    }
+
+    50% {
+        background-image: rgba(15, 102, 224, 0.2);
+        border-radius: 300px 900px 400px 900px;
+    }
+
+    100% {
+        background-color: rgba(107, 17, 171, 0.2);
+        border-radius: 900px 300px 900px 400px;
+    }
+
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* i design */
+i {
+    animation: i 5s linear infinite;
+}
+
+@keyframes i {
+    0% {
+        color: rgb(107, 17, 171);
+    }
+
+    20% {
+        color: rgb(17, 55, 171);
+    }
+
+    30% {
+        color: rgb(171, 17, 130);
+    }
+
+    40% {
+        color: rgb(249, 14, 182);
+    }
+
+    50% {
+        color: rgb(15, 102, 224);
+    }
+
+    100% {
+        color: rgb(107, 17, 171);
+    }
+
+}
+
+/*media quary*/
+@media (max-width: 600px) {
+    .login {
+        width: 400px;
+        height: 300px;
+    }
+}

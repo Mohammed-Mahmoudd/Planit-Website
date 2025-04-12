@@ -12,7 +12,6 @@ const promptCancel = document.getElementById('prompt-cancel');
 // State variables
 let currentTaskId = null;
 let currentEditType = null;
-const timers = {}; // Store timer intervals
 
 // Initialize the app
 document.addEventListener('DOMContentLoaded', function() {
@@ -41,11 +40,7 @@ function createTask() {
         time: getCurrentFormattedTime(),
         status: 'in-progress',
         timer: '01:00:00',
-        image: null,
-        priority: 'high',
-        endDate: '19/3/2025',
-        endMonth: 'May 2025 / Mars',
-        timerRunning: false
+        image: null
     };
 
     if (imageInput.files[0]) {
@@ -76,19 +71,8 @@ function createTask() {
 
 function addTaskToDOM(task) {
     const taskHTML = `
-        <div class="col-12" id="task-${task.id}">
+        <div class="col-md-6 col-lg-4" id="task-${task.id}">
             <div class="task-card">
-                <!-- Right-aligned control buttons -->
-                <div class="task-control-buttons">
-                    <button class="control-button complete-btn" onclick="completeTask(${task.id})">
-                        Complete
-                    </button>
-                    <button class="control-button delete-btn" onclick="showDeleteConfirmation(${task.id})">
-                        Delete
-                    </button>
-                </div>
-                
-                <!-- Top Section -->
                 <div class="task-header">
                     <div class="task-image-container">
                         ${task.image ? 
@@ -97,134 +81,61 @@ function addTaskToDOM(task) {
                         }
                     </div>
                     <div class="task-title-wrapper">
-                        <h3 class="task-title">${task.title}</h3>
-                        <div class="task-sub">${task.subtitle || 'Sub title'}</div>
-                        <div class="task-creation-date">Created at ${task.date}</div>
-                    </div>
-                </div>
-                
-                <!-- Middle Section - Action Buttons -->
-                <div class="task-actions-row">
-                    <button class="action-button" onclick="showEditPrompt(${task.id}, 'title', 'Edit Title', '${task.title}')">
-                        ✏️ Edit your task
-                    </button>
-                    <button class="action-button" onclick="showEditPrompt(${task.id}, 'time', 'Edit Time', '${task.time}', validateTime)">
-                        🕒 Set time
-                    </button>
-                    <button class="action-button" onclick="showEditPrompt(${task.id}, 'date', 'Edit Date', '${task.date}', validateDate)">
-                        📅 Set date
-                    </button>
-                </div>
-                
-                <!-- Bottom Section - Task Info -->
-                <div class="task-info-container">
-                    <div class="task-info-item">
-                        🔥 Priority: <span class="priority-high">${task.priority}</span>
-                    </div>
-                    <div class="task-info-item">
-                        📅 ${task.date}
-                    </div>
-                    <div class="task-status">
-                        ${task.status}
-                    </div>
-                </div>
-            </div>
-            
-            <!-- External Info Boxes with connecting lines -->
-            <div class="external-info-wrapper">
-                <div class="connecting-line"></div>
-                <div class="external-info-container">
-                    <div class="external-info-box date-box">
-                        <div class="external-info-title">End Date</div>
-                        <div class="external-info-value end-date">${task.endDate}</div>
-                        <div class="external-info-value end-month">${task.endMonth}</div>
-                    </div>
-                    <div class="external-info-box timer-box">
-                        <div class="external-info-title">Timer</div>
-                        <div class="external-info-value timer-display">${task.timer}</div>
-                        <div class="timer-controls">
-                            <button class="timer-control start-btn" onclick="startTimer(${task.id}, this)">
-                                ▶️
-                            </button>
-                            <button class="timer-control sound-btn" onclick="toggleSound(this)">
-                                🔊
-                            </button>
+                        <h3 class="task-title" contenteditable="true" 
+                            onblur="updateTaskField(${task.id}, 'title', this.textContent)">
+                            ${task.title}
+                        </h3>
+                        <div class="task-date" contenteditable="true" 
+                            onblur="updateTaskField(${task.id}, 'date', this.textContent)">
+                            ${task.date}
                         </div>
                     </div>
+                </div>
+                
+                ${task.subtitle ? `
+                <div class="task-sub" contenteditable="true" 
+                    onblur="updateTaskField(${task.id}, 'subtitle', this.textContent)">
+                    ${task.subtitle}
+                </div>` : ''}
+                
+                <div class="task-meta">
+                    <div class="task-meta-item edit-task" onclick="showEditPrompt(${task.id}, 'time', 'Edit Time', '${task.time}', validateTime)">
+                        <span>Set time</span>
+                        <span class="task-time">${task.time}</span>
+                    </div>
+                    <div class="task-meta-item set-date" onclick="showEditPrompt(${task.id}, 'date', 'Edit Date', '${task.date}', validateDate)">
+                        <span>Set date</span>
+                        <span class="task-date-value">${task.date}</span>
+                    </div>
+                </div>
+                
+                <div class="task-progress">
+                    <div class="progress-status">
+                        <span>Status:</span>
+                        <select class="status-select" onchange="updateTaskField(${task.id}, 'status', this.value)">
+                            <option value="in-progress" ${task.status === 'in-progress' ? 'selected' : ''}>In Progress</option>
+                            <option value="completed" ${task.status === 'completed' ? 'selected' : ''}>Completed</option>
+                            <option value="pending" ${task.status === 'pending' ? 'selected' : ''}>Pending</option>
+                        </select>
+                    </div>
+                    <div class="task-timer" onclick="showEditPrompt(${task.id}, 'timer', 'Edit Timer', '${task.timer}', validateTimer)">
+                        ${task.timer}
+                    </div>
+                </div>
+                
+                <div class="task-actions">
+                    <button class="task-btn complete-btn" onclick="completeTask(${task.id})">
+                        Complete
+                    </button>
+                    <button class="task-btn delete-btn" onclick="showDeleteConfirmation(${task.id})">
+                        Delete
+                    </button>
                 </div>
             </div>
         </div>
     `;
     
     taskList.insertAdjacentHTML("beforeend", taskHTML);
-}
-
-// ================ Timer Functions ================
-
-function startTimer(taskId, button) {
-    const taskElement = document.getElementById(`task-${taskId}`);
-    const timerDisplay = taskElement.querySelector('.timer-display');
-    
-    // If timer is already running, stop it
-    if (timers[taskId]) {
-        clearInterval(timers[taskId]);
-        delete timers[taskId];
-        button.innerHTML = '▶️';
-        return;
-    }
-    
-    button.innerHTML = '⏸️';
-    
-    let timeParts = timerDisplay.textContent.split(':');
-    let hours = parseInt(timeParts[0]);
-    let minutes = parseInt(timeParts[1]);
-    let seconds = parseInt(timeParts[2]);
-    
-    timers[taskId] = setInterval(() => {
-        seconds--;
-        
-        if (seconds < 0) {
-            seconds = 59;
-            minutes--;
-        }
-        
-        if (minutes < 0) {
-            minutes = 59;
-            hours--;
-        }
-        
-        if (hours < 0) {
-            // Timer reached zero
-            clearInterval(timers[taskId]);
-            delete timers[taskId];
-            timerDisplay.textContent = "00:00:00";
-            button.innerHTML = '▶️';
-            showAlert("Timer completed!", "success");
-            return;
-        }
-        
-        // Update display
-        timerDisplay.textContent = 
-            `${hours.toString().padStart(2, '0')}:` +
-            `${minutes.toString().padStart(2, '0')}:` +
-            `${seconds.toString().padStart(2, '0')}`;
-            
-        // Update in storage
-        updateTaskInStorage(taskId, { 
-            timer: timerDisplay.textContent 
-        });
-    }, 1000);
-}
-
-function toggleSound(button) {
-    // This would toggle sound notifications in a real app
-    if (button.textContent.includes('🔊')) {
-        button.innerHTML = '🔇';
-        showAlert("Sound muted", "success");
-    } else {
-        button.innerHTML = '🔊';
-        showAlert("Sound unmuted", "success");
-    }
 }
 
 // ================ Storage Functions ================
@@ -398,7 +309,7 @@ function showEditPrompt(taskId, type, title, currentValue, validator) {
     promptInput.focus();
     
     // Store the validator function
-    promptInput.dataset.validator = validator?.name || '';
+    promptInput.dataset.validator = validator.name;
 }
 
 function confirmPrompt() {
@@ -444,10 +355,7 @@ function confirmPrompt() {
             taskElement.querySelector('.task-date-value').textContent = newValue;
         }
         else if (currentEditType === 'timer') {
-            taskElement.querySelector('.timer-display').textContent = newValue;
-        }
-        else if (currentEditType === 'title') {
-            taskElement.querySelector('.task-title').textContent = newValue;
+            taskElement.querySelector('.task-timer').textContent = newValue;
         }
     }
     
@@ -467,7 +375,7 @@ function completeTask(taskId) {
     if (confirm("Mark this task as completed?")) {
         if (updateTaskInStorage(taskId, { status: 'completed' })) {
             const taskElement = document.getElementById(`task-${taskId}`);
-            taskElement.querySelector('.task-status').textContent = 'completed';
+            taskElement.querySelector('.status-select').value = 'completed';
             showAlert("Task marked as completed!", "success");
         }
     }
