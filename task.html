@@ -124,6 +124,12 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
+                                <label class="form-label">Description (Optional)</label>
+                                <textarea class="form-control input-field" id="task-description" placeholder="Enter task description (optional)" rows="2"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
                                 <label class="form-label">Task Image</label>
                                 <div class="file-input-container">
                                     <input type="file" class="form-control input-field" id="task-image" accept="image/*">
@@ -131,7 +137,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 d-flex align-items-end">
+                        <div class="col-md-12 d-flex align-items-end justify-content-end">
                             <div class="create-btn-container">
                                 <button class="create-btn" onclick="createTask()">
                                     <span class="btn-icon">+</span>
@@ -162,6 +168,8 @@
             </div>
         </div>
     </div>
+    <!-- ضعه في نهاية ملف HTML قبل غلق </body> -->
+    <audio id="timer-sound" src="sound/videoplayback.mp3" preload="auto"></audio>
 
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="js/nav.js"></script>
