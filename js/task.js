@@ -14,10 +14,25 @@ let currentTaskId = null;
 let currentEditType = null;
 const timers = {}; // Store timer intervals
 
+// Audio element for timer completion sound
+const timerSound = new Audio();
+timerSound.src = 'https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mp3';
+timerSound.preload = 'auto';
+
 // Initialize the app
 document.addEventListener('DOMContentLoaded', function() {
     loadTasks();
     setupPrompt();
+    
+    // Initialize audio (required for some browsers)
+    document.body.addEventListener('click', function() {
+        timerSound.volume = 0.5;
+        // This empty play promise helps unlock audio on mobile devices
+        timerSound.play().then(() => {
+            timerSound.pause();
+            timerSound.currentTime = 0;
+        }).catch(e => {});
+    }, { once: true });
 });
 
 // ================ Main Functions ================
@@ -25,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function createTask() {
     const title = document.getElementById("main-title").value.trim();
     const subtitle = document.getElementById("sub-title").value.trim();
+    const description = document.getElementById("task-description").value.trim();
     const imageInput = document.getElementById("task-image");
     
     if (!title) {
@@ -39,6 +55,7 @@ function createTask() {
         id: taskId,
         title: title,
         subtitle: subtitle,
+        description: description,
         date: getCurrentFormattedDate(),
         time: getCurrentFormattedTime(),
         status: 'in-progress',
@@ -47,7 +64,8 @@ function createTask() {
         priority: 'high',
         endDate: formatDate(endDate),
         endMonth: getFormattedEndMonth(endDate),
-        timerRunning: false
+        timerRunning: false,
+        soundEnabled: true
     };
 
     if (imageInput.files[0]) {
@@ -73,6 +91,7 @@ function createTask() {
     // Reset form
     document.getElementById("main-title").value = "";
     document.getElementById("sub-title").value = "";
+    document.getElementById("task-description").value = "";
     document.getElementById("task-image").value = "";
 }
 
@@ -101,6 +120,7 @@ function addTaskToDOM(task) {
                     <div class="task-title-wrapper">
                         <h3 class="task-title">${task.title}</h3>
                         <div class="task-sub">${task.subtitle || 'Sub title'}</div>
+                        ${task.description ? `<div class="task-description">${task.description}</div>` : ''}
                         <div class="task-creation-date">Created at ${task.date}</div>
                     </div>
                 </div>
@@ -152,8 +172,8 @@ function addTaskToDOM(task) {
                             <button class="timer-control start-btn" onclick="startTimer(${task.id}, this)">
                                 ▶️
                             </button>
-                            <button class="timer-control sound-btn" onclick="toggleSound(this)">
-                                🔊
+                            <button class="timer-control sound-btn" onclick="toggleSound(${task.id}, this)">
+                                ${task.soundEnabled ? '🔊' : '🔇'}
                             </button>
                         </div>
                     </div>
@@ -165,11 +185,15 @@ function addTaskToDOM(task) {
     taskList.insertAdjacentHTML("beforeend", taskHTML);
 }
 
+// باقي الدوال تبقى كما هي بدون تغيير...
+// [كل الدوال الأخرى تبقى نفسها بدون أي تعديلات]
 // ================ Timer Functions ================
 
 function startTimer(taskId, button) {
     const taskElement = document.getElementById(`task-${taskId}`);
     const timerDisplay = taskElement.querySelector('.timer-display');
+    const soundButton = taskElement.querySelector('.sound-btn');
+    const soundEnabled = soundButton.textContent.includes('🔊');
     
     // If timer is already running, stop it
     if (timers[taskId]) {
@@ -211,6 +235,13 @@ function startTimer(taskId, button) {
                 timer: "00:00:00",
                 timerRunning: false 
             });
+            
+            // Play sound if enabled
+            if (soundEnabled) {
+                timerSound.currentTime = 0;
+                timerSound.play().catch(e => console.log("Could not play sound:", e));
+            }
+            
             showAlert("Timer completed!", "success");
             return;
         }
@@ -229,12 +260,14 @@ function startTimer(taskId, button) {
     }, 1000);
 }
 
-function toggleSound(button) {
+function toggleSound(taskId, button) {
     if (button.textContent.includes('🔊')) {
         button.innerHTML = '🔇';
+        updateTaskInStorage(taskId, { soundEnabled: false });
         showAlert("Sound muted", "success");
     } else {
         button.innerHTML = '🔊';
+        updateTaskInStorage(taskId, { soundEnabled: true });
         showAlert("Sound unmuted", "success");
     }
 }

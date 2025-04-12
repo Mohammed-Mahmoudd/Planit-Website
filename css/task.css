@@ -161,6 +161,17 @@
 }
 
 /* ================ Task Cards ================ */
+/* أضف هذا في قسم Task Cards Styles */
+.task-description {
+    font-size: 0.85rem;
+    color: #A0A0A0;
+    margin-bottom: 8px;
+    line-height: 1.4;
+    padding: 8px;
+    background-color: rgba(39, 34, 62, 0.7);
+    border-radius: 8px;
+    border-left: 3px solid #675AA4;
+}
 #task-list {
     display: flex;
     flex-direction: column;
