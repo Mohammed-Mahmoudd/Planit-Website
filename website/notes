@@ -168,3 +168,229 @@
      }
 } */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+animation p-1 .anime {
+    width: fit-content;
+    height: 10%;
+    background-image: linear-gradient(to right, #00000079, #008cf05a, transparent), url(../images/Bulb.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+    box-shadow: #00000061 -3px 3px 7px;
+    filter: blur(6px);
+}
+
+.anime-1 {
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    animation: anime1 20s infinite forwards;
+
+}
+
+@keyframes anime1 {
+    0% {
+        transform: rotatez(0deg);
+        translate: 0px -20px;
+    }
+
+    100% {
+        transform: rotatez(360deg);
+        translate: 0px 400px;
+    }
+}
+
+/*anime-2 p-2*/
+
+.anime-2 {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    animation: anime2 20s infinite forwards;
+
+}
+
+@keyframes anime2 {
+    0% {
+        transform: rotateZ(0deg);
+        translate: 0px -20px;
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+        translate: 0px 400px;
+    }
+}
+
+/*anime-3 p-2*/
+
+.anime-3 {
+    position: absolute;
+    top: -20px;
+    left: 20%;
+    animation: anime3 15s infinite forwards;
+
+}
+
+@keyframes anime3 {
+    0% {
+        transform: rotateZ(0deg);
+        translate: 0px -20px;
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+        translate: 0px 400px;
+    }
+}
+
+/*anime-4 p-2*/
+
+.anime-4 {
+    position: absolute;
+    top: -20px;
+    left: 70%;
+    animation: anime4 10s infinite forwards;
+
+}
+
+@keyframes anime4 {
+    0% {
+        transform: rotateZ(0deg);
+        translate: 0px -20px;
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+        translate: 0px 400px;
+    }
+}
+
+/*anime-5 p-2*/
+
+.anime-5 {
+    position: absolute;
+    top: -30px;
+    left: 88%;
+    animation: anime5 12s infinite forwards;
+
+}
+
+@keyframes anime5 {
+    0% {
+        transform: rotateZ(0deg);
+        translate: 0px -30px;
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+        translate: 0px 400px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <section class="mt-5">
+
+                <div class="row problem" id="problem-3">
+                    
+                    <!-- problem-3 -->
+
+                    <div class="col-12 text-center">
+                        <i><h4 class="lead">There is a problem lets solve it.</h4></i>
+                    </div>
+                    <!--  -->
+                    <div class="col-12 mt-5">
+                        <p dir="rtl" class="lead text-center">
+                            تواجة  البيءة  الان مشاكل  تهدد بحيات البشرية وجميع الكاءنات التى تعيش  بها  
+                        </p>
+                    </div>
+                    <!--  -->
+                    <div class="col-12 d-flex justify-content-between align-items-center px-4 mt-5">
+                        <button class=" solve" onclick="solve()">
+                            Let's solve it
+                            <img src="../images/Arrow 9.png" alt="start" class="img-fluid start">
+                        </button>
+                        <img src="../images/$.png" alt="points" class="img-fluid points">
+                        <div class="earn">
+                            Points will earn 5
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="col-12 lead mt-5">
+                        <p dir="rtl" style="color: #8283DF;">
+                            كن فى يقين  عزيزى العميل انة اذا كان حلك لهذة المشكلة مستدام كما انة سوف يقوم بحل المشكلة بطريقة فعالة ويمكن تحقيقة فى الواقع سوف يتم عرضة على جهات مختصة بحل هذة المشكلة, وسوف يتم اشهارة على وساءل التواصل الاجتماعى كما انة اذا وجد ربح سوف نهديك اياة مباشرة وسوف يكون لنا نسبة بسيطة جدا اذا سمحت عزيزى العميل  نحن نثق بك داءما
+                        </p>
+                    </div>
+                </div>
+
+            </section>

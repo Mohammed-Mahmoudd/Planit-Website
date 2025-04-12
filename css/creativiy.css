@@ -32,123 +32,65 @@ body{
     margin-bottom: 10%;
 }
 
-/*animation p-1*/
+/*anime*/
 
 .anime{
-    width: fit-content;
-    height: 10%;
-    background-image: linear-gradient(to right, #00000079,#008cf05a,transparent),url(../images/Bulb.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 6px;
-    box-shadow: #00000061 -3px 3px 7px;
-    filter: blur(6px);
-}
-
-.anime-1{
+    background-color: rgba(255, 255, 255, 0.239);
+    filter: blur(40px);
+    width: 15%;
+    height: 20%;
+    border-radius: 20px;
+    padding: 20px;
     position: absolute;
-    top: -20px;
-    left: 30px;
-    animation: anime1 20s infinite forwards;
-
+    top: 20%;
+    left: 10%;
+    z-index: -1;
+    font-size: 100px;
+    animation: anime 30s ease-in-out infinite;
 }
-@keyframes anime1{
+@keyframes anime{
     0%{
-        transform: rotatez(0deg);
-        translate: 0px -20px;
+        transform: rotate(0deg);
+        translate: 0px 0px;
     }
-    100%{
-        transform: rotatez(360deg);
-        translate: 0px 400px;
+    50%{
+        transform: rotate(360deg);
+        translate: 900px 900px;
     }
-}
-
-/*anime-2 p-2*/
-
-.anime-2 {
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    animation: anime2 20s infinite forwards;
-
-}
-
-@keyframes anime2 {
-    0% {
-        transform: rotateZ(0deg);
-        translate: 0px -20px;
-    }
-
     100% {
-        transform: rotateZ(360deg);
-        translate: 0px 400px;
+        transform: rotate(360deg);
+        translate: -900px -900px;
     }
 }
 
-/*anime-3 p-2*/
+/**/
 
-.anime-3 {
+.anime-2{
+    background-color: rgba(254, 254, 254, 0.323);
+    filter: blur(40px);
+    width: 15%;
+    height: 20%;
+    border-radius: 20px;
+    padding: 20px;
     position: absolute;
-    top: -20px;
-    left: 20%;
-    animation: anime3 15s infinite forwards;
-
+    top: 20%;
+    right: 5%;
+    z-index: -1;
+    font-size: 100px;
+    animation: anime2 30s ease-in-out infinite;
 }
-
-@keyframes anime3 {
-    0% {
-        transform: rotateZ(0deg);
-        translate: 0px -20px;
+@keyframes anime2{
+    0%{
+        transform: rotate(0deg);
+        translate: 0px 0px;
     }
-
+    50%{
+        transform: rotate(360deg);
+        translate: 0px 900px ;
+    }
     100% {
-        transform: rotateZ(360deg);
-        translate: 0px 400px;
-    }
-}
-
-/*anime-4 p-2*/
-
-.anime-4 {
-    position: absolute;
-    top: -20px;
-    left: 70%;
-    animation: anime4 10s infinite forwards;
-
-}
-
-@keyframes anime4 {
-    0% {
-        transform: rotateZ( 0deg);
-        translate: 0px -20px;
-    }
-
-    100% {
-        transform: rotateZ(360deg);
-        translate: 0px 400px;
-    }
-}
-
-/*anime-5 p-2*/
-
-.anime-5 {
-    position: absolute;
-    top: -30px;
-    left: 88%;
-    animation: anime5 12s infinite forwards;
-
-}
-
-@keyframes anime5 {
-    0% {
-        transform: rotateZ(0deg);
-        translate: 0px -30px;
-    }
-
-    100% {
-        transform: rotateZ(360deg);
-        translate: 0px 400px;
+        transform: rotate(360deg);
+        translate: 0px -300px;
     }
 }
 
@@ -159,7 +101,7 @@ body{
     overflow: hidden;
     position: relative;
     width: 800px;
-    height: 265px;
+    height: 998px;
     background: #2f2f39;
     border-radius: 10px;
     padding: 20px;
@@ -167,7 +109,7 @@ body{
     box-shadow: #00000061 -3px 3px 7px;
 }
 #problem-1:hover{
-    height: 420px;
+    height: 1170px;
 }
 
     /*solve-btn*/
@@ -234,7 +176,7 @@ body{
     overflow: hidden;
     position: relative;
     width: 800px;
-    height: 265px;
+    height: 725px;
     background: #2f2f39;
     border-radius: 10px;
     color: #ffffff;
@@ -244,7 +186,7 @@ body{
 }
 
 #problem-2:hover {
-    height: 420px;
+    height: 880px;
 }
 
 /*solve-btn*/
@@ -396,7 +338,7 @@ body{
     overflow: hidden;
     position: relative;
     width: 800px;
-    height: 265px;
+    height: 825px;
     background: #2f2f39;
     border-radius: 10px;
     color: #ffffff;
@@ -406,7 +348,7 @@ body{
 }
 
 #problem-4:hover {
-    height: 420px;
+    height: 970px;
 }
 
 /*solve-btn*/
@@ -489,97 +431,99 @@ body{
         left: 19.5%;
     }
 
-    #problem-1 {
-        width: 650px;
-        height: 265px;
-    } 
+        #problem-1 {
+            width: 650px;
+            height: 1100px;
+        } 
 
-    #problem-1:hover{
-    height: 445px;
+        #problem-1:hover{
+        height: 1270px;
+        }
+
+    #problem-2 {
+            width: 650px;
+            height: 765px;
+        } 
+
+        #problem-2:hover{
+        height: 945px;
+        }
+
+    #problem-3 {
+            width: 650px;
+            height: 265px;
+        } 
+
+        #problem-3:hover{
+        height: 445px;
+        }
+
+    #problem-4 {
+            width: 650px;
+            height: 860px;
+        } 
+
+        #problem-4:hover{
+        height: 1090px;
+        }
+
+    .points {
+            width: fit-content;
+            height: fit-content;
+            background: #313344;
+            padding: 12px;
+            border-radius: 15px;
+            /* box-shadow: #00000061 -3px 3px 7px; */
+            filter: drop-shadow(3px 3px 10px #000000);
+            position: relative;
+            left: 20.5%;
+        }
     }
 
-   #problem-2 {
-        width: 650px;
-        height: 265px;
-    } 
 
-    #problem-2.anime-1{
-    height: 445px;
-    }
+    @media (max-width: 810px) and (min-width: 768px) {
+        #content {
+            position: relative;
+            left: 16.5%;
+        }
 
-   #problem-3 {
-        width: 650px;
-        height: 265px;
-    } 
+        
 
-    #problem-3:hover{
-    height: 445px;
-    }
+        #problem-1 {
+            width: 650px;
+            height: 1095px;
+        } 
 
-   #problem-4 {
-        width: 650px;
-        height: 265px;
-    } 
+        #problem-1:hover{
+        height: 1295px;
+        }
 
-    #problem-4:hover{
-    height: 445px;
-    }
+    #problem-2 {
+            width: 650px;
+            height: 765px;
+        } 
 
-   .points {
-        width: fit-content;
-        height: fit-content;
-        background: #313344;
-        padding: 12px;
-        border-radius: 15px;
-        /* box-shadow: #00000061 -3px 3px 7px; */
-        filter: drop-shadow(3px 3px 10px #000000);
-        position: relative;
-        left: 20.5%;
-    }
-}
+        #problem-2:hover{
+        height: 945px;
+        }
 
+    #problem-3 {
+            width: 650px;
+            height: 265px;
+        } 
 
-@media (max-width: 810px) and (min-width: 768px) {
-    #content {
-        position: relative;
-        left: 16.5%;
-    }
+        #problem-3:hover{
+        height: 445px;
+        }
 
-    #problem-1 {
-        width: 650px;
-        height: 265px;
-    } 
+    #problem-4 {
+            width: 650px;
+            height: 855px;
+        } 
 
-    #problem-1:hover{
-    height: 445px;
-    }
-
-   #problem-2 {
-        width: 650px;
-        height: 265px;
-    } 
-
-    #problem-1:hover{
-    height: 445px;
-    }
-
-   #problem-3 {
-        width: 650px;
-        height: 265px;
-    } 
-
-    #problem-1:hover{
-    height: 445px;
-    }
-
-   #problem-4 {
-        width: 650px;
-        height: 265px;
-    } 
-
-    #problem-1:hover{
-    height: 445px;
-    }
+        #problem-4:hover{
+        height: 1015px;
+        }
 
    .points {
         width: fit-content;
@@ -606,20 +550,20 @@ body{
 
     #problem-1{
         width: 700px;
-        height: 265px;
+        height: 1050px;
     }
 
     #problem-1:hover{
-    height: 433px;
+    height: 1220px;
     }
 
     #problem-2 {
         width: 700px;
-        height: 265px;
+        height: 765px;
     }
 
     #problem-2:hover {
-        height: 433px;
+        height: 933px;
     }
 
     #problem-3 {
@@ -633,11 +577,11 @@ body{
 
     #problem-4 {
         width: 700px;
-        height: 265px;
+        height: 865px;
     }
 
     #problem-4:hover {
-        height: 433px;
+        height: 999px;
     }
 
     .points {
@@ -664,20 +608,20 @@ body{
 
     #problem-1 {
         width: 600px;
-        height: 265px;
+        height: 1125px;
     }
 
     #problem-1:hover {
-        height: 453px;
+        height: 1330px;
     }
 
     #problem-2 {
         width: 600px;
-        height: 265px;
+        height: 799px;
     }
 
     #problem-2:hover {
-        height: 453px;
+        height: 993px;
     }
 
     #problem-3 {
@@ -691,11 +635,11 @@ body{
 
     #problem-4 {
         width: 600px;
-        height: 265px;
+        height: 865px;
     }
 
     #problem-4:hover {
-        height: 453px;
+        height: 1060px;
     }
 
     .points {
