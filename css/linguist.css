@@ -159,7 +159,6 @@ body {
 .container {
    width: 70%;
     height: fit-content;
-   
 }
 
 /* Sidebar Styles */
@@ -201,6 +200,7 @@ body {
 }
 
 /* Word Selection Panel / Challenge Panel */
+
 .word-selection {
     width: 220px;
     background-color: var(--secondary-color);
@@ -396,7 +396,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 5px;
-    background-color: var(--gold-color);
+    background-image: linear-gradient(#62419f,rgb(29, 93, 135),#cb9910);
     padding: 5px;
     border-radius: 10px;
     flex: 1;
