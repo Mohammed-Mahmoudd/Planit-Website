@@ -65,6 +65,32 @@ body {
     width: 80px;
     height: 80px;
     margin-bottom: 15px;
+    box-shadow: 5px 4px 9px rgba(65, 33, 181, 0.711),
+                -5px -4px 9px rgba(241, 34, 34, 0.68),
+                5px -4px 9px rgba(0, 0, 0, 0.639),
+                -5px 4px 9px rgba(177, 11, 88, 0.549);
+    animation: img 1s ease-in-out infinite alternate;
+}
+@keyframes img{
+    form {
+            box-shadow: 5px 4px 9px rgba(65, 33, 181, 0.711),
+                    -5px -4px 9px rgba(241, 34, 34, 0.68),
+                    5px -4px 9px rgba(0, 0, 0, 0.639),
+                    -5px 4px 9px rgba(177, 11, 88, 0.549);   
+        }
+    to {
+        box-shadow: 5px 4px 9px rgba(65, 33, 181, 0.711),
+                -5px -4px 9px rgba(241, 34, 34, 0.68),
+                -5px 4px 9px rgba(177, 11, 88, 0.549),
+                5px -4px 9px rgba(0, 0, 0, 0.639);
+    }
+    into{
+        box-shadow: 
+                -5px -4px 9px rgba(0, 0, 0, 0.639),
+                5px 4px 9px rgba(65, 33, 181, 0.711),
+                -5px 4px 9px rgba(177, 11, 88, 0.549),
+                -5px -4px 9px rgba(241, 34, 34, 0.68);
+    }
 }
 
 .intro-logo h1 {
