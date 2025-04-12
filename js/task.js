@@ -33,6 +33,8 @@ function createTask() {
     }
 
     const taskId = Date.now();
+    const endDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+    
     const taskData = {
         id: taskId,
         title: title,
@@ -43,8 +45,8 @@ function createTask() {
         timer: '01:00:00',
         image: null,
         priority: 'high',
-        endDate: '19/3/2025',
-        endMonth: 'May 2025 / Mars',
+        endDate: formatDate(endDate),
+        endMonth: getFormattedEndMonth(endDate),
         timerRunning: false
     };
 
@@ -92,7 +94,7 @@ function addTaskToDOM(task) {
                 <div class="task-header">
                     <div class="task-image-container">
                         ${task.image ? 
-                            `<img src="${task.image}" class="task-image" alt="task image">` : 
+                            `<img src="${task.image}" class="task-image" alt="task image" onclick="showImageModal('${task.image}')">` : 
                             `<div class="default-image">📷</div>`
                         }
                     </div>
@@ -134,14 +136,18 @@ function addTaskToDOM(task) {
             <div class="external-info-wrapper">
                 <div class="connecting-line"></div>
                 <div class="external-info-container">
-                    <div class="external-info-box date-box">
+                    <div class="external-info-box date-box" 
+                         onclick="showEditPrompt(${task.id}, 'endDate', 'Edit End Date', '${task.endDate}', validateEndDate)">
                         <div class="external-info-title">End Date</div>
                         <div class="external-info-value end-date">${task.endDate}</div>
                         <div class="external-info-value end-month">${task.endMonth}</div>
                     </div>
                     <div class="external-info-box timer-box">
                         <div class="external-info-title">Timer</div>
-                        <div class="external-info-value timer-display">${task.timer}</div>
+                        <div class="external-info-value timer-display" 
+                             onclick="showEditPrompt(${task.id}, 'timer', 'Edit Timer', '${task.timer}', validateTimer)">
+                            ${task.timer}
+                        </div>
                         <div class="timer-controls">
                             <button class="timer-control start-btn" onclick="startTimer(${task.id}, this)">
                                 ▶️
@@ -170,10 +176,12 @@ function startTimer(taskId, button) {
         clearInterval(timers[taskId]);
         delete timers[taskId];
         button.innerHTML = '▶️';
+        updateTaskInStorage(taskId, { timerRunning: false });
         return;
     }
     
     button.innerHTML = '⏸️';
+    updateTaskInStorage(taskId, { timerRunning: true });
     
     let timeParts = timerDisplay.textContent.split(':');
     let hours = parseInt(timeParts[0]);
@@ -199,25 +207,29 @@ function startTimer(taskId, button) {
             delete timers[taskId];
             timerDisplay.textContent = "00:00:00";
             button.innerHTML = '▶️';
+            updateTaskInStorage(taskId, { 
+                timer: "00:00:00",
+                timerRunning: false 
+            });
             showAlert("Timer completed!", "success");
             return;
         }
         
         // Update display
-        timerDisplay.textContent = 
-            `${hours.toString().padStart(2, '0')}:` +
-            `${minutes.toString().padStart(2, '0')}:` +
-            `${seconds.toString().padStart(2, '0')}`;
+        const newTime = `${hours.toString().padStart(2, '0')}:` +
+                       `${minutes.toString().padStart(2, '0')}:` +
+                       `${seconds.toString().padStart(2, '0')}`;
+        
+        timerDisplay.textContent = newTime;
             
         // Update in storage
         updateTaskInStorage(taskId, { 
-            timer: timerDisplay.textContent 
+            timer: newTime 
         });
     }, 1000);
 }
 
 function toggleSound(button) {
-    // This would toggle sound notifications in a real app
     if (button.textContent.includes('🔊')) {
         button.innerHTML = '🔇';
         showAlert("Sound muted", "success");
@@ -225,6 +237,24 @@ function toggleSound(button) {
         button.innerHTML = '🔊';
         showAlert("Sound unmuted", "success");
     }
+}
+
+// ================ Image Modal Functions ================
+
+function showImageModal(imageSrc) {
+    const modalHTML = `
+        <div class="image-modal" onclick="closeImageModal()">
+            <div class="image-modal-content">
+                <img src="${imageSrc}" alt="Enlarged task image">
+            </div>
+        </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+}
+
+function closeImageModal() {
+    const modal = document.querySelector('.image-modal');
+    if (modal) modal.remove();
 }
 
 // ================ Storage Functions ================
@@ -239,6 +269,11 @@ function loadTasks() {
     const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
     tasks.forEach(task => {
         addTaskToDOM(task);
+        // Restore running timers if needed
+        if (task.timerRunning) {
+            const button = document.querySelector(`#task-${task.id} .start-btn`);
+            if (button) startTimer(task.id, button);
+        }
     });
 }
 
@@ -265,18 +300,50 @@ function deleteTaskFromStorage(taskId) {
 function updateTaskField(taskId, field, value) {
     value = value.trim();
     
-    // Special validation for date field
-    if (field === 'date' && !validateDate(value)) {
+    if (field === 'endDate') {
         const taskElement = document.getElementById(`task-${taskId}`);
-        taskElement.querySelector('.task-date').textContent = getTaskFromStorage(taskId)?.date || getCurrentFormattedDate();
-        showAlert("Invalid date format. Please use: MMM DD, YYYY (e.g. Apr 22, 2023)", "error");
+        taskElement.querySelector('.end-date').textContent = value;
+        
+        // Update end month display
+        const dateParts = value.split('/');
+        if (dateParts.length === 3) {
+            const monthNames = ["January", "February", "March", "April", "May", "June",
+                              "July", "August", "September", "October", "November", "December"];
+            const monthIndex = parseInt(dateParts[1]) - 1;
+            const monthName = monthNames[monthIndex];
+            const newEndMonth = `${monthName} ${dateParts[2]} / ${monthName.substring(0, 3)}`;
+            taskElement.querySelector('.end-month').textContent = newEndMonth;
+            updateTaskInStorage(taskId, { 
+                endDate: value,
+                endMonth: newEndMonth 
+            });
+        }
+        showAlert("End date updated successfully!", "success");
         return;
     }
     
     if (value && updateTaskInStorage(taskId, { [field]: value })) {
-        // Update any related fields in the DOM
-        if (field === 'date') {
-            document.getElementById(`task-${taskId}`).querySelector('.task-date-value').textContent = value;
+        // Update the specific field in the DOM
+        const taskElement = document.getElementById(`task-${taskId}`);
+        if (field === 'time') {
+            taskElement.querySelector('.task-time').textContent = value;
+        } 
+        else if (field === 'date') {
+            taskElement.querySelector('.task-date').textContent = value;
+        }
+        else if (field === 'timer') {
+            taskElement.querySelector('.timer-display').textContent = value;
+            // Stop timer if it was running
+            if (timers[taskId]) {
+                clearInterval(timers[taskId]);
+                delete timers[taskId];
+                const button = taskElement.querySelector('.start-btn');
+                if (button) button.innerHTML = '▶️';
+                updateTaskInStorage(taskId, { timerRunning: false });
+            }
+        }
+        else if (field === 'title') {
+            taskElement.querySelector('.task-title').textContent = value;
         }
         showAlert("Task updated successfully!", "success");
     }
@@ -307,6 +374,11 @@ function validateTimer(timerString) {
     return regex.test(timerString);
 }
 
+function validateEndDate(dateString) {
+    const regex = /^\d{1,2}\/\d{1,2}\/\d{4}$/;
+    return regex.test(dateString);
+}
+
 // ================ Helper Functions ================
 
 function getCurrentFormattedDate() {
@@ -323,6 +395,20 @@ function getCurrentFormattedTime() {
         hour: '2-digit', 
         minute: '2-digit' 
     });
+}
+
+function formatDate(date) {
+    const day = date.getDate().toString().padStart(2, '0');
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+}
+
+function getFormattedEndMonth(date) {
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+                       "July", "August", "September", "October", "November", "December"];
+    const monthName = monthNames[date.getMonth()];
+    return `${monthName} ${date.getFullYear()} / ${monthName.substring(0, 3)}`;
 }
 
 function showAlert(message, type) {
@@ -390,6 +476,9 @@ function showEditPrompt(taskId, type, title, currentValue, validator) {
         case 'timer':
             promptInput.placeholder = 'HH:MM:SS (e.g. 01:30:00)';
             break;
+        case 'endDate':
+            promptInput.placeholder = 'DD/MM/YYYY (e.g. 31/12/2023)';
+            break;
         default:
             promptInput.placeholder = '';
     }
@@ -425,6 +514,12 @@ function confirmPrompt() {
             promptError.textContent = 'Please use format: HH:MM:SS (e.g. 01:30:00)';
         }
     }
+    else if (validatorName === 'validateEndDate') {
+        isValid = validateEndDate(newValue);
+        if (!isValid) {
+            promptError.textContent = 'Please use format: DD/MM/YYYY (e.g. 31/12/2023)';
+        }
+    }
     
     if (!isValid) {
         promptInput.classList.add('invalid-input');
@@ -433,22 +528,6 @@ function confirmPrompt() {
     
     if (newValue) {
         updateTaskField(currentTaskId, currentEditType, newValue);
-        
-        // Update the specific field in the DOM
-        const taskElement = document.getElementById(`task-${currentTaskId}`);
-        if (currentEditType === 'time') {
-            taskElement.querySelector('.task-time').textContent = newValue;
-        } 
-        else if (currentEditType === 'date') {
-            taskElement.querySelector('.task-date').textContent = newValue;
-            taskElement.querySelector('.task-date-value').textContent = newValue;
-        }
-        else if (currentEditType === 'timer') {
-            taskElement.querySelector('.timer-display').textContent = newValue;
-        }
-        else if (currentEditType === 'title') {
-            taskElement.querySelector('.task-title').textContent = newValue;
-        }
     }
     
     closePrompt();
@@ -480,6 +559,12 @@ function showDeleteConfirmation(taskId) {
 }
 
 function deleteTask(taskId) {
+    // Stop timer if running
+    if (timers[taskId]) {
+        clearInterval(timers[taskId]);
+        delete timers[taskId];
+    }
+    
     document.getElementById(`task-${taskId}`).remove();
     deleteTaskFromStorage(taskId);
     showAlert("Task deleted successfully!", "success");
@@ -489,6 +574,11 @@ function deleteTask(taskId) {
 
 function clearAllTasks() {
     if (confirm("Are you sure you want to delete ALL tasks? This cannot be undone.")) {
+        // Stop all running timers
+        Object.keys(timers).forEach(taskId => {
+            clearInterval(timers[taskId]);
+        });
+        
         localStorage.removeItem('tasks');
         taskList.innerHTML = '';
         showAlert("All tasks have been deleted.", "success");
