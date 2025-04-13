@@ -666,38 +666,38 @@ body{
 
     #problem-1 {
         width: 565px;
-        height: 265px;
+        height: 1125px;
     }
 
     #problem-1:hover {
-        height: 453px;
+        height: 1313px;
     }
 
     #problem-2 {
         width: 565px;
-        height: 265px;
+        height: 825px;
     }
 
     #problem-2:hover {
-        height: 453px;
+        height: 980px;
     }
 
     #problem-3 {
         width: 565px;
-        height: 265px;
+        height: 965px;
     }
 
     #problem-3:hover {
-        height: 453px;
+        height: 953px;
     }
 
     #problem-4 {
         width: 565px;
-        height: 265px;
+        height: 895px;
     }
 
     #problem-4:hover {
-        height: 453px;
+        height: 1083px;
     }
 
     .points {
@@ -724,20 +724,20 @@ body{
 
     #problem-1 {
         width: 470px;
-        height: 278px;
+        height: 1278px;
     }
 
     #problem-1:hover {
-        height: 492px;
+        height: 1492px;
     }
 
     #problem-2 {
         width: 470px;
-        height: 278px;
+        height: 848px;
     }
 
     #problem-2:hover {
-        height: 492px;
+        height: 1062px;
     }
 
     #problem-3 {
@@ -751,11 +751,11 @@ body{
 
     #problem-4 {
         width: 470px;
-        height: 278px;
+        height: 958px;
     }
 
     #problem-4:hover {
-        height: 492px;
+        height: 1192px;
     }
 
     .earn {
@@ -769,7 +769,7 @@ body{
     }
 
     .points {
-        width: 30حء;
+        width:30px;
         height: fit-content;
         background: #313344;
         padding: 9px;
@@ -791,24 +791,24 @@ body{
 
     #problem-1 {
         width: 430px;
-        height: 285px;
+        height: 1285px;
         padding-right: 2px;
         padding-left: 2px;
     }
 
     #problem-1:hover {
-        height: 520px;
+        height: 1510px;
     }
 
     #problem-2 {
         width: 430px;
-        height: 285px;
+        height: 855px;
         padding-right: 2px;
         padding-left: 2px;
     }
 
     #problem-2:hover {
-        height: 520px;
+        height: 1100px;
     }
 
     #problem-3 {
@@ -824,13 +824,13 @@ body{
 
     #problem-4 {
         width: 430px;
-        height: 285px;
+        height: 965px;
         padding-right: 2px;
         padding-left: 2px;
     }
 
     #problem-4:hover {
-        height: 520px;
+        height: 1196px;
     }
 
     .earn {
@@ -866,24 +866,24 @@ body{
 
     #problem-1 {
         width: 400px;
-        height: 285px;
+        height: 1325px;
         padding-right: 2px;
         padding-left: 2px;
     }
 
     #problem-1:hover{
-    height: 535px;
+    height: 1585px;
     }
 
     #problem-2 {
         width: 400px;
-        height: 285px;
+        height: 865px;
         padding-right: 2px;
         padding-left: 2px;
     }
 
     #problem-2:hover{
-    height: 535px;
+    height: 1135px;
     }
 
     #problem-3 {
@@ -899,13 +899,13 @@ body{
 
     #problem-4 {
         width: 400px;
-        height: 285px;
+        height: 1000px;
         padding-right: 2px;
         padding-left: 2px;
     }
 
     #problem-4:hover{
-    height: 535px;
+    height: 1265px;
     }
 
     .earn{
@@ -941,24 +941,24 @@ body{
 
     #problem-1 {
         width: 350px;
-        height: 285px;
+        height: 1435px;
         padding-right: 2px;
         padding-left: 2px;
     }
 
     #problem-1:hover {
-        height: 560px;
+        height: 1699px;
     }
 
     #problem-2 {
         width: 350px;
-        height: 285px;
+        height: 955px;
         padding-right: 2px;
         padding-left: 2px;
     }
 
     #problem-2:hover {
-        height: 560px;
+        height: 1260px;
     }
 
     #problem-3 {
@@ -974,13 +974,13 @@ body{
 
     #problem-4 {
         width: 350px;
-        height: 285px;
+        height: 1085px;
         padding-right: 2px;
         padding-left: 2px;
     }
 
     #problem-4:hover {
-        height: 560px;
+        height: 1360px;
     }
 
     .earn {

@@ -598,14 +598,14 @@ body {
     left: 0;
     width: 100%;
     z-index: 2;
-    background-image: linear-gradient(to right, hsla(281, 80%, 38%, 0.754), hsla(205, 100%, 47%, 0.754), hsla(43, 100%, 47%, 0.734));
+    background-image: linear-gradient(to right, hsla(281, 80%, 38%, 0.691), hsla(205, 100%, 47%, 0.81), hsla(43, 100%, 47%, 0.603));
     overflow: hidden;
-    padding: 10px;
+    padding: 10px 10px;
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     text-align: center;
-    animation: slideIn 0.5s ease-out;
+    animation: slideIn 0.8s ease-out;
 }
 
 @keyframes slideIn {
