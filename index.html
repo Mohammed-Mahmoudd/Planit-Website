@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planit</title>
+    <title>Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -11,57 +11,56 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Protest+Riot&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- side -->
+    <!-- القائمة الجانبية -->
     <aside id="sidebar" class="sidebar">
         <div class="aside-content">
             <div class="logo-section">
                 <img src="images/logo.jpg" alt="Plan IT Logo" class="logo-img">
                 <h5>Plan IT</h5>
             </div>
-
+            
             <div class="subtitle">
                 <p>Home</p>
             </div>
-
+            
             <nav class="nav-links">
-                <a href="./index.html" class="nav-link active">
+                <a href="./index.html" class="nav-link">
                     <img src="./images/home.png" class="nav-icon">
                     <span class="nav-text">Home page</span>
                 </a>
-
-                <a href="./task.html" class="nav-link">
+                
+                <a href="#" class="nav-link">
                     <img src="./images/Note_Edit.png" class="nav-icon">
                     <span class="nav-text">My Task</span>
                 </a>
-
+                
                 <a href="./habit-trucker.html" class="nav-link">
                     <img src="./images/Check_All.png" class="nav-icon">
                     <span class="nav-text">Habit Trucker</span>
                 </a>
-
+                
                 <a href="./study-planner.html" class="nav-link">
                     <img src="./images/Book.png" class="nav-icon">
                     <span class="nav-text">Study Planner</span>
                 </a>
-
-                <a href="./play-linguist.html" class="nav-link">
+                
+                <a href="./play.html" class="nav-link">
                     <img src="./images/Puzzle.png" class="nav-icon">
                     <span class="nav-text">Play</span>
                 </a>
-
-                <a href="./Idea submission/creativity.html" class="nav-link">
+                
+                <a href="./creativity.html" class="nav-link active">
                     <img src="./images/Bulb.png" class="nav-icon">
                     <span class="nav-text">Creativity</span>
                 </a>
-
+                
                 <a href="./Setting.html" class="nav-link">
                     <img src="./images/Settings_Future.png" class="nav-icon">
                     <span class="nav-text">Settings</span>
                 </a>
             </nav>
-
+            
             <button class="logout-btn">
                 <img src="./images/vector.png" class="logout-icon">
                 <span class="logout-text">Log out</span>
@@ -69,43 +68,45 @@
         </div>
     </aside>
 
-    <!-- main -->
+    <!-- المحتوى الرئيسي -->
     <main class="main-content">
         <header class="main-header">
+            <!-- زر التوجيه بجانب العنوان -->
             <div class="title-section">
-                <button id="toggle-nav" class="toggle-nav-btn"><i class="fas fa-bars"></i></button>
-                <h2 class="page-title">Plan IT home</h2>
+                <button id="toggle-nav" class="toggle-nav-btn">☰</button>
+                <h2 class="page-title">Home</h2>
             </div>
-
+            
             <div class="header-controls">
                 <div class="search-container">
                     <input type="search" name="search" class="search-input" placeholder="Search...">
-                    <i class="fas fa-search search-icon"></i>
+                    <img src="./assets\Header\User\Search_Magnifying_Glass.png" class="search-icon" alt="Search">
                 </div>
-
+                
                 <div class="user-actions">
                     <div class="mode-toggle">
-                        <i class="fas fa-sun mode-icon sun"></i>
-                        <i class="fas fa-moon mode-icon moon"></i>
+                        <img src="./images/Sun-b.png" alt="light mode" class="mode-icon sun">
+                        <img src="./images/moon.png" alt="dark mode" class="mode-icon moon">
                     </div>
-
+                    
+                    
                     <div class="dropdown">
                         <div class="user-profile dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="./images/User_01.png" alt="user profile" class="user-avatar">
                             <span class="user-name">John Doe</span>
                         </div>
                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
-                            <li><a class="dropdown-item" href="./Setting.html"><i class="fas fa-cog me-2"></i>Setting</a></li>
-                            <li><a class="dropdown-item" href="./Setting.html"><i class="fas fa-user me-2"></i>Profile</a></li>
+                            <li><a class="dropdown-item" href="./Setting.html">Setting</a></li>
+                            <li><a class="dropdown-item" href="./Setting.html">Profile</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="./Setting.html"><i class="fas fa-coins me-2"></i>Points</a></li>
-                            <li><a class="dropdown-item" href="./Setting.html"><i class="fas fa-sign-out-alt me-2"></i>Log out</a></li>
+                            <li><a class="dropdown-item" href="./Setting.html">Points</a></li>
+                            <li><a class="dropdown-item" href="./Setting.html">Log out</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </header>
-
+        
         <!-- Content -->
         <div class="content-container">
             <div class="stats-container">
@@ -261,11 +262,6 @@
             </div>
         </div>
     </main>
-
-    <!-- welcome -->
-    <div class="welcome-bar">
-        <p class="m-auto">Welcome to plan IT this place will make you learn, prepare and get new-skills</p>
-    </div>
 
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
