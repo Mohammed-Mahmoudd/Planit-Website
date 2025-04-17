@@ -95,7 +95,37 @@
 
 
 
-//learn more
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     // Show introduction screen
+//     elements.load.style.display = 'flex';
+//     elements.body.style.display = 'none';
+    
+//     // Automatically start the game after 3 seconds
+//     setTimeout(() => { 
+//         startGame();
+//     }, 5200);
+// });
+
+
+// const elements = {
+//     // Introduction screen elements
+//     load: document.getElementById('load'),
+//     body: document.getElementsByTagName('body')
+// }
+
+
+// function startGame() {
+//     // Hide introduction screen
+//     elements.load.style.display = 'none';
+    
+//     // Show game container
+//     elements.body.style.display = 'flex';
+    
+//     // Initialize the game
+//     initGame();
+// }
+
 
 function learn(){
     window.location.href = "./login.html";

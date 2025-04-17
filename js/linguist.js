@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     elements.gameContainer.style.display = 'none';
     
     // Automatically start the game after 3 seconds
-    setTimeout(() => {
+    setTimeout(() => { 
         startGame();
     }, 3200);
 });
@@ -22,11 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
 const gameData = {
     // Word database with related words
     wordDatabase: {
-        'نبات': {
-            plural: 'نباتات',
-            singular: 'نبات',
-            antonym: 'حيوان',
-            meaning: 'كائن حي ينمو من الأرض'
+        'لعب': {
+            plural: "لاعبون",
+            singular: 'لاعب',
+            antonym: 'راحة',
+            meaning: 'نشاط يتم ممارستة فى وقت الراحة'
         },
         'حيوان': {
             plural: 'حيوانات',

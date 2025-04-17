@@ -19,6 +19,18 @@ body{
     animation: body 5s linear infinite;
 }
 
+/*loading-screen*/
+
+/* #load {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: auto;
+} */
+
 /*header*/
 
 #header{
@@ -49,7 +61,51 @@ nav{
 .hero-section{
     z-index: 1;
 }
-.picture2{
+
+ .picture2{
+    transition: 0.5s all;
+    width: 500px;
+    height: 500px;
+    background-image: linear-gradient(black 0%,rgba(94, 94, 94, 0.351) 10%,rgba(118, 113, 113, 0.367),transparent),url(../Images/logo.jpg);
+    border-style:ridge;
+    background-position: center;
+    background-size: cover;
+    animation: picture2 20s linear infinite;
+}
+@keyframes picture2 {
+    0% {
+        background-image: linear-gradient(rgba(15, 102, 224, 0.2),transparent),url(../Images/logo.jpg) ;
+        border-radius: 900px 300px 900px 400px;
+    }
+
+    20% {
+        background-image: linear-gradient(rgba(15, 102, 224, 0.2), transparent), url(../Images/logo.jpg);
+        border-radius: 1050px 900px 450px 900px;
+    }
+
+    30% {
+        background-image: linear-gradient(rgba(15, 102, 224, 0.2), transparent), url(../Images/logo.jpg);
+        border-radius: 300px 900px 1050px 900px;
+    }
+
+    40% {
+        background-image: linear-gradient(rgba(15, 102, 224, 0.2), transparent), url(../Images/logo.jpg);
+        border-radius: 350px 1050px 450px 900px;
+    }
+
+    50% {
+        background-image: linear-gradient(rgba(15, 102, 224, 0.2), transparent), url(../Images/logo.jpg);
+        border-radius: 300px 900px 400px 1050px;
+    }
+
+    100% {
+        background-image: linear-gradient(rgba(15, 102, 224, 0.2), transparent), url(../Images/logo.jpg);
+        border-radius: 900px 300px 900px 400px;
+    }
+
+}
+
+/* .picture2{
     width: 500px;
     height: 500px;
     background-image: linear-gradient(black 0%,rgba(94, 94, 94, 0.351) 10%,rgba(118, 113, 113, 0.367),transparent),url(../Images/logo.jpg);
@@ -78,7 +134,7 @@ nav{
 
         transform: perspective(1000px) rotateY(0deg);
     }
-}
+} */
 .animated{
     position: relative;
     top: 0px;
