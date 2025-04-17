@@ -68,12 +68,6 @@ prevNextIcon.forEach((icon) => {
     });
 });
 
-// Toggle sidebar on mobile
-document.getElementById('toggle-nav').addEventListener('click', function() {
-    const sidebar = document.getElementById('sidebar');
-    sidebar.classList.toggle('active');
-});
-
 // Creativity button function
 function creativity() {
     window.location.href = "./Idea submission/creativity.html";
