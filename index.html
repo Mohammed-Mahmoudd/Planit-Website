@@ -30,7 +30,7 @@
                     <span class="nav-text">Home page</span>
                 </a>
                 
-                <a href="#" class="nav-link">
+                <a href="./task.html" class="nav-link">
                     <img src="./images/Note_Edit.png" class="nav-icon">
                     <span class="nav-text">My Task</span>
                 </a>
@@ -45,12 +45,12 @@
                     <span class="nav-text">Study Planner</span>
                 </a>
                 
-                <a href="./play.html" class="nav-link">
+                <a href="./play-linguist.html" class="nav-link">
                     <img src="./images/Puzzle.png" class="nav-icon">
                     <span class="nav-text">Play</span>
                 </a>
                 
-                <a href="./creativity.html" class="nav-link">
+                <a href="./Idea submission/creativity.html" class="nav-link">
                     <img src="./images/Bulb.png" class="nav-icon">
                     <span class="nav-text">Creativity</span>
                 </a>
@@ -153,8 +153,9 @@
                             <h5 dir="ltr">|Games</h5>
                         
                             <div class="d-flex card-controls">
-                                <i class="fas fa-gamepad fa-2x me-3"></i>
-                                <div class="control-buttons">
+                                <img src="./images/controller.png" alt="play" class="play-img">
+                                <!-- <i class="fas fa-gamepad fa-2x me-3 mx-5"></i> -->
+                                <div class="control-buttons ms-auto">
                                     <button class="control-btn bu-1">
                                         X / O
                                     </button>
@@ -194,8 +195,13 @@
 
                     <!-- creativity card -->
                     <div class="card-box" id="creativity">
-                        <img src="./images/Ellipse 1090.png" alt="shape" class="shape shape1">
-                        <img src="./images/Ellipse 1094.png" alt="shape" class="shape shape2">
+                        <div class="Shape1">
+                            <img src="./images/Ellipse 1090.png" alt="shape" class="shape shape1">
+                        </div>
+
+                        <div class="Shape2">
+                            <img src="./images/Ellipse 1094.png" alt="shape" class="shape shape2">
+                        </div>
 
                         <img src="./images/Polygon 26.png" alt="shape" class="shape shape1-2">
                         <img src="./images/Polygon 27.png" alt="shape" class="shape shape2-2">
@@ -241,8 +247,8 @@
                     <header>
                         <p class="current-date"></p>
                         <div class="icons">
-                            <span id="prev" class="material-icons">chevron_left</span>
-                            <span id="next" class="material-icons">chevron_right</span>
+                            <span id="prev" class="material-icons"><</span>
+                            <span id="next" class="material-icons">></span>
                         </div>
                     </header>
 
@@ -262,6 +268,14 @@
             </div>
         </div>
     </main>
+
+    <!-- welcome-bar -->
+
+    <div class="welcome-bar d-grid justify-content-center">
+        <p class="m-auto">Welcome to plan IT this place will make you learn, prepare and get new-skills</p>
+    </div>
+
+    
 
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>

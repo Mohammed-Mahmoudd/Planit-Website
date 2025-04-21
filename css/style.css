@@ -148,8 +148,8 @@ body {
 .card-header {
     margin-bottom: 10px;
     font-family: 'Protest Riot', sans-serif;
-    position: relative;
-    z-index: 1;
+    /* position: relative; */
+    /* z-index: 1; */
 }
 
 .card-icon {
@@ -188,11 +188,19 @@ body {
     align-items: center;
     display: flex;
     position: relative;
-    z-index: 1;
+    /* z-index: 1; */
+}
+
+.play-img{
+    width: 150px;
+    margin-left: 25px;
 }
 
 .control-buttons {
-    margin-left: 25px;
+    margin-right: 10px;
+    display: grid;
+    font-size: 20px;
+    padding:0px 15px 0px 15px;
 }
 
 .control-btn {
@@ -223,7 +231,7 @@ body {
 
 /* Study Card */
 .lessons {
-    margin-top: 45px;
+    margin-top: 85px;
     position: relative;
     z-index: 1;
 }
@@ -291,12 +299,12 @@ body {
 
 #play .shape1 {
     top: 4%;
-    left: 0%;
+    left: 14%;
     animation: shape1 8s forwards infinite;
 }
 
 #play .shape2 {
-    left: 123px;
+    left: 210px;
     top: 12%;
     transform: rotateZ(-10deg);
     animation: shape2 8s forwards infinite;
@@ -304,18 +312,18 @@ body {
 
 #play .shape3 {
     top: 35%;
-    left: 50px;
+    left: 100px;
     animation: shape3 8s forwards infinite;
 }
 
 #study .shape1 {
-    left: 240px;
+    left: 270px;
     animation: s-shape1 8s forwards infinite;
 }
 
 #study .shape2 {
-    top: 50%;
-    left: 170px;
+    top: 54%;
+    left: 190px;
     animation: s-shape2 8s forwards infinite;
 }
 
@@ -324,25 +332,60 @@ body {
     animation: s-shape3 8s forwards infinite;
 }
 
-#creativity .shape1 {
+/* #creativity .shape1 {
+} */
+.Shape1{
+    position: absolute;
     top: -20px;
-    left: -40px;
+    left: 30px;
+    animation:creativity_shape1 10s  forwards infinite;
+}
+@keyframes creativity_shape1{
+    0%{
+        transform: rotateZ(-50deg);
+    }
+    50% {
+        transform: rotateZ(50deg);
+    }
+    100% {
+        transform: rotateZ(-50deg);
+    }
 }
 
-#creativity .shape2 {
-    top: 90%;
-    left: 200px;
+/* #creativity .shape2 {
+    top: 80%;
+    left: 340px;
+} */
+.Shape2 {
+    position: absolute;
+    top: 85%;
+    left: 340px;
+    animation: creativity_shape2 10s forwards infinite;
+}
+
+@keyframes creativity_shape2 {
+    0% {
+        transform: rotateZ(50deg);
+    }
+
+    50% {
+        transform: rotateZ(-50deg);
+    }
+
+    100% {
+        transform: rotateZ(50deg);
+    }
 }
 
 #creativity .shape1-2 {
-    top: 75px;
-    left: 40px;
+    top: 73px;
+    left: 99px;
     animation: shape1-2 10s infinite forwards;
 }
 
 #creativity .shape2-2 {
-    top: 43%;
-    left: 140px;
+    top: 45%;
+    left: 230px;
     animation: shape2-2 10s infinite forwards;
 }
 
@@ -454,6 +497,7 @@ body {
 }
 
 .timer-btn {
+    cursor: pointer;
     border: none;
     outline: none;
     border-radius: 50%;
@@ -588,6 +632,15 @@ body {
 
 .days li:not(.active):hover::before {
     background: #2b5f9b;
+}
+
+.material-icons{
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 6px;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 0 5px 0 5px;
 }
 
 /* Welcome Bar */

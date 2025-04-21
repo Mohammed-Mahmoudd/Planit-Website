@@ -101,7 +101,7 @@ body{
     overflow: hidden;
     position: relative;
     width: 800px;
-    height: 998px;
+    height: 1040px;
     background: #2f2f39;
     border-radius: 10px;
     padding: 20px;
@@ -110,6 +110,11 @@ body{
 }
 #problem-1:hover{
     height: 1170px;
+}
+
+#problem-1 p{
+    color: hsl(0, 8%, 69%);
+    font-size: 17.5px;
 }
 
     /*solve-btn*/
@@ -176,7 +181,7 @@ body{
     overflow: hidden;
     position: relative;
     width: 800px;
-    height: 725px;
+    height: 790px;
     background: #2f2f39;
     border-radius: 10px;
     color: #ffffff;
@@ -187,6 +192,11 @@ body{
 
 #problem-2:hover {
     height: 880px;
+}
+
+#problem-2 p {
+    color: hsl(0, 8%, 69%);
+    font-size: 17.5px;
 }
 
 /*solve-btn*/
@@ -270,6 +280,11 @@ body{
     height: 420px;
 }
 
+#problem-3 p {
+    color: hsl(0, 8%, 69%);
+    font-size: 17.5px;
+}
+
 /*solve-btn*/
 
 #problem-3 .solve {
@@ -349,6 +364,11 @@ body{
 
 #problem-4:hover {
     height: 970px;
+}
+
+#problem-4 p{
+    color: hsl(0, 8%, 69%);
+    font-size: 17.5px;
 }
 
 /*solve-btn*/

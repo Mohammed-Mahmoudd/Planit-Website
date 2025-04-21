@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Automatically start the game after 3 seconds
     setTimeout(() => { 
         startGame();
-    }, 3200);
+    }, 10200);
 });
 
 
@@ -28,17 +28,17 @@ const gameData = {
             antonym: 'راحة',
             meaning: 'نشاط يتم ممارستة فى وقت الراحة'
         },
-        'حيوان': {
-            plural: 'حيوانات',
-            singular: 'حيوان',
-            antonym: 'نبات',
-            meaning: 'كائن حي يتحرك ويتنفس'
+        'زهقا': {
+            plural: 'زالوا',
+            singular: 'انتهى',
+            antonym: 'مازال',
+            meaning: 'فاضت روحة'
         },
-        'بحري': {
-            plural: 'بحريات',
-            singular: 'بحري',
-            antonym: 'بري',
-            meaning: 'متعلق بالبحر'
+        'فؤاد': {
+            plural: 'افئدة',
+            singular: 'فؤاد',
+            antonym: 'عناد',
+            meaning: 'قلب'
         },
         'جوي': {
             plural: 'جويات',
@@ -64,11 +64,11 @@ const gameData = {
             antonym: 'حيوان',
             meaning: 'نبات صغير'
         },
-        'حي': {
-            plural: 'أحياء',
-            singular: 'حي',
-            antonym: 'ميت',
-            meaning: 'كائن يتمتع بالحياة'
+        'تجلى': {
+            plural: 'متجلون',
+            singular: 'متجلى',
+            antonym: 'اختفى',
+            meaning: 'الشى الذىْ يظهر'
         }
     },
     
