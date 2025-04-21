@@ -61,6 +61,24 @@ document.addEventListener('DOMContentLoaded', function() {
             moonIcon.style.display = 'none';
         }
     });
+    // في ملف nav.js بعد جزء toggle dark/light mode
+function updateIconsForMode() {
+    const isLightMode = document.body.classList.contains('light-mode');
+    const allDarkIcons = document.querySelectorAll('.dark-icon');
+    const allLightIcons = document.querySelectorAll('.light-icon');
+    
+    allDarkIcons.forEach(icon => {
+        icon.style.display = isLightMode ? 'none' : 'block';
+    });
+    
+    allLightIcons.forEach(icon => {
+        icon.style.display = isLightMode ? 'block' : 'none';
+    });
+}
+
+// استدعاء الدالة عند التحميل وعند تغيير الوضع
+updateIconsForMode();
+modeToggle.addEventListener('click', updateIconsForMode);
 
     // Toggle search input on mobile
     if (searchIcon) {
