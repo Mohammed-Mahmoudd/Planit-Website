@@ -266,8 +266,8 @@ body {
 .card-text {
     margin: 35px 0 25px;
     text-align: center;
-    position: relative;
-    z-index: 1;
+    /* position: relative;
+    z-index: 1; */
 }
 
 .creativity-btn {

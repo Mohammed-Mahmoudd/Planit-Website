@@ -168,5 +168,6 @@ function setupx_oButton() {
 // استدع هذه الدالة عند تحميل الصفحة
 document.addEventListener('DOMContentLoaded', function() {
     setupLinguistButton();
+    setupx_oButton();
     // باقي الكود...
 })
