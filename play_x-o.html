@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Plan IT / X/O</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/Nav.css">
+        <link rel="stylesheet" href="css/x-o.css">
+    </head>
+    <body>
+        
+        <!-- sidebar -->
+
+            <aside id="sidebar" class="sidebar">
+                <div class="aside-content">
+                    <div class="logo-section">
+                        <img src="images/logo.jpg" alt="Plan IT Logo" class="logo-img">
+                        <h5>Plan IT</h5>
+                    </div>
+
+                    <div class="subtitle">
+                        <p>Play</p>
+                    </div>
+
+                    <nav class="nav-links">
+                        <a href="./index.html" class="nav-link">
+                            <img src="./images/home.png" class="nav-icon">
+                            <span class="nav-text">Home page</span>
+                        </a>
+
+                        <a href="./task.html" class="nav-link">
+                            <img src="./images/Note_Edit.png" class="nav-icon">
+                            <span class="nav-text">My Task</span>
+                        </a>
+
+                        <a href="./habit-trucker.html" class="nav-link">
+                            <img src="./images/Check_All.png" class="nav-icon">
+                            <span class="nav-text">Habit Trucker</span>
+                        </a>
+
+                        <a href="./study-planner.html" class="nav-link">
+                            <img src="./images/Book.png" class="nav-icon">
+                            <span class="nav-text">Study Planner</span>
+                        </a>
+
+                        <a href="./play-linguist.html" class="nav-link active">
+                            <img src="./images/Puzzle.png" class="nav-icon">
+                            <span class="nav-text">Play</span>
+                        </a>
+
+                        <a href="./Idea submission/creativity.html" class="nav-link">
+                            <img src="./images/Bulb.png" class="nav-icon">
+                            <span class="nav-text">Creativity</span>
+                        </a>
+
+                        <a href="./Setting.html" class="nav-link">
+                            <img src="./images/Settings_Future.png" class="nav-icon">
+                            <span class="nav-text">Settings</span>
+                        </a>
+                    </nav>
+
+                    <button class="logout-btn">
+                        <img src="./images/vector.png" class="logout-icon">
+                        <span class="logout-text">Log out</span>
+                    </button>
+                </div>
+            </aside>
+        <!-- main content -->
+
+            <main class="main-content">
+                <header class="main-header">
+                    <!-- زر التوجيه بجانب العنوان -->
+                    <div class="title-section">
+                        <button id="toggle-nav" class="toggle-nav-btn">☰</button>
+                        <h2 class="page-title">Play (X/O)</h2>
+                        <h3>-></h3>
+                        <a href="./play-linguist.html" alt="Linguist" class="fs-5 text-info text-decoration-none  d-grid">(Linguist)</a>
+                    </div>
+
+                    <div class="header-controls">
+                        <div class="search-container">
+                            <input type="search" name="search" class="search-input" placeholder="Search...">
+                            <img src="./assets\Header\User\Search_Magnifying_Glass.png" class="search-icon" alt="Search">
+                        </div>
+
+                        <div class="user-actions">
+                            <div class="mode-toggle">
+                                <img src="./images/Sun-b.png" alt="light mode" class="mode-icon sun">
+                                <img src="./images/moon.png" alt="dark mode" class="mode-icon moon">
+                            </div>
+
+
+                            <div class="dropdown">
+                                <div class="user-profile dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="./images/User_01.png" alt="user profile" class="user-avatar">
+                                    <span class="user-name">John Doe</span>
+                                </div>
+                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="./Setting.html">Setting</a></li>
+                                    <li><a class="dropdown-item" href="./Setting.html">Profile</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="./Setting.html">Points</a></li>
+                                    <li><a class="dropdown-item" href="./Setting.html">Log out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </main>
+
+        <!-- content -->
+        <div class="container-1">
+
+            <div class="main-content-2">
+
+                <div class="game-mode-selection" id="game-mode-selection">
+                    <h2>Choose game mode</h2>
+                    <div class="mode-buttons">
+                        <button id="vs-computer">Play against computer</button>
+                        <button id="vs-player">Play with a frind</button>
+                    </div>
+                </div>
+
+                <div class="game-container" id="game-container" style="display: none;">
+                    <div class="player player-top">
+                        <div class="player-info">
+                            <div class="player-avatar">
+                                <img src="images/avatar.svg" alt="اللاعب">
+                            </div>
+                            <span id="player1-name" class="mx-1">Player</span>
+                            <div class="player-color pink mx-3"></div>
+                        </div>
+                        <div class="player-points">
+                            <!-- <div class="points-icon">$</div> -->
+                            <div class="points-value">
+                                <span>Points</span>
+                                <span id="player1-points">$ 20</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game-bg">
+                        <div class="game-board">
+                            <div class="cell" data-index="0"></div>
+                            <div class="cell" data-index="1"></div>
+                            <div class="cell" data-index="2"></div>
+                            <div class="cell" data-index="3"></div>
+                            <div class="cell" data-index="4"></div>
+                            <div class="cell" data-index="5"></div>
+                            <div class="cell" data-index="6"></div>
+                            <div class="cell" data-index="7"></div>
+                            <div class="cell" data-index="8"></div>
+                        </div>
+                    </div>
+
+                    <div class="player player-bottom">
+                        <div class="player-info">
+                            <div class="player-avatar">
+                                <img src="images/avatar.svg" alt="أنت">
+                            </div>
+                            <span id="player2-name" class="mx-1">You</span>
+                            <div class="player-color blue mx-3"></div>
+                        </div>
+                        <div class="player-points">
+                            <!-- <div class="points-icon">$</div> -->
+                            <div class="points-value">
+                                <span>Points</span>
+                                <span id="player2-points">$ 20</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-result" id="game-result" style="display: none;">
+                    <h2 id="result-message"></h2>
+                    <button id="play-again">Play again</button>
+                    <button id="change-mode">Change play mode</button>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="./js/nav.js"></script>
+        <script src="js/x-o.js"></script>
+    </body>
+</html>

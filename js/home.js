@@ -158,6 +158,13 @@ function setupLinguistButton() {
     });
 }
 
+function setupx_oButton() {
+    const x_oBtn = document.querySelector('.control-btn.bu-1');
+   x_oBtn.addEventListener('click', function() {
+        window.location.href = "./play_x-o.html";
+    });
+}
+
 // استدع هذه الدالة عند تحميل الصفحة
 document.addEventListener('DOMContentLoaded', function() {
     setupLinguistButton();
