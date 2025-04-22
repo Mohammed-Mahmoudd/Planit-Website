@@ -1,6 +1,6 @@
 
 
-.timer-circle {
+/* .timer-circle {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -11,6 +11,20 @@
   font-size: 2rem;
   border: 4px solid #4caf50;
   margin-top: 20px;
+} */
+/* خلفية مختلفة للتايمر */
+.timer-circle {
+  background-color: #4b4b5c; /* لون مختلف عن البودي */
+  border-radius: 50%;
+  width: 230px;
+  height: 230px;
+  line-height: 230px;
+  text-align: center;
+  font-size: 32px;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;  border: 4px solid #4caf50;
+
 }
 
 .input-group {
@@ -60,8 +74,95 @@ button:hover {
   font-weight: bold;
   border-radius: 50%;
 }
-@media (min-width : 497px) and (max-width : 767.98px){
-  #timer{
-    width: 200px;
-  }
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+
+h1 {
+  margin-bottom: 3rem;
+}
+
+.container {
+  width: 550px;
+}
+
+.container {
+  background-color: #313038;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.pie-chart {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: #4b384c;
+  background-image: linear-gradient(to right, transparent 50%, #632c65 0);
+}
+
+.pie-chart::before,
+.pie-chart::after {
+  content: "";
+  display: block;
+  margin-left: 50%;
+  height: 100%;
+  border-radius: 0 100% 100% 0 / 50%;
+  transform-origin: left;
+}
+
+.pie-chart::before {
+  background-color: #632c65;
+  transform: rotate(0.1turn);
+}
+
+.pie-chart::after {
+  margin-top: -100%;
+  background-color: #e2a9e5;
+  transform: rotate(0.4turn);
+}
+
+.pie-text {
+  position: absolute;
+  font-weight: bold;
+}
+
+.pie-text.text1 {
+  color: #e2a9e5;
+  left: -50px;
+  bottom: 50px;
+}
+
+.pie-text.text2 {
+  color: #632c65;
+  right: -56px;
+  top: 80px;
+}
+
+.pie-text.text3 {
+  color: #4b384c;
+  top: -25px;
+  left: 106px;
+}
+
+
+/* حاوية الرسم البياني */
+.container {
+  background-color:  #313038;; /* لون أفتح من البودي */
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  color: white;
+}
+
+
+
+
+.input-group button:hover {
+  background-color: #6a69b8;
 }
