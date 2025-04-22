@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/Nav.css">
+    <link rel="stylesheet" href="/css/style_setting.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- القائمة الجانبية -->
+    <aside id="sidebar" class="sidebar">
+        <div class="aside-content">
+            <div class="logo-section">
+                <img src="/images/logo.jpg" alt="Plan IT Logo" class="logo-img">
+                <h5>Plan IT</h5>
+            </div>
+
+            <div class="subtitle">
+                <p>Study</p>
+            </div>
+
+            <nav class="nav-links">
+                <a href="/index.html" class="nav-link">
+                    <img src="/images/home.png" class="nav-icon">
+                    <span class="nav-text">Home page</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <img src="/images/Note_Edit.png" class="nav-icon">
+                    <span class="nav-text">My Task</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <img src="/images/Check_All.png" class="nav-icon">
+                    <span class="nav-text">Habit Trucker</span>
+                </a>
+
+                <a href="#" class="nav-link active">
+                    <img src="/images/Book.png" class="nav-icon">
+                    <span class="nav-text">Study Planner</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <img src="/images/Puzzle.png" class="nav-icon">
+                    <span class="nav-text">Play</span>
+                </a>
+
+                <a href="/creativity.html" class="nav-link ">
+                    <img src="/images/Bulb.png" class="nav-icon">
+                    <span class="nav-text">Creativity</span>
+                </a>
+
+                <a href="/Setting.html" class="nav-link">
+                    <img src="/images/Settings_Future.png" class="nav-icon">
+                    <span class="nav-text">Settings</span>
+                </a>
+            </nav>
+
+            <button class="logout-btn">
+                <img src="/images/Vector.png" class="logout-icon">
+                <span class="logout-text">Log out</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- المحتوى الرئيسي -->
+
+
+    <main class="main-content">
+        <header class="main-header">
+
+
+
+            <!-- زر التوجيه بجانب العنوان -->
+            <div class="title-section">
+                <button id="toggle-nav" class="toggle-nav-btn">☰</button>
+                <h1 class="page-title px-xl-5 mx-xl-5  "> Study</h1>
+            </div>
+
+            <div class="header-controls">
+                <div class="search-container">
+                    <input type="search" name="search" class="search-input" placeholder="Search...">
+                    <img src="/assets\Header\User\Search_Magnifying_Glass.png" class="search-icon" alt="Search">
+                </div>
+
+                <div class="user-actions">
+                    <div class="mode-toggle">
+                        <img src="/images/Sun-b.png" alt="light mode" class="mode-icon sun">
+                        <img src="/images/moon.png" alt="dark mode" class="mode-icon moon">
+                    </div>
+
+
+                    <div class="dropdown">
+                        <div class="user-profile dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/images/User_01.png" alt="user profile" class="user-avatar">
+                            <span class="user-name">John Doe</span>
+                        </div>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="./Setting.html">Setting</a></li>
+                            <li><a class="dropdown-item" href="./Setting.html">Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="./Setting.html">Points</a></li>
+                            <li><a class="dropdown-item" href="./Setting.html">Log out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </main>
+
+
+    <!-- التقويم -->
+
+
+
+    <section class="row justify-content-center gap-5">
+
+        <div class=" rounded-5 shadow col-sm-9 col-lg-3"
+            style="width: 350px; height: 300px; background-color:  #313038;">
+            <div id="calendar" class=" justify-content-center my-4 text-center"></div>
+        </div>
+
+        <!-- Schedule  -->
+        <div style="width: 350px; height: 300px; background-color:  #313038;"
+            class=" col-lg-3 col-sm-9 shadow rounded-5 ">
+            <h5 class="my-3">Schedule</h5>
+            <div class="row mt-4 gap-2 justify-content-evenly">
+                <div class="col-lg-3">9:55</div>
+                <div class="col-lg-3">
+                    |
+                </div>
+                <div class="col-lg-4 ">
+                    <div>Design</div>
+                    <div>
+
+                        <del>Create task</del>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4 gap-2 justify-content-evenly">
+                <div class="col-lg-3">9:55</div>
+                <div class="col-lg-3">
+                    |
+                </div>
+                <div class="col-lg-4 ">
+                    <div>Design</div>
+                    <div>
+
+                        <del>Create task</del>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4 gap-2 justify-content-evenly">
+                <div class="col-lg-3">9:55</div>
+                <div class="col-lg-3">
+                    |
+                </div>
+                <div class="col-lg-4 ">
+                    <div>Design</div>
+                    <div>
+
+                        <del>Create task</del>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <!-- timer -->
+
+    <section class="row justify-content-center   ">
+
+        <div class="timer-circle" id="timerDisplay">
+            00:00
+        </div>
+        <div class="input-group mt-5 justify-content-center">
+            <input type="number " class="rounded-4  " id="minutesInput" placeholder="Enter minutes" min="1">
+            <button class="rounded-4" onclick="startTimer()">Start</button>
+        </div>
+
+        <!-- صوت إنذار -->
+        <audio id="alarmSound" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
+
+    </section>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/setting.js"></script>
+</body>
+
+</html>

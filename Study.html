@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/Nav.css">
+    <link rel="stylesheet" href="/css/style_setting.css">
+</head>
+
+<body>
+    <!-- القائمة الجانبية -->
+    <aside id="sidebar" class="sidebar">
+        <div class="aside-content">
+            <div class="logo-section">
+                <img src="/images/logo.jpg" alt="Plan IT Logo" class="logo-img">
+                <h5>Plan IT</h5>
+            </div>
+
+            <div class="subtitle">
+                <p>Study</p>
+            </div>
+
+            <nav class="nav-links">
+                <a href="/index.html" class="nav-link">
+                    <img src="/images/home.png" class="nav-icon">
+                    <span class="nav-text">Home page</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <img src="/images/Note_Edit.png" class="nav-icon">
+                    <span class="nav-text">My Task</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <img src="/images/Check_All.png" class="nav-icon">
+                    <span class="nav-text">Habit Trucker</span>
+                </a>
+
+                <a href="#" class="nav-link active">
+                    <img src="/images/Book.png" class="nav-icon">
+                    <span class="nav-text">Study Planner</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <img src="/images/Puzzle.png" class="nav-icon">
+                    <span class="nav-text">Play</span>
+                </a>
+
+                <a href="/creativity.html" class="nav-link ">
+                    <img src="/images/Bulb.png" class="nav-icon">
+                    <span class="nav-text">Creativity</span>
+                </a>
+
+                <a href="/Setting.html" class="nav-link">
+                    <img src="/images/Settings_Future.png" class="nav-icon">
+                    <span class="nav-text">Settings</span>
+                </a>
+            </nav>
+
+            <button class="logout-btn">
+                <img src="/images/Vector.png" class="logout-icon">
+                <span class="logout-text">Log out</span>
+            </button>
+        </div>
+    </aside>
+    <!-- المحتوى الرئيسي -->
+    <main class="main-content">
+        <header class="main-header">
+            <!-- زر التوجيه بجانب العنوان -->
+            <div class="title-section">
+                <button id="toggle-nav" class="toggle-nav-btn">☰</button>
+                <h1 class="page-title px-xl-5 mx-xl-5  "> Study</h1>
+            </div>
+
+            <div class="header-controls">
+                <div class="search-container">
+                    <input type="search" name="search" class="search-input" placeholder="Search...">
+                    <img src="/assets\Header\User\Search_Magnifying_Glass.png" class="search-icon" alt="Search">
+                </div>
+
+                <div class="user-actions">
+                    <div class="mode-toggle">
+                        <img src="/images/Sun-b.png" alt="light mode" class="mode-icon sun">
+                        <img src="/images/moon.png" alt="dark mode" class="mode-icon moon">
+                    </div>
+
+
+                    <div class="dropdown">
+                        <div class="user-profile dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/images/User_01.png" alt="user profile" class="user-avatar">
+                            <span class="user-name">John Doe</span>
+                        </div>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="./Setting.html">Setting</a></li>
+                            <li><a class="dropdown-item" href="./Setting.html">Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="./Setting.html">Points</a></li>
+                            <li><a class="dropdown-item" href="./Setting.html">Log out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </main>
+    <section class=" mx-5 px-3 ">
+
+        <div class="row mb-5 my-2  justify-content-evenly gap-3">
+            <a href="/subject/math.html" style="width: 300px; height: 100px; background-color: #313038; "
+                class="box-1 d-block nav-link col-lg-3 shadow-effect  rounded-4 justify-content-center">
+                <div class="d-flex fs-5 my-2  gap-5 justify-content-center">
+                    <i class="fa-solid fa-calculator my-1">
+                    </i>
+                    <h3>Mathematics</h3>
+                </div>
+
+                <div class="time">
+                    <i class="fas fa-clock mx-1"></i>
+                    Time:01:00
+                </div>
+
+            </a>
+            <a href="/subject/math.html" style="width: 300px; height: 100px; background-color: #313038; "
+                class="box-1 d-block nav-link col-lg-3 shadow-effect  rounded-4 justify-content-center">
+                <div class="d-flex fs-5 gap-5 my-2 justify-content-center"><i class="fas fa-flask my-1"></i>
+                    <h3>Science</h3>
+                </div>
+                <div class="time">
+                    <i class="fas fa-clock mx-1"></i>
+                    Time:01:00
+                </div>
+            </a>
+            <a href="/subject/math.html" style="width: 300px; height: 100px; background-color: #313038; "
+                class="box-1 d-block nav-link col-lg-3 shadow-effect  rounded-4 justify-content-center">
+                <div class="d-flex fs-5 gap-5 my-2 justify-content-center"><i class="fas fa-font my-1"></i>
+                    <h3>English</h3>
+                </div>
+                <div class="time">
+                    <i class="fas fa-clock mx-1"></i>
+                    Time:01:00
+                </div>
+
+            </a>
+
+
+
+        </div>
+        <div class="row my-3 justify-content-evenly gap-3">
+            <a href="/subject/math.html" style="width: 300px; height: 100px; background-color: #313038; "
+                class="box-1 d-block nav-link col-lg-3 shadow-effect  rounded-4 justify-content-center">
+                <div class="d-flex fs-5 gap-5 my-2 justify-content-center"><i class="fas fa-book my-1"></i>
+                    <h3>Arabic</h3>
+                </div>
+                <div class="time">
+                    <i class="fas fa-clock mx-1"></i>
+                    Time:01:00
+                </div>
+
+            </a>
+            <a href="/subject/math.html" style="width: 300px; height: 100px; background-color: #313038; "
+                class="box-1 d-block nav-link col-lg-3 shadow-effect  rounded-4 justify-content-center">
+                <div class="d-flex fs-5 gap-5 my-2 justify-content-center"><i class="fas fa-mosque my-1"></i>
+                    <h3>Religion</h3>
+                </div>
+                <div class="time">
+                    <i class="fas fa-clock mx-1"></i>
+                    Time:01:00
+                </div>
+
+            </a>
+
+
+
+
+
+        </div>
+    </section>
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <!-- <script src="js/task.js"></script> -->
+    <script src="/js/nav.js"></script>
+    <script src="/js/setting.js"></script>
+</body>
+
+</html>
