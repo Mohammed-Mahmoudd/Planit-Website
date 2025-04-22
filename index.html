@@ -21,48 +21,56 @@
             </div>
             
             <div class="subtitle">
-                <p>Home</p>
+                <p>Creativity</p>
             </div>
             
             <nav class="nav-links">
                 <a href="./index.html" class="nav-link active">
-                    <img src="./images/home.png" class="nav-icon">
+                    <img src="./assets\navigation\dark mode\House_03.png" class="nav-icon dark-icon">
+                    <img src="./assets\navigation\white mode\House_03.png" class="nav-icon light-icon">
                     <span class="nav-text">Home page</span>
                 </a>
                 
                 <a href="./task.html" class="nav-link">
-                    <img src="./images/Note_Edit.png" class="nav-icon">
+                    <img src="./assets\navigation\dark mode\Note_Edit.png" class="nav-icon dark-icon">
+                    <img src="./assets\navigation\white mode\Note_Edit.png" class="nav-icon light-icon">
                     <span class="nav-text">My Task</span>
                 </a>
                 
                 <a href="./habit-trucker.html" class="nav-link">
-                    <img src="./images/Check_All.png" class="nav-icon">
+                    <img src="./assets\navigation\dark mode\Check_All.png" class="nav-icon dark-icon">
+                    <img src="./assets\navigation\white mode\Check_All.png" class="nav-icon light-icon">
                     <span class="nav-text">Habit Trucker</span>
                 </a>
                 
                 <a href="./study-planner.html" class="nav-link">
-                    <img src="./images/Book.png" class="nav-icon">
+                    <img src="./assets\navigation\dark mode\Book.png" class="nav-icon dark-icon">
+                    <img src="./assets\navigation\white mode\Book.png" class="nav-icon light-icon">
                     <span class="nav-text">Study Planner</span>
                 </a>
                 
-                <a href="./play-linguist.html" class="nav-link">
-                    <img src="./images/Puzzle.png" class="nav-icon">
+                <a href="./play.html" class="nav-link">
+                    <img src="./assets\navigation\dark mode\Puzzle.png" class="nav-icon dark-icon">
+                    <img src="./assets\navigation\white mode\Puzzle.png" class="nav-icon light-icon">
                     <span class="nav-text">Play</span>
                 </a>
                 
                 <a href="./Idea submission/creativity.html" class="nav-link">
-                    <img src="./images/Bulb.png" class="nav-icon">
+                    <img src="./assets\navigation\dark mode\Bulb.png" class="nav-icon dark-icon">
+                    <img src="./assets\navigation\white mode\Bulb.png" class="nav-icon light-icon">
                     <span class="nav-text">Creativity</span>
                 </a>
                 
                 <a href="./Setting.html" class="nav-link">
-                    <img src="./images/Settings_Future.png" class="nav-icon">
+                    <img src="./assets\navigation\dark mode\Settings_Future.png" class="nav-icon dark-icon">
+                    <img src="./assets\navigation\white mode\Settings_Future.png" class="nav-icon light-icon">
                     <span class="nav-text">Settings</span>
                 </a>
             </nav>
             
             <button class="logout-btn">
-                <img src="./images/vector.png" class="logout-icon">
+                <img src="./assets\navigation\dark mode\Log_Out.png" class="logout-icon dark-icon">
+                <img src="./assets\navigation\white mode\Log_Out.png" class="logout-icon light-icon">
                 <span class="logout-text">Log out</span>
             </button>
         </div>
@@ -115,7 +123,7 @@
                         <img src="./assets\Header\User\Vector 1.png" class="stat-icon" alt="Completed Icon">
                         <div class="d-grid stat-info">
                             <i><span>Completed</span></i>
-                            <span>20</span>
+                            <span data-counter="completed">20</span>
                         </div>
                     </div>   
 
@@ -123,7 +131,7 @@
                         <img src="./assets\Header\User\Vector.png" class="stat-icon" alt="Completed Icon">
                         <div class="d-grid stat-info">
                             <i><span>In_progress</span></i>
-                            <span>5</span>
+                            <span data-counter="in-progress">5</span>
                         </div>
                     </div> 
 
@@ -283,5 +291,6 @@
     <script type="module" src="./firebase/script.js"></script>
     <script src="./js/nav.js"></script>
     <script src="./js/home.js"></script>
+    <script src="js/task reject.js"></script>
 </body>
 </html>
