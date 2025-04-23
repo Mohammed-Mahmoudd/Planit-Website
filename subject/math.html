@@ -34,52 +34,36 @@
                     <span class="nav-text">Home page</span>
                 </a>
 
-                <a href="#" class="nav-link">
-                        
-                    <nav class="nav-links">
-                        <a href="../index.html" class="nav-link">
-                            <img src="../assets\navigation\dark mode\House_03.png" class="nav-icon dark-icon">
-                            <img src="../assets\navigation\white mode\House_03.png" class="nav-icon light-icon">
-                            <span class="nav-text">Home page</span>
-                        </a>
-                        
-                        <a href="../task.html" class="nav-link">
-                            <img src="../assets\navigation\dark mode\Note_Edit.png" class="nav-icon dark-icon">
-                            <img src="../assets\navigation\white mode\Note_Edit.png" class="nav-icon light-icon">
-                            <span class="nav-text">My Task</span>
-                        </a>
-                        
-                        <a href="../habit-trucker.html" class="nav-link">
-                            <img src="../assets\navigation\dark mode\Check_All.png" class="nav-icon dark-icon">
-                            <img src="../assets\navigation\white mode\Check_All.png" class="nav-icon light-icon">
-                            <span class="nav-text">Habit Trucker</span>
-                        </a>
-                        
-                        <a href="../Study.html" class="nav-link active">
-                            <img src="../assets\navigation\dark mode\Book.png" class="nav-icon dark-icon">
-                            <img src="../assets\navigation\white mode\Book.png" class="nav-icon light-icon">
-                            <span class="nav-text">Study Planner</span>
-                        </a>
-                        
-                        <a href="../play-linguist.html" class="nav-link ">
-                            <img src="../assets\navigation\dark mode\Puzzle.png" class="nav-icon dark-icon">
-                            <img src="../assets\navigation\white mode\Puzzle.png" class="nav-icon light-icon">
-                            <span class="nav-text">Play</span>
-                        </a>
-                        
-                        <a href="../Idea submission/creativity.html" class="nav-link">
-                            <img src="../assets\navigation\dark mode\Bulb.png" class="nav-icon dark-icon">
-                            <img src="../assets\navigation\white mode\Bulb.png" class="nav-icon light-icon">
-                            <span class="nav-text">Creativity</span>
-                        </a>
-                        
-                        <a href="../Setting.html" class="nav-link">
-                            <img src="../assets\navigation\dark mode\Settings_Future.png" class="nav-icon dark-icon">
-                            <img src="../assets\navigation\white mode\Settings_Future.png" class="nav-icon light-icon">
-                            <span class="nav-text">Settings</span>
-                        </a>
-                    </nav>
-                    
+                <a href="/task.html" class="nav-link">
+                    <img src="/images/Note_Edit.png" class="nav-icon">
+                    <span class="nav-text">My Task</span>
+                </a>
+
+                <a href="/habit-trucker.html" class="nav-link">
+                    <img src="/images/Check_All.png" class="nav-icon">
+                    <span class="nav-text">Habit Trucker</span>
+                </a>
+
+                <a href="/Study.html" class="nav-link active">
+                    <img src="/images/Book.png" class="nav-icon">
+                    <span class="nav-text">Study Planner</span>
+                </a>
+
+                <a href="/play-linguist.html" class="nav-link">
+                    <img src="/images/Puzzle.png" class="nav-icon">
+                    <span class="nav-text">Play</span>
+                </a>
+
+                <a href="/creativity.html" class="nav-link ">
+                    <img src="/images/Bulb.png" class="nav-icon">
+                    <span class="nav-text">Creativity</span>
+                </a>
+
+                <a href="/Setting.html" class="nav-link">
+                    <img src="/images/Settings_Future.png" class="nav-icon">
+                    <span class="nav-text">Settings</span>
+                </a>
+            </nav>
 
             <button class="logout-btn">
                 <img src="/images/Vector.png" class="logout-icon">
@@ -152,11 +136,11 @@
             class=" col-lg-3 col-sm-9 shadow rounded-5 ">
             <h5 class="my-3">Schedule</h5>
             <div class="row mt-4 gap-2 justify-content-evenly">
-                <div class="col-lg-3">9:55</div>
-                <div class="col-lg-3">
+                <div class="col-3">9:55</div>
+                <div class="col-3">
                     |
                 </div>
-                <div class="col-lg-4 ">
+                <div class="col-4 ">
                     <div>Design</div>
                     <div>
 
@@ -165,11 +149,11 @@
                 </div>
             </div>
             <div class="row mt-4 gap-2 justify-content-evenly">
-                <div class="col-lg-3">9:55</div>
-                <div class="col-lg-3">
+                <div class="col-3">9:55</div>
+                <div class="col-3">
                     |
                 </div>
-                <div class="col-lg-4 ">
+                <div class="col-4 ">
                     <div>Design</div>
                     <div>
 
@@ -178,11 +162,11 @@
                 </div>
             </div>
             <div class="row mt-4 gap-2 justify-content-evenly">
-                <div class="col-lg-3">9:55</div>
-                <div class="col-lg-3">
+                <div class="col-3">9:55</div>
+                <div class="col-3">
                     |
                 </div>
-                <div class="col-lg-4 ">
+                <div class="col-4 ">
                     <div>Design</div>
                     <div>
 
@@ -198,20 +182,33 @@
 
     <!-- timer -->
 
-    <section class="row justify-content-center   ">
+    <section class=" row justify-content-center mt-5  ">
 
-        <div class="timer-circle" id="timerDisplay">
-            00:00
-        </div>
-        <div class="input-group mt-5 justify-content-center">
-            <input type="number " class="rounded-4  " id="minutesInput" placeholder="Enter minutes" min="1">
-            <button class="rounded-4" onclick="startTimer()">Start</button>
+        <div class="col-5 justify-content-center rounded-5 p-5 " style="background-color:#554b5c; width: 750px;">
+            <div class="timer-circle" id="timerDisplay">
+                00:00
+            </div>
+            <div class="input-group mt-5 justify-content-center">
+                <input type="number " class="rounded-4 text-md-center " id="minutesInput" placeholder="Enter minutes"
+                    min="1">
+                <button class="rounded-4" onclick="startTimer()">Start</button>
+            </div>
         </div>
 
         <!-- صوت إنذار -->
         <audio id="alarmSound" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
 
     </section>
+    <div class="container  mt-5" style=" width: 750px;">
+        <h1>Pie Chart</h1>
+        <div class="pie-chart ">
+            <div class="pie-text text1">Purple</div>
+            <div class="pie-text text2"> Purple</div>
+            <div class="pie-text text3"> Purple</div>
+        </div>
+    </div>
+
+
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
     <script src="/js/nav.js"></script>
