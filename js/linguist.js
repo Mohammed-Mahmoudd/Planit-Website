@@ -1,13 +1,12 @@
 // Initialize the game when the page loads
-document.addEventListener('DOMContentLoaded', () => {
+let closeBtn = document.getElementById("close")
+closeBtn.addEventListener('click', () => {
     // Show introduction screen
-    elements.introScreen.style.display = 'flex';
-    elements.gameContainer.style.display = 'none';
+    elements.introScreen.style.display = 'none';
+    elements.gameContainer.style.display = 'flex';
     
     // Automatically start the game after 3 seconds
-    setTimeout(() => { 
-        startGame();
-    }, 10200);
+    
 });
 
 
